@@ -1,0 +1,182 @@
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+*{
+  border-radius: border-box;
+}
+.app-container{
+  background-color: #0d1117;
+  min-height: 100.1vh;
+}
+.app-container.experience-container{
+  background-color: rgb(59, 59, 69);
+}
+.app-container.projects-container{
+  background-color: rgb(59, 59, 69);
+}
+.content-container {
+  /* max-width: 800px; */
+  margin: 0;
+  padding: 0 160px;
+  color: white;
+  font-size: 18px;
+  width:calc(100% - 320px);
+}
+
+
+.content-container h2 {
+  color: white;
+  font-size: 28px;
+}
+.nav-item {
+  animation: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item.active {
+  animation: pulse 1s infinite;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar li a {
+  color: transparent;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+.navbar li a:hover {
+  color: white;
+}
+.navbar li a span{
+    color: #c9d1d9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:  all 0.3s;
+}
+.navbar li a:hover span, .navbar li a.active span {
+  /* background-color: #333; */
+  color: white;
+  font-weight: 600;
+  /* margin-left:-2px */
+}
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+
+.container {
+  /* max-width: 800px; */
+  margin: 0;
+  padding: 0 20px;
+  color: #c9d1d9;
+  font-size: 18px;
+  display:flex;
+  align-items: flex-end;
+  justify-content:space-between;
+  width:calc(100% - 40px);
+}
+.navbar ul {
+  list-style-type: none;
+  padding: 30px;
+  margin: 0 ;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+  padding-bottom: 15px;
+}
+
+.navbar li a {
+  color: #0d1117;
+  text-decoration: none;
+  position: relative; /* To position the dotted line */
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust based on your preference */
+  width: 100%; /* Cover the entire width */
+  display: none; /* Initially hidden */
+  overflow: hidden;
+}
+.nav-li{
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar li .underline.active {
+  display: block; /* Show the underline when the link is active */
+}
+.logo-img{
+  width:100px;
+}
+
+.underline svg{
+  /* stroke-width: .3rem; */
+    stroke-linecap: round;
+}
+.nav-contact{
+  background-color: #98FF98;
+  border: 3px solid #98FF98;
+  color:#0d1117;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 60px;
+  margin-bottom: 25px;
+  min-width: 160px;
+  outline: none;
+  transition: all 0.3s;
+  /* font-family: Montserrat, sans-serif; */
+}
+.nav-contact:hover{
+  cursor: pointer;
+  background-color: #253041;
+  color:#98FF98;
+}
+.nav-contact:active{
+  background-color: #0d1117;
+  color:white;
+  border-color: white;
+}
