@@ -10,34 +10,62 @@
     transform: scale(1);
   }
 }
+:root { 
+  /* #0d1117 */
+  --main-background: rgb(35,40,40);
+  /* --main-background: #212123; */
+  --second-background:rgb(60,62,70);
+  /* --second-background:#3f3f3f; */
+  --main-text:whitesmoke;
+  --main-accent: #98FF98;
+  /* --main-dark-accent.container:#5e9e5e; */
+  --main-dark-accent: linear-gradient(to right, 60% #98FF98, 40% #7dd37d);
+  --main-darker-accent:#69b569;
+}
 *{
-  border-radius: border-box;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+a, a span{
+  font-family: Noto Sans, sans-serif;
 }
 .app-container{
-  background-color: #0d1117;
+  background-color: var(--main-background);
   min-height: 100.1vh;
 }
 .app-container.experience-container{
-  background-color: rgb(59, 59, 69);
+  background-color: var(--second-background);
 }
 .app-container.projects-container{
-  background-color: rgb(59, 59, 69);
+  background-color: var(--second-background);
 }
 .content-container {
-  /* max-width: 800px; */
-  margin: 0;
-  padding: 0 160px;
   color: white;
   font-size: 18px;
-  width:calc(100% - 320px);
+  width: 100%;
+  overflow: hidden;
+}
+.section-container{
+  width:100%;
+  margin: 0 ;
+  padding: 1px;
+}
+.section-content{
+  margin: 0 auto;
+  max-width: 1500px;
+  width: calc(100% - 100px);
+}
+.section-container-white{
+  background-color: white;
+  color:var(--main-background);
 }
 
-
 .content-container h2 {
-  color: white;
+  /* color: white;/ */
   font-size: 28px;
 }
 .nav-item {
+  
   animation: none;
   transition: transform 0.3s ease-in-out;
 }
@@ -64,9 +92,6 @@
   padding: 10px 15px;
   transition: all 0.3s;
 }
-.navbar li a:hover {
-  color: white;
-}
 .navbar li a span{
     color: #c9d1d9;
     position: absolute;
@@ -75,11 +100,14 @@
     transform: translate(-50%, -50%);
     transition:  all 0.3s;
 }
-.navbar li a:hover span, .navbar li a.active span {
+ .navbar li a:hover span, .navbar li a.active span {
   /* background-color: #333; */
   color: white;
   font-weight: 600;
   /* margin-left:-2px */
+}
+.navbar li a:active span {
+  color: rgb(200,200,200);
 }
 .navbar {
   padding: 0;
@@ -104,7 +132,7 @@
   color: #c9d1d9;
   font-size: 18px;
   display:flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content:space-between;
   width:calc(100% - 40px);
 }
@@ -121,16 +149,13 @@
 }
 
 .navbar li a {
-  color: #0d1117;
+  color: var(--main-background);
   text-decoration: none;
   position: relative; /* To position the dotted line */
-  font-size: 18px;
+  font-size: 16px;
   transition: all 0.3s;
 }
 
-.navbar li a:hover {
-  color: white;
-}
 
 .underline {
   position: absolute;
@@ -157,26 +182,69 @@
     stroke-linecap: round;
 }
 .nav-contact{
-  background-color: #98FF98;
-  border: 3px solid #98FF98;
-  color:#0d1117;
-  padding: 10px 20px;
-  font-size: 18px;
+  background-color: var(--main-accent);
+  border:none;
+  color:var(--main-background);
+  padding: 14px 20px;
+  font-size: 14px;
   font-weight: 600;
   border-radius: 60px;
-  margin-bottom: 25px;
   min-width: 160px;
   outline: none;
   transition: all 0.3s;
-  /* font-family: Montserrat, sans-serif; */
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 .nav-contact:hover{
   cursor: pointer;
-  background-color: #253041;
-  color:#98FF98;
+  /* background-image: var(--main-dark-accent); */
+  /* color:var(--main-accent); */
 }
 .nav-contact:active{
-  background-color: #0d1117;
-  color:white;
-  border-color: white;
+  background-color: var(--main-darker-accent);
+  background-image:none;
+  /* color:darkgr; */
+}
+.nav-contact-overlay{
+  background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.9) );
+  opacity:0;
+  height: 100%;
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  border-radius: 60px;
+  transition: opacity 0.3s;
+}
+.nav-contact:hover .nav-contact-overlay{
+  opacity: 0.5;
+}
+.nav-contact:active .nav-contact-overlay{
+  opacity: 0.1;
+}
+
+.split-svg{
+  position: absolute;
+  width: 100%;
+}
+.split-svg-wave-2{
+  margin-top:-5px;
+}
+.page-split-padding-light{
+  aspect-ratio: 5/1;
+  background-color: white;
+  min-height: 200px;
+}
+.page-split-padding-dark{
+  aspect-ratio: 5/1;
+  background-color: var(--main-background);
+  min-height: 200px;
+}
+.split-wave-2{
+  aspect-ratio: 4/1;
+}
+.split-wave-3{
+  aspect-ratio: 3/1;
+  /* min-height: 300px; */
 }

@@ -5,21 +5,24 @@ import React, { useState } from 'react';
 import DotUnderline from './images/DottedLine.js';
 import NsLogo from './images/NS-trans-1.png'
 
-// Home component
-const Home = () => (
-  <div className="content-container">
-    <h2>Home</h2>
-    <p>Welcome to the Home page!</p>
-  </div>
-);
+import About from './components/About.js'
+import Home from './components/Home.js'
 
-// About component
-const About = () => (
-  <div className="content-container">
-    <h2>About</h2>
-    <p>This is the About page.</p>
-  </div>
-);
+// // Home component
+// const Home = () => (
+//   <div className="content-container">
+//     <h2>Home</h2>
+//     <p>Welcome to the Home page!</p>
+//   </div>
+// );
+
+// // About component
+// const About = () => (
+//   <div className="content-container">
+//     <h2>About</h2>
+//     <p>This is the About page.</p>
+//   </div>
+// );
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
@@ -36,7 +39,7 @@ function App() {
           <div className="container"><img className="logo-img" src={NsLogo} />
             <ul>
               <li className="nav-li">
-                <Link onClick={()=> setPath('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Home<span>Home</span></Link>
+                <Link onClick={()=> setPath('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
               
@@ -57,7 +60,7 @@ function App() {
                 <div className={path == '/about'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
             </ul>
-            <button className="nav-contact">Contact Me</button>
+            <button className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></button>
           </div>
         </nav>
 
