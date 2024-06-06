@@ -8,7 +8,7 @@ const Home = () => (
     <div className="content-container">
         <div className="section-container">
             <div className="section-content">
-                <h2>Home</h2>
+                <h1>Home</h1>
                 <p>Welcome to the Home page!</p>
             </div>
         </div>
@@ -16,7 +16,7 @@ const Home = () => (
         <div className="page-split-padding-light"></div>
         <div className="section-container section-container-white">
             <div className="section-content">
-                <h2>Home</h2>
+                <h1>Home</h1>
                 <p>Welcome to the Home page!</p>
             </div>
         </div>
@@ -24,7 +24,7 @@ const Home = () => (
         <div className="page-split-padding-dark split-wave-2"></div>
         <div className="section-container ">
             <div className="section-content">
-                <h2>Home</h2>
+                <h1>Home</h1>
                 <p>Welcome to the Home page!</p>
             </div>
         </div>
