@@ -1,4 +1,6 @@
-
+.content-container h1{
+    margin-bottom:0;
+}
 .project-columns{
     display: flex;
     width: 100%;
@@ -9,17 +11,75 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .project-list .item{
     min-width:300px;
     width: calc(100% - 5%);
-    background-color: var(--main-background);
+    /* background-color: var(--main-background); */
     border-radius: 25px;
     padding:15px;
     margin:10px 5px;
 }
-.project-list .item > *, .project-list .item > * > *{
-    margin: 10px auto;
+.img-overflow{
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    width:100%;
+    aspect-ratio: 1;
+    background-size: cover;
+}
+.img-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.6);
+    text-align: left;
+    border-radius: 20px;
+    transition: all 0.325s;
+}
+.img-overflow:hover .img-overlay{
+    background-color: rgba(255,255,255,0.15);
+    color:black;
+    cursor: pointer;
+}
+.img-overlay span{
+    display: block;
+    margin-top:30px;
+    margin-left: 30px;
+    font-weight: 800;
+    font-size:25px;
 }
 .item img{
-    width:200px
+    min-width:200px;
+    width: 100%;
+    border-radius: 25px;
+}
+.svg-contain{
+    position: absolute;
+    bottom: -130px;
+    right:-500px;
+    z-index: 11;
+    width:300px;
+    aspect-ratio: 1;
+    transition: all 0.325s;
+}
+.img-overflow:hover .svg-contain{
+    right:-100px;
+    cursor: pointer;
+}
+.svg-contain svg{
+    transform: rotate(-100deg);
+    width: 100%;
+    height: 100%;
+}
+.svg-text{
+    position: absolute;
+    top:100px;
+    left:100px;
+    color:black;
+    font-weight: 900;
+
 }

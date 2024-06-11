@@ -1,4 +1,7 @@
 import React from 'react';
+
+import ArrowSvg from '../../images/svg/projCard.js'
+
 const Project = (props) => {
     if (!(props.project.name)) {
         props.project.name = 'ERROR'
@@ -14,20 +17,22 @@ const Project = (props) => {
     return (
 
         <div className="item">
-            <h2 className='title'>{name}</h2>
-            <div className='img-overflow'>
-            <img src={img} alt={`${name} smol pic`} />
-            </div>
-            <div className="info">
+            <div className='img-overflow' style={{background: `url(${img})`, backgroundSize: 'cover'}}>
+            <div className="img-overlay"><span>{name}</span></div>
+            <div className="svg-contain"><ArrowSvg fillColor={'#98FF98'} index={props.index}/><div className="svg-text">{'More'}</div></div>
 
-                <p aria-label={'project-description'}>{description}</p>
-                <button class="main-btn" target="_blank" onClick={projectPage}>Learn More<span className="main-btn-overlay"></span></button>
+            {/* <img src={img} alt={`${name} smol pic`} /> */}
+            </div>
+            {/* <div className="info"> */}
+                
+                {/* <p aria-label={'project-description'}>{description}</p> */}
+                {/* <button class="main-btn" target="_blank" onClick={projectPage}>Learn More<span className="main-btn-overlay"></span></button> */}
                 {/* <div className='project-links'>
 
                     <img src={gitLogo} target="_blank" onClick={() => window.open(link)} />
                     {props.project.deployed && <button target="_blank" onClick={() => window.open(props.project.deployed)}>Site</button>}</div> */}
 
-            </div>
+            {/* </div> */}
 
         </div >
     );
