@@ -1,0 +1,25 @@
+
+.project-columns{
+    display: flex;
+    width: 100%;
+}
+.project-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.project-list .item{
+    min-width:300px;
+    width: calc(100% - 5%);
+    background-color: var(--main-background);
+    border-radius: 25px;
+    padding:15px;
+    margin:10px 5px;
+}
+.project-list .item > *, .project-list .item > * > *{
+    margin: 10px auto;
+}
+.item img{
+    width:200px
+}

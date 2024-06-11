@@ -7,6 +7,7 @@ import NsLogo from './images/NS-trans-1.png'
 
 import About from './components/About.js'
 import Home from './components/Home.js'
+import Projects from './components/Projects.js'
 
 // // Home component
 // const Home = () => (
@@ -26,7 +27,6 @@ import Home from './components/Home.js'
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
-  console.log(window.location.pathname)
   let appContainer = 'app-container'
   if(path == '/experience') appContainer += ' experience-container'
   if(path == '/projects') appContainer += ' projects-container'
@@ -66,6 +66,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/projects"  render={props => <Projects {...props} />}  /> */}
+          <Route path="/projects"  element={ <Projects  />}  />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

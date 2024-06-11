@@ -1,0 +1,48 @@
+.home-indent{
+    /* margin-left:45px; */
+    display: inline-block;
+}
+.home-indent-two{
+    margin-left:30px
+}
+.home-indent:last-child{
+    margin-left:35px;
+}
+.home-main-header{
+    margin-bottom: 0;
+}
+.home-main-header span{
+    display: block;
+}
+.home-main-image{
+    aspect-ratio: 1/1;
+    position: absolute;
+    top:0px;
+    right:30px;
+    border-radius: 100%;
+    z-index: 10;
+    overflow: hidden;
+    background-image: url(../../images/old/pfp3.jpg);
+    background-size: cover;
+    min-width: 290px;
+    max-width: 400px;
+    width:35%;
+    box-shadow: 0px 0px 60px -51px rgba(152,255,152,1);
+}
+.home-bottom-conatiner{
+    margin-bottom: -10vw;
+}
+.home-bottom-conatiner p, .home-second-conatiner p{
+    text-indent: 50px;
+}
+
+@media (max-width: 960px) {
+    .home-main-image{
+        left: 0;
+        top:calc(100% - 100px);
+        margin:0 auto;
+    }
+    .home-first-content{
+        padding-bottom: 140px;
+    }
+}
