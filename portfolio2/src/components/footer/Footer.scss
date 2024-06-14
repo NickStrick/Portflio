@@ -1,0 +1,123 @@
+@import '../../utilities/imports.scss';
+
+.footer{
+    // background: red;
+    
+    width: 50%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    .gitLogo{
+        opacity: .7;
+        color: white;
+    }
+    .gitLogo:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    .git{
+        height: 60px;
+        margin-right: 100px;
+    }
+    .mail{
+        width: 60px;
+        margin-left: 100px;
+    }
+
+    .mail-div{
+        position: relative;
+        .mail-text{
+            position: absolute;
+            left: 85px;
+            top: -4px;
+            // background: white;
+            
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                border: 2px solid gray;
+                font-size: .8rem;
+                width: 60px;
+                padding:  0 2px;
+                height: 50px;
+                margin-right: 10px;
+                box-shadow: 1px 2px 2px white;
+            }
+            #mailInput{
+                font-size: 1.1rem;
+                background: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            //Tooltip
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+              }
+              
+              .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 140px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -75px;
+                opacity: 0;
+                transition: opacity 0.3s;
+              }
+              
+              .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+              }
+              
+              .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+              }
+
+        }
+        
+    }
+}
+
+
+@media (max-width: $mobile){
+    .footer{
+        .git{
+            margin-right: 75px;
+        }
+        .mail{
+            margin-left: 75px;
+        }
+    }
+}
+@media (max-width: $small-mobile){
+    .footer{
+        .git{
+            margin-right: 35px;
+        }
+        .mail{
+            margin-left: 35px;
+        }
+    }
+}

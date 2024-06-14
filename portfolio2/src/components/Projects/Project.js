@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ArrowSvg from '../../images/svg/projCard.js'
+import arrow from '../../images/rightArrow.png'
 
 const Project = (props) => {
     if (!(props.project.name)) {
@@ -16,13 +17,18 @@ const Project = (props) => {
     // return (<></>)
     return (
 
-        <div className="item">
+        <div className="project-container item">
             <div className='img-overflow' style={{background: `url(${img})`, backgroundSize: 'cover'}}>
+            </div>
             <div className="img-overlay"><span>{name}</span></div>
-            <div className="svg-contain"><ArrowSvg fillColor={'#98FF98'} index={props.index}/><div className="svg-text">{'More'}</div></div>
+            <div className="svg-contain">
+                <ArrowSvg fillColor={'#98FF98'} index={props.index}/>
+                {/* <div className="svg-text">{'More'}</div> */}
+                {/* <img className="svg-text" src={arrow} /> */}
+            </div>
 
             {/* <img src={img} alt={`${name} smol pic`} /> */}
-            </div>
+            
             {/* <div className="info"> */}
                 
                 {/* <p aria-label={'project-description'}>{description}</p> */}

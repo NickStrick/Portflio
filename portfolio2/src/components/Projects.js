@@ -10,6 +10,7 @@ import rangoLogo from '../images/old/rangoDjango.png'
 import ProjectList from './Projects/ProjectList.js'
 
 
+
 const pData = [
     {
         name: "Softball Science",

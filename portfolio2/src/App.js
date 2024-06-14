@@ -8,6 +8,8 @@ import NsLogo from './images/NS-trans-1.png'
 import About from './components/About.js'
 import Home from './components/Home.js'
 import Projects from './components/Projects.js'
+import Skills from './components/skills/SkillsSection.js'
+import Cert from './components/certificates/Certificate.js'
 
 // // Home component
 // const Home = () => (
@@ -66,9 +68,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/projects"  render={props => <Projects {...props} />}  /> */}
           <Route path="/projects"  element={ <Projects  />}  />
           <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<><Skills /><Cert /></>} />
         </Routes>
       </div>
     </Router>

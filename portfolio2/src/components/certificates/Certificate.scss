@@ -1,0 +1,65 @@
+
+
+.certificates{
+    margin: 55px 2% 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+.cert-head{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    margin:  25px 0 60px;
+    padding: 10px;
+    font-size: 1.9rem;
+    text-align: center;
+    // background: $background-light;
+}
+
+// .lambda-cert{
+//     width: 260px;
+//     height:260px;
+//     overflow: hidden;
+    
+//     :hover{
+//         background-color: white;
+//     }
+// } 
+
+.cert-list .image{
+    background-size: contain;
+    width: 260px;
+    height: 260px;
+    border-radius: 120px;
+    overflow: hidden;
+}
+.cert-list .image div{
+    width: 260px;
+    height: 260px;
+}
+.cert-list .image div:hover{
+    background: rgba(255,255,255, .175);
+}
+.cert-list .image div:active{
+    background: rgba(0,0,0, .475);
+}
+/* Social buttons */
+.cert-list .image.lambda-cert{
+    background-image: url('../../images/old/certs/full-stack-web-development.png');
+}
+
+@media (max-width: 900px){
+    .cert-list .image{
+        background-size: contain;
+        width: 92vw;
+        height: 92vw;
+        border-radius: 120px;
+        overflow: hidden;
+    }
+    .cert-list .image div{
+        width: 92vw;
+        height: 92vw;
+}
+}
