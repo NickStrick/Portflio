@@ -6,6 +6,8 @@ import riyLogo from '../images/old/RIY.png'
 import mympyLogo from '../images/old/Mympy.png'
 import luncherLogo from '../images/old/luncherApp.png'
 import rangoLogo from '../images/old/rangoDjango.png'
+import softSciLogo from '../images/softsci.png'
+import doWellLogo from '../images/doWell.png'
 
 import ProjectList from './Projects/ProjectList.js'
 
@@ -15,7 +17,7 @@ const pData = [
     {
         name: "Softball Science",
         description: 'Softball Science will target people who want to get up and get productive and learn different skills to do projects themselves. There will be a rating system on which one is better. This will lead to the tutorials that are accurate and precise to be on top.',
-        img: riyLogo,
+        img: softSciLogo,
         link: 'https://github.com/labs13-how-to',
         deployed: 'https://how-tutor.netlify.com/',
         role: 'Wed Developer',
@@ -27,7 +29,7 @@ const pData = [
       {
         name: "Do Well 2 Transform",
         description: 'Do Well 2 Transform will target people who want to get up and get productive and learn different skills to do projects themselves. There will be a rating system on which one is better. This will lead to the tutorials that are accurate and precise to be on top.',
-        img: riyLogo,
+        img: doWellLogo,
         link: 'https://github.com/labs13-how-to',
         deployed: 'https://how-tutor.netlify.com/',
         role: 'Wed Developer',
@@ -36,7 +38,19 @@ const pData = [
         weeksCompleted: 5,
         contribution: 'I was responsible for frontend organization and  many frontend pages, such as project page, create project page, and edit project page as well as styling and debugging much of the website. I also worked on all CRUD operations and endpoints for reviews, comments, and favorites'
       },
-
+      {
+        name: "Mympy Dreams",
+        description: 'Mympy is on a mission to close the poverty gap in VR technology by creating a low barrier entry into the field of VR development for low-income individuals. Mympy Dreams is a marketplace where individuals can create a profile and post their project and needs and find funding from the Mympy Dreams community.',
+        img: mympyLogo,
+        link: 'https://github.com/mympy-dreamers',
+        deployed: 'https://mympydreamers.netlify.com/',
+        role: 'Team Lead/Web Developer',
+        techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'Auth0', 'NodeJS', 'Express', 'SendGrid', 'Cloudinary', 'Stripe', 'Postgres'],
+        teamMemebers: 9,
+        weeksCompleted: 8,
+        contribution: 'I was responsible for maintaining momentum by overseeing project planning and updates, leading meetings, maintaining manager and stakeholder relationships, communicating effectively, solving conflicts, deployment, and debugging as well as contributing to the authentication of the app whenever possible.'
+    
+      },
     {
       name: "Review It Yourself",
       description: 'Review It Yourself will target people who want to get up and get productive and learn different skills to do projects themselves. There will be a rating system on which one is better. This will lead to the tutorials that are accurate and precise to be on top.',
@@ -62,19 +76,7 @@ const pData = [
       contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
   
     },
-    {
-      name: "Mympy Dreams",
-      description: 'Mympy is on a mission to close the poverty gap in VR technology by creating a low barrier entry into the field of VR development for low-income individuals. Mympy Dreams is a marketplace where individuals can create a profile and post their project and needs and find funding from the Mympy Dreams community.',
-      img: mympyLogo,
-      link: 'https://github.com/mympy-dreamers',
-      deployed: 'https://mympydreamers.netlify.com/',
-      role: 'Team Lead/Web Developer',
-      techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'Auth0', 'NodeJS', 'Express', 'SendGrid', 'Cloudinary', 'Stripe', 'Postgres'],
-      teamMemebers: 9,
-      weeksCompleted: 8,
-      contribution: 'I was responsible for maintaining momentum by overseeing project planning and updates, leading meetings, maintaining manager and stakeholder relationships, communicating effectively, solving conflicts, deployment, and debugging as well as contributing to the authentication of the app whenever possible.'
-  
-    },
+    
     {
       name: "Luncher App",
       description: 'There are kids today in this country who go without student lunches. This app allows schools to broadcast the needs of their students by declaring an amount of donations that they would need to be fullfilled in order to provide lunches for those that go without.',

@@ -1,7 +1,8 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import ArrowSvg from '../../images/svg/projCard.js'
-import arrow from '../../images/rightArrow.png'
+import WaveSvg from '../../images/projects/itemSvg.js'
 
 const Project = (props) => {
     if (!(props.project.name)) {
@@ -17,12 +18,14 @@ const Project = (props) => {
     // return (<></>)
     return (
 
-        <div className="project-container item">
-            <div className='img-overflow' style={{background: `url(${img})`, backgroundSize: 'cover'}}>
+        <div className={`project-container item proj-item-${props.index}`} >
+            <div className={`img-overflow`} >
+            <WaveSvg fillColor={'#98FF98'} index={props.index}/>
             </div>
             <div className="img-overlay"><span>{name}</span></div>
             <div className="svg-contain">
                 <ArrowSvg fillColor={'#98FF98'} index={props.index}/>
+                <FontAwesomeIcon icon={faArrowRight} />
                 {/* <div className="svg-text">{'More'}</div> */}
                 {/* <img className="svg-text" src={arrow} /> */}
             </div>

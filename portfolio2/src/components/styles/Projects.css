@@ -10,29 +10,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project-list .item{
-    min-width:300px;
-    width: calc(100% - 5%);
+    min-width:350px;
+    /* min-height: 400px; */
+    width: calc(30%);
     /* background-color: var(--main-background); */
     border-radius: 25px;
     /* padding:15px; */
     margin:10px 15px;
+    aspect-ratio: 7/8;
     /* border: 3px solid rgb(35,40,40); */
 }
 .project-container{
     position: relative;
     border-radius: 25px;
     overflow:hidden;
+    
 }
 .img-overflow{
     overflow: hidden;
     position: relative;
     width:100%;
-    aspect-ratio: 1;
+    min-width: 350px;
+    aspect-ratio: 7/8;
     background-size: cover;
-    border: 10px solid rgb(35,40,40);
+    /* border: 10px solid rgb(35,40,40); */
     border-radius:23px;
 }
 .img-overlay{
@@ -42,7 +47,7 @@
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgba(35,40,40,0.7);
+    /* background-color: rgba(35,40,40,0.7); */
     /* border: 20px solid rgb(35,40,40); */
     text-align: left;
     /* border-radius: 20px; */
@@ -60,11 +65,6 @@
     font-weight: 800;
     font-size:25px;
 }
-.item img{
-    min-width:200px;
-    width: 100%;
-    border-radius: 25px;
-}
 .svg-contain{
     position: absolute;
     bottom: -130px;
@@ -78,10 +78,16 @@
     right:-108px;
     cursor: pointer;
 }
-.svg-contain svg{
+.svg-contain .proj-svg{
     transform: rotate(-100deg);
     width: 100%;
     height: 100%;
+}
+.svg-contain .fa-arrow-right{
+    position: absolute;
+    top:33%;
+    left:34%;
+    font-size: 1.8rem;
 }
 .svg-text{
     position: absolute;
@@ -90,4 +96,48 @@
     color:black;
     font-weight: 900;
 
+}
+.proj-svg{
+    filter: drop-shadow(0px 0px 10px  rgb(0 0 0 / 0.3));
+}
+.proj-item-0 .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #71217B;
+}
+.proj-item-0 .proj-svg{
+    fill:#71217B;
+}
+.proj-item-1 .img-overflow{
+    /* #F89F73  */
+    background: #7FB98D;
+}
+.proj-item-1 .proj-svg{
+    fill:#7FB98D;
+}
+.proj-item-2 .img-overflow{
+    /* #B14C9C  */
+    background: #245AA9;
+}
+.proj-item-2 .proj-svg{
+    fill:#245AA9;
+}
+.proj-item-3 .img-overflow{
+    /* #FFAB61  */
+    background: #FFDEC2;
+}
+.proj-item-3 .proj-svg{
+    fill:#FFDEC2;
+}
+.proj-item-4 .img-overflow{
+    background: #4C2C72;
+}
+.proj-item-4 .proj-svg{
+    fill:#4C2C72;
+}
+.proj-item-5 .img-overflow{
+    /* #rgb(174,65,16)  */
+    background: #81905A;
+}
+.proj-item-5 .proj-svg{
+    fill:#81905A;
 }

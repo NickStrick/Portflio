@@ -1,7 +1,8 @@
 
 
 .certificates{
-    margin: 55px 2% 80px;
+    margin: 55px 2% 0px;
+    padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -11,7 +12,7 @@
     width: 100%;
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
-    margin:  25px 0 60px;
+    margin:  25px 0 15px;
     padding: 10px;
     font-size: 1.9rem;
     text-align: center;
@@ -29,17 +30,21 @@
 // } 
 
 .cert-list .image{
-    background-size: contain;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 260px;
     height: 260px;
-    border-radius: 120px;
+    border-radius: 100%;
     overflow: hidden;
+    
 }
 .cert-list .image div{
     width: 260px;
     height: 260px;
 }
 .cert-list .image div:hover{
+    cursor: pointer;
     background: rgba(255,255,255, .175);
 }
 .cert-list .image div:active{

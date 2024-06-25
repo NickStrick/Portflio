@@ -20,14 +20,14 @@ const ProjectList = (props) => {
                                 return <Project project={project} key={index} index={index} history={props.history} />
                             }
                         }
-                        )}</div>
-                    <div className='project-list'>
+                        )}
                         {props.projects.map((project, index) => {
                             if (middle <= index) {
                                 return <Project project={project} key={index} index={index} history={props.history} />
                             }
                         }
-                        )}</div>
+                        )}
+                        </div>
                 </div>
 
             </div></>
