@@ -31,12 +31,14 @@ const SkillsSection = () => {
     ]
 
     return (
-        <div className="skills">
-            <h1 className='skills-head'>Skills</h1>
+        <div className="skills section-container">
+            <div className="section-content">
+            <h1 className='port-head'>Skills</h1>
             <div className='skill-list'>
                 {skillList.map((item, index) => {
-                    return <SkillItem item={item} key={index} id={`${item.skill}Logo`} />
+                    return <SkillItem item={item} index={index} key={index} id={`${item.skill}Logo`} />
                 })}
+            </div>
             </div>
 
 

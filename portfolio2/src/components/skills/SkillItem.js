@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import BlobSvg from '../../images/skills/skillSvg.js'
 const SkillItem = (props) => {
     const { skill, logo } = props.item;
 
@@ -9,6 +9,7 @@ const SkillItem = (props) => {
                 <img src={logo} alt={skill} id={props.id} />
             </div>
             <p>{skill}</p>
+            <BlobSvg  index={props.index}/>
 
         </div >
     );

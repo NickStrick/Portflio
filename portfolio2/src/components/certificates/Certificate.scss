@@ -8,16 +8,6 @@
     justify-content: center;
     color: white;
 }
-.cert-head{
-    width: 100%;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
-    margin:  25px 0 15px;
-    padding: 10px;
-    font-size: 1.9rem;
-    text-align: center;
-    // background: $background-light;
-}
 
 // .lambda-cert{
 //     width: 260px;
@@ -28,7 +18,13 @@
 //         background-color: white;
 //     }
 // } 
-
+#wave-cert{
+    transform: rotate((180deg));
+}
+.cert-list {
+    display: flex;
+    justify-content: space-around;
+}
 .cert-list .image{
     background-size: 90%;
     background-position: center;
@@ -42,10 +38,11 @@
 .cert-list .image div{
     width: 260px;
     height: 260px;
+    transition: 0.25s;
 }
 .cert-list .image div:hover{
     cursor: pointer;
-    background: rgba(255,255,255, .175);
+    background: rgba(50,50,50, .175);
 }
 .cert-list .image div:active{
     background: rgba(0,0,0, .475);

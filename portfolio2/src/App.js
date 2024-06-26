@@ -70,7 +70,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects"  element={ <Projects  />}  />
           <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<><Skills /><Cert /></>} />
+          <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
         </Routes>
       </div>
     </Router>

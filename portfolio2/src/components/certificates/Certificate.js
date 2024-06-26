@@ -2,6 +2,7 @@ import React from 'react';
 import './Certificate.scss';
 
 import lambdaCert from '../../images/old/certs/full-stack-web-development.png';
+import CertsSVG from '../../images/skills/CertSplit.js'
 
 const Certificate = (props) => {
     let lamb_cert_url= 'https://www.youracclaim.com/badges/b2683aac-d322-43a3-bc78-5101de3c6485/public_url';
@@ -11,9 +12,11 @@ const Certificate = (props) => {
         window.open(link, "_blank");
       }
 
-    return (
-
-        <div className="certificates" id='certificate'>
+    return (<>
+        <CertsSVG />
+        <div class="page-split-padding-light"></div>
+        <div className="section-container section-container-white ">
+        <div className="section-content " id='certificate'>
             <h1 className='cert-head'>Certificate</h1>
             <div className='cert-list' >
                 
@@ -26,6 +29,8 @@ const Certificate = (props) => {
                 <div></div></div> 
             </div>
         </div>
+        </div>
+        </>
     );
 }
 
