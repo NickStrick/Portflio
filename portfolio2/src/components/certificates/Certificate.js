@@ -14,7 +14,7 @@ const Certificate = (props) => {
 
     return (<>
         <CertsSVG />
-        <div class="page-split-padding-light"></div>
+        <div className="page-split-padding-light"></div>
         <div className="section-container section-container-white ">
         <div className="section-content " id='certificate'>
             <h1 className='cert-head'>Certificate</h1>

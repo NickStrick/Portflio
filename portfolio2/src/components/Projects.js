@@ -10,6 +10,7 @@ import softSciLogo from '../images/softsci.png'
 import doWellLogo from '../images/doWell.png'
 
 import ProjectList from './Projects/ProjectList.js'
+import ProjectDetail from './Projects/ProjectDetail.js';
 
 
 
@@ -93,12 +94,14 @@ const pData = [
   
   ]
   const Project = (props) => {
+    const [detailedProject, setDetail] = useState(null)
       console.log('project list')
       return (
         <div className="content-container">
-            <div className="section-container">
-            <ProjectList {...props} projects={pData}/> 
-            </div>
+            
+            {detailedProject == null 
+            ? <div className="section-container"><ProjectList setDetail={setDetail} {...props} projects={pData}/></div>
+            : <ProjectDetail setDetail={setDetail} {...props} project={detailedProject}/> }
         </div>
       );
   }

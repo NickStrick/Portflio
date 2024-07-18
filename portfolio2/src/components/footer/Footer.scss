@@ -1,18 +1,14 @@
-@import '../../utilities/imports.scss';
+// @import '../../utilities/imports.scss';
 
 .footer{
     // background: red;
-    
-    width: 50%;
-    margin: 0 auto;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-
+    position: relative;
+    .split-svg {
+        min-width: 400px;
+    }
     .gitLogo{
         opacity: .7;
-        color: white;
+        color: black;
     }
     .gitLogo:hover{
         opacity: 1;
@@ -46,11 +42,11 @@
                 padding:  0 2px;
                 height: 50px;
                 margin-right: 10px;
-                box-shadow: 1px 2px 2px white;
+                box-shadow: 1px 2px 2px black;
             }
             #mailInput{
                 font-size: 1.1rem;
-                background: white;
+                background: black;
                 padding: 5px 10px;
                 border-radius: 5px;
             }
@@ -99,10 +95,42 @@
         
     }
 }
+.footer-content{
+    position: absolute;
+    background-color: transparent;
+    fill: rgb(35,40,40);
+    color: rgb(35,40,40);
+    padding-right:60%;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    .icon-btn{
+        margin-right: 15px;
+        padding:20px;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        svg{
+            height:80px;
+            width:80px;
+        }
+    }
+    .icon-btn:hover{
+        color: white;
+        background-color: rgb(35,40,40);
+    }
+}
+.footer-end{
+    background: white;
+    width:100%;
+    height:300px;
+}
 
-
-@media (max-width: $mobile){
+@media (max-width: 990px){
     .footer{
+        .footer-content{
+            flex-direction: column;
+        }
         .git{
             margin-right: 75px;
         }
@@ -111,7 +139,7 @@
         }
     }
 }
-@media (max-width: $small-mobile){
+@media (max-width: 700px){
     .footer{
         .git{
             margin-right: 35px;

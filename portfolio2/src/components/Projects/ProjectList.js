@@ -17,13 +17,13 @@ const ProjectList = (props) => {
                         {props.projects.map((project, index) => {
 
                             if (middle > index) {
-                                return <Project project={project} key={index} index={index} history={props.history} />
+                                return <Project setDetail={props.setDetail} project={project} key={index} index={index} history={props.history} />
                             }
                         }
                         )}
                         {props.projects.map((project, index) => {
                             if (middle <= index) {
-                                return <Project project={project} key={index} index={index} history={props.history} />
+                                return <Project setDetail={props.setDetail} project={project} key={index} index={index} history={props.history} />
                             }
                         }
                         )}

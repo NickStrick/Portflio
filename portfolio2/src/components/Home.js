@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles/Home.css'
 import SplitLine from '../images/svg/pageSplit.js'
 import SplitTwo from '../images/splitters/bottom-wave-2.js'
-import SplitThree from '../images/splitters/bottom-wave-3.js'
+
 
 import PfpThree from '../images/old/pfp3.jpg';
 
@@ -52,8 +52,7 @@ const Home = () => (
                 <p>{summary3}</p>
             </div>
         </div>
-        <SplitThree fillColor={'#98FF98'} />
-        <div className="page-split-padding-dark split-wave-3"></div>
+        
     </div>
   );
   export default Home;

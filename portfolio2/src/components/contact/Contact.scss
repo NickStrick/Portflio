@@ -1,0 +1,170 @@
+.content-container{
+    position: relative;
+}
+.contact-content{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.contact-content .section-column{
+    width:50%;
+    min-width: 380px;;
+}
+.color-text{
+    color: var(--main-accent)
+}
+.span-block{
+    display: block;
+    text-align: center;
+    font-size: 58px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.work-column{
+    // position: relative;
+    margin-top:70px;
+}
+.work-icons{
+    position: relative;
+    width:100%;
+    height:1px;
+}
+.work-icons svg{
+    position: absolute;
+    font-size: 40px;
+    right:calc(50% - 70px);
+    top:95px;
+    transform: rotate(-20deg);
+    color: var(--main-accent);
+}
+.work-icons svg.fa-hammer{
+    position: absolute;
+    right:calc(50% + 10px);
+    top:100px;
+    transform: rotate(-90deg);
+    color: rgba(100,105,105);
+}
+.work-icons svg.fa-handshake-simple{
+    color:white;
+    position: absolute;
+    right:calc(50% - 35px);
+    top:47px;
+    transform: rotate(-20deg);
+}
+form .formGroup{
+    display: flex;
+    flex-direction: column;
+}
+form .formGroup label{
+    transition: 0.45s ease-in-out;
+    margin-left:3.2rem;
+    margin-top:1rem;
+    margin-bottom: .75rem;
+}
+form .formGroup:hover label, form .formGroup:focus label{
+    color:var(--main-accent)
+}
+form .formGroup input,form .formGroup textarea{
+    background-color: rgb(25,25,25);
+    color:white;
+    resize: none;
+    padding:2rem 5.4rem 2rem 3.2rem!important;
+    border-radius: 600px;
+    border:none;
+    width:100%;
+    height: 6.4rem!important;
+    
+}
+form .formGroup textarea{
+    padding-top:30px;
+    height: 9.9rem!important
+}
+form .formGroup:hover input,
+form .formGroup:hover textarea,
+form .formGroup input:focus,
+form .formGroup textarea:focus{
+    background-color: rgb(15,15,15);
+}
+.form-submit{
+    display: flex;
+    margin-top:20px;
+}
+.formButton{
+    background-color: var(--main-accent);
+    border:none;
+    color:var(--main-background);
+    padding: 1.3rem 6rem;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 60px;
+    min-width: 160px;
+    outline: none;
+    transition: all 0.3s;
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    margin-left: auto;
+
+  }
+  .formButton:hover{
+    cursor: pointer;
+    /* background-image: var(--main-dark-accent); */
+    /* color:var(--main-accent); */
+  }
+  .formButton:active{
+    background-color: var(--main-darker-accent);
+    background-image:none;
+    /* color:darkgr; */
+  }
+  .formButton-overlay{
+    background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.99) );
+    opacity:0;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 60px;
+    transition: opacity 0.3s;
+  }
+  .formButton:hover .formButton-overlay{
+    opacity: 0.63;
+  }
+  .formButton:active .formButton-overlay{
+    opacity: 0.25;
+  }
+  .fa-paper-plane{
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.formButton:hover .fa-paper-plane{
+    transform: rotate(40deg);
+  }
+  .formButton:active .fa-paper-plane{
+    transform: rotate(65deg);
+  }
+  input:focus-visible, textarea:focus-visible {
+    outline: 1px solid var(--main-accent)
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 1000s;
+    box-shadow: inset 0 0 20px 120px rgb(25, 25, 25);
+}
+.contact-background{
+    position: absolute;
+    top:280px;
+    left:-387px;
+    aspect-ratio: 1/1;
+    width:100vw;
+    // height: 100vh;
+    z-index: 0;
+    transform: scale(1.5);
+}

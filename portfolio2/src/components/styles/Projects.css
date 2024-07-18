@@ -74,7 +74,7 @@
     z-index: 11;
     width:300px;
     aspect-ratio: 1;
-    transition: all 0.425s ease-in-out;
+    transition: all 0.29s ease-in-out;
 }
 .project-container:hover .svg-contain{
     right:-108px;

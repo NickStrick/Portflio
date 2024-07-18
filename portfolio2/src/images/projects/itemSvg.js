@@ -1,7 +1,7 @@
 
 export default function Split({ fillColor, index }) {
     return (
-        <svg width="100%" height="100%" id={"projwave-svg"+index} viewBox="0 0 1440 890" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+        <svg width="100%" height="100%" id={"projwave-svg"+index} viewBox="0 0 1440 890" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150">
             <defs>
             <linearGradient id={"projwave-gradient"+index} x1="52%" y1="0%" x2="48%" y2="100%">
             <stop offset="5%" stop-color="rgba(0,0,0,0.2)">

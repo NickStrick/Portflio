@@ -10,15 +10,14 @@ const Project = (props) => {
     }
     const { img, description, name, link } = props.project
 
-    function projectPage() {
+    function handleProjClick(){
+        console.log('click', props.project)
         window.scrollTo({ top: 0, left: 0 })
-        props.history.push(`/project/${props.index}`)
+        props.setDetail(props.project)
     }
-    console.log('props', props)
-    // return (<></>)
     return (
 
-        <div className={`project-container item proj-item-${props.index}`} >
+        <div className={`project-container item proj-item-${props.index}`} onClick={handleProjClick}>
             <div className={`img-overflow`} >
             <WaveSvg fillColor={'#98FF98'} index={props.index}/>
             </div>
