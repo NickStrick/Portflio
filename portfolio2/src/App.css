@@ -146,7 +146,7 @@ margin-top:0.5rem;
   padding: 0;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   background-color:  var(--main-background);
 }
 .navbar.second-navbar{
@@ -204,6 +204,8 @@ margin-top:0.5rem;
   width: 100%; /* Cover the entire width */
   display: none; /* Initially hidden */
   overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
 }
 .nav-li{
   position: relative;
@@ -212,6 +214,7 @@ margin-top:0.5rem;
 
 .navbar li .underline.active {
   display: block; /* Show the underline when the link is active */
+  opacity: 1;
 }
 .logo-img{
   width:100px;

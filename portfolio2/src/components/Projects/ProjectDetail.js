@@ -18,9 +18,30 @@ const Project = (props) => {
     function returnBack(){
         props.setDetail(null) 
     }
+   
+    var middle = Math.floor(description.length / 2); 
+    splitDescription()
+   function splitDescription(){
+    
+    var before = description.lastIndexOf(' ', middle);
+    var after = description.indexOf(' ', middle + 1);
+
+    if (middle - before < after - middle) {
+        middle = before;
+    } else {
+        middle = after;
+    }
+
+   }
+    
+    var d1 = description.substr(0, middle);
+    var d2 = description.substr(middle + 1);
+    // var descresult = (<span className="rotate"> 
+    // {descarr.forEach(() =></span><span className="rotate">}}
+    //             </span>);
     return (<>
         <div className="section-container project-detials">
-            <div className=" section-content" >
+            <div className=" section-content project-header" >
                 <div className="proj-return" onClick={returnBack}><FontAwesomeIcon icon={faArrowLeft}/> Return to list</div>
                     <h1 className='port-head'>{name}</h1>
                     <div className="project-info">
@@ -52,8 +73,11 @@ const Project = (props) => {
         
         <div className="section-container project-description">
             <div className=" section-content" >
-                    <p>{description}</p>
+                <div className="description-info">
+                    <strong>About</strong>
+                    <p><span>{d1}</span><span>{d2}</span></p>
                     <p>{contribution}</p>
+                </div>
             </div>
         </div>
         </>
