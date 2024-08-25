@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Footer.scss';
-import gitLogo from '../../images/old/GitHub-Mark-Light-64px.png'
-import linkedin from '../../images/old/linkedin-2.svg'
-import mail from '../../images/old/mail-100.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
@@ -14,25 +11,25 @@ import SplitThree from '../../images/splitters/bottom-wave-3.js'
 const Footer = (props) => {
     const navigate = useNavigate();
     let footerColor = 'rgb(35,40,40)'
-    const [showMail, setMail] = useState(false)
+    // const [showMail, setMail] = useState(false)
     function handleEmailClick() {
         window.scroll(0,0)
         navigate("/contact");
       }
-    function myFunction() {
-        var copyText = document.getElementById("mailInput");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        document.execCommand("copy");
+    // function myFunction() {
+    //     var copyText = document.getElementById("mailInput");
+    //     copyText.select();
+    //     copyText.setSelectionRange(0, 99999);
+    //     document.execCommand("copy");
 
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copied: " + copyText.value;
-    }
+    //     var tooltip = document.getElementById("myTooltip");
+    //     tooltip.innerHTML = "Copied: " + copyText.value;
+    // }
 
-    function outFunc() {
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copy to clipboard";
-    }
+    // function outFunc() {
+    //     var tooltip = document.getElementById("myTooltip");
+    //     tooltip.innerHTML = "Copy to clipboard";
+    // }
 
     if(window.location.pathname.includes('skills')){
         footerColor = 'white'

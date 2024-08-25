@@ -51,7 +51,8 @@ function App() {
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
             </ul>
-            <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
+            <div></div>
+            {/* <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link> */}
           </div>
         </nav>
 
@@ -62,7 +63,7 @@ function App() {
           <Route path="/about" element={<About />} />
           
           <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
         <Footer />
       </div>

@@ -35,7 +35,6 @@ function Contact(props) {
                 let passCheck = checkUrlValue(value)
                 if(!passCheck){
                     return false;
-                    break;
                 }
             }
         }
