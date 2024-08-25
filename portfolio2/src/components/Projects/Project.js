@@ -8,20 +8,29 @@ const Project = (props) => {
     if (!(props.project.name)) {
         props.project.name = 'ERROR'
     }
-    const { img, description, name, link } = props.project
+    const { img, description, name, link, pills } = props.project
 
     function handleProjClick(){
         console.log('click', props.project)
         window.scrollTo({ top: 0, left: 0 })
         props.setDetail(props.project)
     }
+    console.log(pills)
     return (
 
         <div className={`project-container item proj-item-${props.index}`} onClick={handleProjClick}>
             <div className={`img-overflow`} >
             <WaveSvg fillColor={'#98FF98'} index={props.index}/>
             </div>
-            <div className="img-overlay"><span>{name}</span></div>
+            <div className="img-overlay">
+                <span>{name}</span>
+                <div className="info-pill-conatiner">
+                    {pills.map(pill => {
+                        return <div className="info-pill">{pill}</div>
+                    })}
+                </div>
+             </div>
+            
             <div className="svg-contain">
                 <ArrowSvg fillColor={'#98FF98'} index={props.index}/>
                 <FontAwesomeIcon icon={faArrowRight} />

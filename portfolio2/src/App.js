@@ -14,22 +14,6 @@ import Footer from './components/footer/Footer.js'
 import Contact from './components/contact/Contact.js'
 import Experiences from './components/Experience.js';
 
-// // Home component
-// const Home = () => (
-//   <div className="content-container">
-//     <h2>Home</h2>
-//     <p>Welcome to the Home page!</p>
-//   </div>
-// );
-
-// // About component
-// const About = () => (
-//   <div className="content-container">
-//     <h2>About</h2>
-//     <p>This is the About page.</p>
-//   </div>
-// );
-
 function App() {
   const [path, setPath] = useState(window.location.pathname);
   let appContainer = 'app-container'
@@ -65,10 +49,6 @@ function App() {
               <li className="nav-li">
                 <Link onClick={()=> setPage('/experience')} to="/experience" className={path == '/experience'?'nav-link active':'nav-link'} >Experience<span>Experience</span></Link>
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
-              </li>
-              <li className="nav-li">
-                <Link onClick={()=> setPage('/about')} to="/about" className={path == '/about'?'nav-link active':'nav-link'} >About<span>About</span></Link>
-                <div className={path == '/about'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
             </ul>
             <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>

@@ -1,0 +1,11 @@
+.paragraph{
+    white-space: pre-wrap;   
+}
+.experience-container strong{
+    margin-top:25px;
+    margin-bottom:20px;
+    display: flex;
+}
+.experience-container strong:not(:first-of-type){
+    padding-top:35px;
+}

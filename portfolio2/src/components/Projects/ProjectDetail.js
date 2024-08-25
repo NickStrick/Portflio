@@ -19,23 +19,33 @@ const Project = (props) => {
         props.setDetail(null) 
     }
    
-    var middle = Math.floor(description.length / 2); 
+    var middle = Math.floor(contribution.length / 3); 
+    var middle2 = Math.floor(contribution.length / 3) * 2
     splitDescription()
    function splitDescription(){
     
-    var before = description.lastIndexOf(' ', middle);
-    var after = description.indexOf(' ', middle + 1);
+    var before = contribution.lastIndexOf(' ', middle);
+    var after = contribution.indexOf(' ', middle + 1);
 
     if (middle - before < after - middle) {
         middle = before;
     } else {
         middle = after;
     }
+    var before2 = contribution.lastIndexOf(' ', middle2);
+    var after2 = contribution.indexOf(' ', middle2 + 1);
+
+    if (middle2 - before2 < after2 - middle2) {
+        middle2 = before2;
+    } else {
+        middle2 = after2;
+    }
 
    }
-    
-    var d1 = description.substr(0, middle);
-    var d2 = description.substr(middle + 1);
+    console.log(middle,middle2)
+    var d1 = contribution.substr(0, middle);
+    var d2 = contribution.substr(middle + 1, middle2);
+    var d3 = contribution.substr(middle2 + 1 )
     // var descresult = (<span className="rotate"> 
     // {descarr.forEach(() =></span><span className="rotate">}}
     //             </span>);
@@ -46,7 +56,7 @@ const Project = (props) => {
                     <h1 className='port-head'>{name}</h1>
                     <div className="project-info">
                         <p className="quick-info"><strong>My Role</strong> {role}</p>
-                        <p className="quick-info"><strong>What We Did</strong> {description}</p>
+                        <p className="quick-info"><strong>Desription</strong> {description}</p>
                     </div>
                     <div className="project-btns">
                         <button onClick={()=>buttonClick(deployed)} className="project-a main-btn" >Deployed Site</button>
@@ -74,9 +84,9 @@ const Project = (props) => {
         <div className="section-container project-description">
             <div className=" section-content" >
                 <div className="description-info">
-                    <strong>About</strong>
-                    <p><span>{d1}</span><span>{d2}</span></p>
-                    <p>{contribution}</p>
+                    <strong>What I Did</strong>
+                    <p><span>{d1}</span><span>{d2}</span><span>{d3}</span></p>
+                    {/* <p>{contribution}</p> */}
                 </div>
             </div>
         </div>

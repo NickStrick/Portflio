@@ -36,7 +36,7 @@ const Footer = (props) => {
 
     if(window.location.pathname.includes('skills')){
         footerColor = 'white'
-    }else if(window.location.pathname.includes('projects')){
+    }else if(window.location.pathname.includes('projects') || window.location.pathname.includes('experience')){
         footerColor = 'rgb(60,62,70)'
     }
 

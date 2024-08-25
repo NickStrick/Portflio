@@ -35,6 +35,11 @@
 .description-info{
     margin-left:3rem;
 }
+.description-info p span{
+    display: block;
+    margin-top:10px;
+    white-space: pre-wrap;
+}
 .project-header .port-head{
     margin-top:2rem;
 }
