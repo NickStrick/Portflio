@@ -277,6 +277,10 @@ margin-top:0.5rem;
   margin-top:-5px;
   transform: scaleX(-1);
 }
+.page-split-padding-light, .page-split-padding-dark{
+    max-width: 100%;
+    overflow: hidden;
+}
 .page-split-padding-light{
   aspect-ratio: 5/1;
   background-color: white;
