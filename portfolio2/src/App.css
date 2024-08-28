@@ -353,6 +353,9 @@ margin-top:0.5rem;
   color:var(--main-background);
 
 }
+.pararaph{
+  white-space: pre-wrap;
+}
 .main-btn:active:after{
   border-color: white !important;
 }

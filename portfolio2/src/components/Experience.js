@@ -13,11 +13,40 @@ import React, { useState } from 'react';
                         {`
 Experienced working with teams to produce impactful, leading-edge websites that engage customers and deliver business results. Well-versed in design standards and user preferences.`}
                     </div>
-                    <strong>Background</strong>
+                    <strong>Senior Front End Developer, Expocad by A.C.T. - Aurora, IL | May 2021 - Present</strong>
                     <div className="pararaph">
-                        {`I spent the last couple of years learning and teaching to code. After highschool, curious about coding, I completed some credits toward a computer science degree while i worked in retail. I spent free time creating small games, and looking for resources to learn more and find out what I could make. I followed small courses on coding through things such as Youtube, Udemy, or Watch and Code. I spent these past two years enrolled in Lambda School as a student and as a contract teaching assistant.
-
-During my time as a student, I learned Full Stack web development and computer science fundamentals, along with an assortment of librarys, frameworks and algorithms. With that I created some pretty cool projects that I’m proud of. I was a contract worker for Lambda School as well, where I frist worked as a Team lead above students, leading daily meetings, solving any debugging issues, helping my students learn the cirriculum in javscript, java, and python. The times I was working on a project with a team, I was responsible with the relationship between the stakeholder and the team, and managed our planning. I also debugged and filled any gaps in the conribution to the project where nessesary. I spent most of my time in meetings getting to know my students and solving problems or planning with them and creating documentation.`}
+                        {`
+- Planned, designed, and created application features upon client requests using CSS, HTML, and JavaScript in
+a codebase of 550,000 lines of code.
+- Mentored junior developers by providing guidance on best practices and industry standards in front-end
+development.
+- Collaborated closely with back-end developers to integrate RESTful API endpoints into front-end architecture
+seamlessly.
+- Ensured high-quality user experiences by rigorously testing application features against diverse user
+scenarios before deployment.
+- Streamlined codebase by refactoring and modularizing CSS, HTML, and JavaScript files.
+`}
+                    </div>
+                    <strong>Team Lead, Bloom Institute of Technology | Jul 2020 - Oct 2020</strong>
+                    <div className="pararaph">
+                        {`
+- Led a team of 8 developers/designers through full product development life cycle over 8-week project unit,
+including product releases, debugging, code reviews, and stakeholder management
+- Worked through agile methodologies with the scrum framework for project planning
+- Collaborated and solved problems between team members of varying skill sets
+- Coached students on how to present their final project
+`}
+                    </div>
+                    <strong>Teacher's Assistant, Bloom Institute of Technology | Feb 2019 - July 2020</strong>
+                    <div className="pararaph">
+                        {`
+- Led team of 8+ students in daily code challenges in Javascript, Java, and Python
+- Reinforced technical concepts by facilitating small group study sessions
+- Lead 1:1 mentoring sessions to provide impactful encouragement and support to students
+- Led daily standup meetings to build camaraderie, facilitate the sharing of ideas and work progress, and
+provide guidance for that week's study material
+- Provided daily feedback and issue resolution of all curriculum through slack help channel or code review
+                        `}
                     </div>
                     {/* <strong>Early</strong>
                     <div class="paragraph">
