@@ -143,6 +143,13 @@
     }
     .project-info{
         flex-direction: column;
+        margin-left:.7rem;
+    }
+    .description-info{
+        margin-left:.7rem;
+    }
+    .description-info p span{
+        width: 100% !important;
     }
     .project-description{
         margin-top:0;

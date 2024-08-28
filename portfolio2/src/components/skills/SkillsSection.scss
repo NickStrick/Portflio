@@ -66,3 +66,10 @@ $highlight: #76E7B3;
     transform: scaleY(-1);;
     max-width: 400px;
 }
+@media (max-width: 930px) {
+    .skills .skill-list{
+        margin: 35px auto 0 !important;
+        width:100%;
+    }
+    
+}
