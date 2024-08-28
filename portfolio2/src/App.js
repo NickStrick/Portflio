@@ -16,23 +16,34 @@ import Experiences from './components/Experience.js';
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
+  const [openNav, setNav] = useState(false);
   let appContainer = 'app-container'
   let isSecondaryColor = path == '/projects' || path == '/experience';
   if(path == '/experience') appContainer += ' experience-container'
   if(path == '/projects') appContainer += ' projects-container'
 
   function setPage(newPath){
+    if(openNav)  setNav(!openNav)
     window.scrollTo(0, 0)
     setPath(newPath)
   }
 
+  function menuOpen(){
+    console.log(this)
+    document.getElementById("nav-icon3").classList.toggle("open")
+    setNav(!openNav)
+  }
+  
+
   return (
     <Router>
+      <div id="SaveScreen"><span className="spinner"></span></div>
+      <div id="SentScreen"><span>Message Sent</span></div>
       <div className={appContainer}>
         <nav className={`navbar${isSecondaryColor? ' second-navbar':''}`}>
           
           <div className="container"><img className="logo-img" src={NsLogo} />
-            <ul>
+            <ul class={`nav-list ${openNav? ' list-open':''} ${isSecondaryColor? ' gray-list':''}`}>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
@@ -51,8 +62,19 @@ function App() {
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
             </ul>
-            <div></div>
-            {/* <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link> */}
+            <div className='nav-right'>
+              <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
+              <div class="nav-mobile-btn">
+                <div id="nav-icon3" onClick={menuOpen}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            
+            
+            </div>
           </div>
         </nav>
 
@@ -63,7 +85,7 @@ function App() {
           <Route path="/about" element={<About />} />
           
           <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

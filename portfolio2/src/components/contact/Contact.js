@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Contact.scss'
+import axios from 'axios';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
@@ -15,6 +16,46 @@ function Contact(props) {
         email:''
     })
 
+    const fetchData = async (data) => {
+        await axios(
+        `https://softball-science-data.vercel.app/locker/5`,
+        ).then(res => {
+        let oldData = JSON.parse(res.data.data[0].value)
+            sendEmailData(oldData, data);
+        }).catch(err => {
+            console.log(err)
+        })
+    };
+    function sentAlert(){
+        document.getElementById('SentScreen').classList.add('show');
+        setTimeout(function(){
+            document.getElementById('SentScreen').classList.remove('show');
+        },1000)
+    }
+    const sendEmailData = async (oldData, newData) => {
+        let sendData = ''
+        if(oldData) sendData = [newData, ...oldData]
+        let postString ={ "value":JSON.stringify(sendData) }
+        
+        await axios.put(
+        `https://softball-science-data.vercel.app/locker/5`,
+        postString
+        ).then(res => {
+            // alert('Message sent!')
+            setInput({
+                name:'', 
+                message:'',
+                email:''
+            })
+            document.getElementById('SaveScreen').classList.remove('show');
+            sentAlert()
+            // props.setData()
+        }
+        ).catch(err => {
+            document.getElementById('SaveScreen').classList.remove('show');
+            alert('Something went wrong! did not save your data!')
+        })
+    }
     function checkUrlValue(url){
         let urlArray = url.split('/')
         if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
@@ -24,22 +65,17 @@ function Contact(props) {
             alert('URL is in the wrong format! Canceling...')
             return false
         }
-    
     }
-
     const handleSubmit = (e) => {
+        e.preventDefault()
         let formData = new FormData(e.target)
+        let data = {};
         for (const pair of formData.entries()) {
-            if(pair[0] == 'url'){
-                let value = pair[1].split('?')[0]
-                let passCheck = checkUrlValue(value)
-                if(!passCheck){
-                    return false;
-                }
-            }
+            data[pair[0]] = pair[1]
         }
-        if(helpOpen)setHelp(!helpOpen)
-        props.submitAllSectionsData(e)
+        document.getElementById('SaveScreen').classList.add('show')
+        data.date = new Date().toDateString() 
+        fetchData(data)
     }
     const handleCancel = (e) => {
         e.preventDefault()
@@ -50,8 +86,6 @@ function Contact(props) {
         e.preventDefault()
         setHelp(!helpOpen)
     }
-    // if(inputObj.id != props.preFill.id) setInput(props.preFill)/
-    // console.log(inputObj)
     return (    
     <div className="content-container"><BackgroundSvg />
         <div className="section-container">
@@ -86,7 +120,7 @@ function Contact(props) {
                         <div className="formGroup">
                             <label>Message</label>
                             <div className="form-input-group">
-                            <textarea rows={5} defaultValue={inputObj.message} message="message" placeholder='Type your message...'></textarea>
+                            <textarea rows={5} defaultValue={inputObj.message} name="message" placeholder='Type your message...'></textarea>
                             </div>
                             <div className="form-alert-message"></div>
                          </div>

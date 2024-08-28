@@ -24,7 +24,7 @@
     overflow: hidden;
     background-image: url(../../images/pfp4.jpg);
     background-size: cover;
-    min-width: 290px;
+    min-width: 220px;
     max-width: 400px;
     width:35%;
     box-shadow: 0px 0px 30px -17px rgba(152,255,152,1);
@@ -32,8 +32,13 @@
 .home-bottom-conatiner{
     margin-bottom: -10vw;
 }
+p{
+   position: relative;
+    z-index: 2;  
+}
 .home-bottom-conatiner p, .home-second-conatiner p{
     text-indent: 50px;
+   
 }
 
 @media (max-width: 960px) {

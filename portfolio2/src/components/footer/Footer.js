@@ -39,7 +39,7 @@ const Footer = (props) => {
 
     return (
 
-        <div className="footer content-container" style={{background:footerColor, paddingTop:'0px'}}>
+        <div className="footer content-container" style={{background:"white", paddingTop:'0px'}}>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
             <div className="footer-content">

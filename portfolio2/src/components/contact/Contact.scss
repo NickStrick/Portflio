@@ -172,3 +172,15 @@ input:-webkit-autofill:active{
     z-index: 0;
     transform: scale(1.5);
 }
+@media (max-width: 930px) {
+    .work-column{
+        margin-bottom: 160px;
+    }
+    .formButton{
+        width:100%;
+    }
+    .contact-content .section-column{
+        width:100%;
+        min-width: 150px;;
+    }
+}
