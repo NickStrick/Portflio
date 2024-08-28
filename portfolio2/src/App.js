@@ -30,7 +30,7 @@ function App() {
 
   function menuOpen(){
     console.log(this)
-    document.getElementById("nav-icon3").classList.toggle("open")
+    // document.getElementById("nav-icon3").classList.toggle("open")
     setNav(!openNav)
   }
   
@@ -65,7 +65,7 @@ function App() {
             <div className='nav-right'>
               <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
               <div class="nav-mobile-btn">
-                <div id="nav-icon3" onClick={menuOpen}>
+                <div id="nav-icon3" onClick={menuOpen} className={openNav? 'open':''}>
                   <span></span>
                   <span></span>
                   <span></span>

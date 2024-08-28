@@ -423,6 +423,15 @@ margin-top:0.5rem;
     padding: 0;
     cursor: pointer;
   }
+  .nav-li{
+    margin-right:0 !important;
+  }
+  .nav-li:not(:first-child){
+    margin-top:10px;
+  }
+  .nav-li a, .nav-li a span{
+    font-size: 25px !important;
+  }
 }
 @media (max-width: 380px) {
   .logo-img{
