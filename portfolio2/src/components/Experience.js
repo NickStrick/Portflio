@@ -48,24 +48,6 @@ provide guidance for that week's study material
 - Provided daily feedback and issue resolution of all curriculum through slack help channel or code review
                         `}
                     </div>
-                    {/* <strong>Early</strong>
-                    <div class="paragraph">
-{`I got interested in game development at a very young age, and throughout my time in middle and highschool i would create small gamedev projects in my freetime for function
-
-    My last couple years of highschool, i took elective classes for coding and software developement. My senior year i graduated half a year early and started comunity college classes that last semester of my senior year.
-I took classes towards a computer science degree`
-                        }
-
-                    </div> */}
-                    {/* <strong>School</strong>
-                    <div class="paragraph">
-{`I got interested in game development at a very young age, and throughout my time in middle and highschool i would create small gamedev projects in my freetime for function
-
-    My last couple years of highschool, i took elective classes for coding and software developement. My senior year i graduated half a year early and started comunity college classes that last semester of my senior year.
-I took classes towards a computer science degree
-                        `}
-
-                    </div> */}
                 </div>
             </div>
         </div>
