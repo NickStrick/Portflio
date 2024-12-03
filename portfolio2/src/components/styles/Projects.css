@@ -7,6 +7,7 @@
 }
 .project-list{
     width: 100%;
+    max-width: 1700px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

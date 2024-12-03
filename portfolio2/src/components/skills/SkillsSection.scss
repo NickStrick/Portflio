@@ -26,7 +26,10 @@ $highlight: #76E7B3;
             text-align: center;
             margin: 0 20px 60px;
             p{
+                color:#3f3f3f;
+                font-weight:800;
                 position: relative;
+
                 z-index: 2;
                 margin: 0;
                 padding: 8px 0 16px;
@@ -61,8 +64,8 @@ $highlight: #76E7B3;
 .skillSvg{
     position: absolute;
     top:-37px;
-    left:-36px;
-    width: 182px;
+    left:-41px;
+    width: 190px;
     transform: scaleY(-1);;
     max-width: 400px;
 }

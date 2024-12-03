@@ -9,3 +9,20 @@
 .experience-container strong:not(:first-of-type){
     padding-top:35px;
 }
+.vertical-timeline-element-content{
+    background-color: blue;
+}
+.vertical-timeline::before{
+    top:2em !important;
+    height:calc(100% - 12em) !important;
+}
+.vertical-timeline.vertical-timeline--two-columns:before{
+    margin-left:-4px !important;
+}
+.vertical-timeline::before{
+    width:8px !important;
+}
+.vertical-timeline-element-subtitle{
+    display: flex;
+    justify-content: space-between;
+}

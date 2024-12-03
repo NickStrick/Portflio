@@ -13,21 +13,24 @@ import reduxLogo from '../../images/old/skills/redux.png';
 import SQL from '../../images/old/skills/SQL.png';
 import postgresLogo from '../../images/old/skills/postgres.png';
 import pythonLogo from '../../images/old/skills/python.png';
-
-
-
+import jquerylogo from '../../images/old/skills/jquery.png';
 const SkillsSection = () => {
     const skillList = [
-        { skill: 'HTML5', logo: htmlLogo },
-        { skill: 'CSS3', logo: cssLogo },
         { skill: 'JavaScript', logo: JSLogo },
-        { skill: 'NodeJS', logo: nodeLogo },
+        { skill: 'Jquery', logo: jquerylogo },
         { skill: 'ReactJS', logo: ReactLogo },
+        { skill: 'NodeJS', logo: nodeLogo },
+        
+        
+        
+        
         { skill: 'Redux', logo: reduxLogo },
         { skill: 'Python', logo: pythonLogo },
         { skill: 'SQL', logo: SQL },
         { skill: 'Git', logo: gitLogo },
-        { skill: 'Postgres', logo: postgresLogo }
+        { skill: 'Postgres', logo: postgresLogo },
+        { skill: 'HTML5', logo: htmlLogo },
+        { skill: 'CSS3', logo: cssLogo },
     ]
 
     return (

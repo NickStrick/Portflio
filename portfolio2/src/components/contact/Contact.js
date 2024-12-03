@@ -19,7 +19,7 @@ function initateConfetti(){
         }, 500);
       }
       isMouseDown = true;
-      let halfWidth = (window.innerWidth / 2)
+      let halfWidth = (window.innerWidth / 2);
       spawnConfetti(halfWidth, 50);
       spawnConfetti((halfWidth + ((halfWidth/2)-45)), 50);
       spawnConfetti((halfWidth - ((halfWidth/2)+45)), 50);
