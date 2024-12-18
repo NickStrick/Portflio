@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import DotUnderline from './images/DottedLine.js';
 import NsLogo from './images/NS-trans-1.png'
@@ -33,6 +33,44 @@ function App() {
     // document.getElementById("nav-icon3").classList.toggle("open")
     setNav(!openNav)
   }
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = (e) => {
+          let svg = document.querySelectorAll('.split-svg')[1]
+          document.querySelectorAll('.split-svg').forEach( (ele, i) => {
+            let offset = getOffset(ele).top - ele.scrollHeight - 0
+            
+            if(!Array.from(ele.classList).includes('footer-wave')){
+              if(window.scrollY > offset){
+                let difference = window.scrollY - offset
+                let percentGrow = Math.min(difference/15, 25)
+                console.log(percentGrow)
+
+                ele.style.transform = ` scaleY(1.${percentGrow})`
+              }else{
+                ele.style.removeProperty('transform')
+              }
+            }
+            
+          })
+          setScrollPosition(window.pageYOffset);
+
+        };
+        function getOffset(el) {
+          const rect = el.getBoundingClientRect();
+          return {
+            left: rect.left + window.scrollX,
+            top: rect.top + window.scrollY
+          };
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
   
 
   return (

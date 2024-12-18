@@ -2,7 +2,7 @@
 export default function Logo({ fillColor='rgb(152, 255, 152)' }) {
     return (
         
-        <svg className="split-svg split-svg-wave-2"  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 1024 562">
+        <svg className="split-svg split-svg-wave-2 footer-wave"  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 1024 562">
         <g clip-path="url(#clip0_9174_234436)">
         <g filter="url(#filter0_d_9174_234436)">
         <path fill="url(#paint0_linear_9174_234436)" d="M536.91 258.845c-188.148 265.589-427.483-244.818-726.4-23.82-211.018 156.012-32.025 260.972 91.49 309.21h1163.98l276.54-381.444s-46.78-277.134-243.48-67.5C902.336 304.927 725.058-6.743 536.91 258.846Z"/>

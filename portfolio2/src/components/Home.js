@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/Home.css'
+import './styles/animations.scss'
 import SplitLine from '../images/svg/pageSplit.js'
 import SplitTwo from '../images/splitters/bottom-wave-2.js'
 
@@ -20,9 +21,44 @@ and looking for resources to learn more and find out what I could make. I follow
     and managed our planning. I also debugged and filled any gaps in the conribution to the project where nessesary. I spent most of my time in meetings getting to know my students 
     and solving problems or planning with them and creating documentation.`;
 const summary4 = 'These exerpiences only feed my hunger for learning and solving puzzles, and they fuel the drive to expand my knowledge and experience.';
+function animateWave() {
+    return
+    const path = document.querySelectorAll('#homeSplitOne path:first-child');
+    const svg = document.getElementById('homeSplitOne');
+    console.log(path)
+    // Initial path data
+    const initialPath = path.getAttribute('d');
+    
+    const length = 1505; // Total length of the path (horizontal dimension)
+    const amplitude = 40; // Height of wave (vertical amplitude)
+    const frequency = 0.02; // Frequency of wave (how many waves across the screen)
+
+    let newPath = 'M136.106 ' + -271.377; // Start with initial coordinates
+
+    // Adjust the path for the wave motion
+    for (let x = 136.106; x < length; x += 10) {
+      // Sine wave formula for vertical motion
+      const y = amplitude * Math.sin(frequency * x + Date.now() * 0.002) + 768.422;
+      newPath += `L${x} ${y}`;
+    }
+
+    newPath += 'Z'; // Close the path
+
+    // Update the path's d attribute
+    path.setAttribute('d', newPath);
+
+    // Keep the animation loop going
+    requestAnimationFrame(animateWave);
+  }
+
+  // Start the animation
+  animateWave();
+
+const Home = () => {
+    
 
 
-const Home = () => (
+    return (
     <div className="content-container">
         <div className="section-container">
             <div className="section-content home-first-content">
@@ -54,5 +90,5 @@ const Home = () => (
         </div>
         
     </div>
-  );
+  );}
   export default Home;

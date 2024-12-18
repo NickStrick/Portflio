@@ -9,7 +9,11 @@ import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinSt
   const Experiences = (props) => {
       return (
         <div className="content-container experience-container">
-            <VerticalTimeline>
+          <div className="section-content">
+          <h1 className='port-head'>Experience</h1>
+          <p>The experience i have is fueled by the passion that i have for tinkering, inovatting, problem solving, and helping people. </p>
+          <p>Let's work together to create a better future for you and your buisness.</p>
+            </div><VerticalTimeline>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}

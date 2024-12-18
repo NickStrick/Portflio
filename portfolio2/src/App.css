@@ -275,9 +275,14 @@ margin-top:0.5rem;
 .split-svg{
   position: absolute;
   width: 100%;
+  transition: all 0.25s;
 }
 .split-svg-wave-2{
   margin-top:-5px;
+  transform: scaleX(1);
+  transition: all 0.25s;
+}
+.footer-wave{
   transform: scaleX(-1);
 }
 .page-split-padding-light, .page-split-padding-dark{
