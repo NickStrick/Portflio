@@ -42,7 +42,7 @@ const Footer = (props) => {
         <div className="footer content-container" style={{background:"white", paddingTop:'0px'}}>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
-            <div className="footer-content">
+            <div className="footer-content" data-aos="fade-right">
                 <div className="icon-btn">
                 <FontAwesomeIcon icon={faGithub}  target="_blank" onClick={() => window.open('https://github.com/NickStrick')}/>
                 </div>
