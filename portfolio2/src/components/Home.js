@@ -62,10 +62,12 @@ const Home = () => {
     <div className="content-container">
         <div className="section-container">
             <div className="section-content home-first-content">
+            <div  data-aos="zoom-in-up" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
                 <h1 className="home-main-header"><span>Nick</span> <span>Stricker</span></h1>
-                <p className="home-indent">Learn, create, collaborate, and serve.</p>
-                <p className="home-indent home-indent-two">The solution expert.</p>
-                <div className="home-main-image">
+                </div>
+                <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and serve.</p>
+                <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
+                <div className="home-main-image" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}
                 </div>
             </div>

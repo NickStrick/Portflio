@@ -2,6 +2,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+// AOS.init();
+
 import DotUnderline from './images/DottedLine.js';
 import NsLogo from './images/NS-trans-1.png'
 
@@ -36,6 +41,7 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
+      AOS.init();
         const handleScroll = (e) => {
           let svg = document.querySelectorAll('.split-svg')[1]
           document.querySelectorAll('.split-svg').forEach( (ele, i) => {
@@ -80,8 +86,8 @@ function App() {
       <div className={appContainer}>
         <nav className={`navbar${isSecondaryColor? ' second-navbar':''}`}>
           
-          <div className="container"><img className="logo-img" src={NsLogo} />
-            <ul class={`nav-list ${openNav? ' list-open':''} ${isSecondaryColor? ' gray-list':''}`}>
+          <div className="container"><img className="logo-img" src={NsLogo}  data-aos="fade-down" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000"/>
+            <ul class={`nav-list ${openNav? ' list-open':''} ${isSecondaryColor? ' gray-list':''}`} data-aos="fade-down" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
               <li className="nav-li">
                 <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
@@ -100,7 +106,7 @@ function App() {
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
             </ul>
-            <div className='nav-right'>
+            <div className='nav-right' data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
               <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
               <div class="nav-mobile-btn">
                 <div id="nav-icon3" onClick={menuOpen} className={openNav? 'open':''}>

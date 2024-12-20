@@ -25,7 +25,7 @@
     background-image: url(../../images/pfp4.jpg);
     background-size: cover;
     min-width: 220px;
-    max-width: 400px;
+    max-width: 500px !important;
     width:35%;
     box-shadow: 0px 0px 30px -17px rgba(152,255,152,1);
 }
