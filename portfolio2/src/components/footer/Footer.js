@@ -39,7 +39,7 @@ const Footer = (props) => {
     let styleobj = {paddingTop:'0px'}
     console.log(window.location.pathname)
     if(window.location.pathname == '/'){
-        styleobj = {paddingTop:'100px'}
+        styleobj = {paddingTop:'12rem'}
     }
     return (
 
