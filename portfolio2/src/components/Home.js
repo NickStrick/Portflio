@@ -75,7 +75,7 @@ const Home = () => {
         <SplitLine fillColor={'#98FF98'} />
         <div className="page-split-padding-light"></div>
         <div className="section-container section-container-white home-second-conatiner">
-            <div className="section-content">
+            <div className="section-content" data-aos="fade-left">
                 <h1>Intro</h1>
                 <p>{summary1}</p>
                 <p>{summary12}</p>
@@ -84,8 +84,8 @@ const Home = () => {
         <SplitTwo fillColor={'#98FF98'} />
         <div className="page-split-padding-dark split-wave-2"></div>
         <div className="section-container home-bottom-conatiner">
-            <div className="section-content">
-                <h1>Background</h1>
+            <div className="section-content" data-aos="fade-right">
+                <h1 style={{marginLeft:'auto', textAlign:'right'}}>Background</h1>
                 <p>{summary2}</p>
                 <p>{summary3}</p>
             </div>

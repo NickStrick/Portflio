@@ -36,10 +36,14 @@ const Footer = (props) => {
     }else if(window.location.pathname.includes('projects') || window.location.pathname.includes('experience')){
         footerColor = 'rgb(60,62,70)'
     }
-
+    let styleobj = {paddingTop:'0px'}
+    console.log(window.location.pathname)
+    if(window.location.pathname == '/'){
+        styleobj = {paddingTop:'100px'}
+    }
     return (
 
-        <div className="footer content-container" style={{background:"white", paddingTop:'0px'}}>
+        <div className="footer content-container" style={styleobj}>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
             <div className="footer-content" data-aos="fade-right">
