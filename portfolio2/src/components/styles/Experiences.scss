@@ -14,7 +14,7 @@
 }
 .vertical-timeline::before{
     top:2em !important;
-    height:calc(100% - 12em) !important;
+    height:calc(100% - 220px) !important;
 }
 .vertical-timeline.vertical-timeline--two-columns:before{
     margin-left:-4px !important;
