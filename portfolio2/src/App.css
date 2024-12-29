@@ -61,6 +61,7 @@ a, a span{
   font-family: Noto Sans, sans-serif;
 }
 .app-container{
+  overflow: hidden;
   background-color: var(--main-background);
   min-height: 100.1vh;
 }
