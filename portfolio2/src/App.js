@@ -22,6 +22,7 @@ import Experiences from './components/Experience.js';
 function App() {
   const [path, setPath] = useState(window.location.pathname);
   const [openNav, setNav] = useState(false);
+  const [animate, setAnimate] = useState(false);
   let appContainer = 'app-container'
   let isSecondaryColor = path == '/projects' || path == '/experience';
   if(path == '/experience') appContainer += ' experience-container'
@@ -42,6 +43,7 @@ function App() {
 
     useEffect(() => {
       console.log('run AOS init')
+      setTimeout(()=>setAnimate(true),1000);
       AOS.init();
       let navlist  = document.querySelector('.nav-list');
       console.log(navlist)
@@ -90,7 +92,7 @@ function App() {
         <nav className={`navbar${isSecondaryColor? ' second-navbar':''}`}>
           
           <div className="container"><img className="logo-img" src={NsLogo}  data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000"/>
-            <ul className={`nav-list${openNav? ' list-open':''}${isSecondaryColor? ' gray-list':''}`} >
+            <ul className={`nav-list${openNav? ' list-open':''}${isSecondaryColor? ' gray-list':''}${animate ? ' show-nav' : ''}`} >
               <li className="nav-li">
                 <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Home</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
