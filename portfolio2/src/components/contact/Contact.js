@@ -4,7 +4,7 @@ import './Contact.scss'
 import axios from 'axios';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 import BackgroundSvg from '../../images/contact/dotsvg.js'
 
 
@@ -200,6 +200,18 @@ function Contact(props) {
                             <button type="submit" className="formButton">Send an email &nbsp; &nbsp; <FontAwesomeIcon icon={faPaperPlane} /><span className="formButton-overlay"></span> </button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div className="section-container">
+            <div className="section-content contact-content" >
+                
+                <div className='section-column horizontal-column'>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt} /></p>
+                    <p>Chicago, IL</p>
+                </div>
+                <div className='section-column'>
+                 
                 </div>
             </div>
         </div>

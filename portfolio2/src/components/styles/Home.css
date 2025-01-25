@@ -22,13 +22,54 @@
     border-radius: 100%;
     z-index: 10;
     overflow: hidden;
-    background-image: url(../../images/pfp4.jpg);
+    background-image: url(../../images/pfp5.jpg);
+    background-size: cover;
+    min-width: 220px;
+    max-width: 500px !important;
+    width:35%;
+    box-shadow: 0px 0px 30px -17px rgba(152,255,152,1);
+    animation: fadeinout 11s ease-in-out;
+    /* animation-iteration-count: infinite; */
+    /* animation-delay: 5s; */
+}
+.home-main-image-2{
+    opacity:0;
+    /* width:; */
+    /* height:; */
+    aspect-ratio: 1/1;
+    position: absolute;
+    top:0px;
+    right:30px;
+    border-radius: 100%;
+    z-index: 10;
+    overflow: hidden;
+    background-image: url(../../images/pfp5.jpg);
     background-size: cover;
     min-width: 220px;
     max-width: 500px !important;
     width:35%;
     box-shadow: 0px 0px 30px -17px rgba(152,255,152,1);
 }
+@keyframes fadeinout {
+    0%, 10%, 90%, 100% { opacity:0; }
+    50%, 100% { opacity:1; }
+    }
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+        opacity: 1;
+      }
+    100%{
+        opacity: 0;
+        /* transform: translateX(-300px); */
+    }
+  }
 .home-bottom-conatiner{
     margin-bottom: -10vw;
 }

@@ -11,6 +11,18 @@
     width:50%;
     min-width: 380px;;
 }
+.horizontal-column{
+    display:flex;
+    gap: 2.5rem;
+    justify-content: center;
+    padding:150px;
+}
+.fa-location-dot {
+    font-size: 2rem;
+}
+.horizontal-column p{
+    font-size: 1.8rem;
+}
 .color-text{
     color: var(--main-accent)
 }

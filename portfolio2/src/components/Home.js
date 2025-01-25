@@ -9,8 +9,8 @@ import PfpThree from '../images/old/pfp3.jpg';
 
 const summary1 = 'Hi, I\'m Nick. I\'m a full stack web developer that loves making creative solutions to complex problems. I help any person or buisness that has dreams to achieve, and a mission to share! Let\'s achieve together!'
 const summary12 = 'I have experience in Front-end Development, Back-end Development, as well as Leadership positions in tech. My technical strengths are Javascript, React.js, and Node.js. But I am always on a quest to learn new things, and gain new knowledge!'
-const summary2 = `I spent the last couple of years learning and teaching to code. After highschool, curious about coding, I completed some credits toward a computer science degree
-while i worked in retail. I spent free time creating small games, 
+const summary2 = `I spent the last several years working as senior developer and mentor. Before that, I was leading and mentoring computer science students. After highschool, curious about coding, I completed some credits toward a computer science degree
+while i worked in retail. I spent free time creating small games, studying C sharp and javascript,
 and looking for resources to learn more and find out what I could make. I followed small courses on coding through things such as Youtube,
     Udemy, or Watch and Code. I spent these past two years enrolled in Lambda School as a student and as a contract teaching assistant. 
     `
@@ -62,12 +62,13 @@ const Home = () => {
     <div className="content-container">
         <div className="section-container">
             <div className="section-content home-first-content">
-            <div  data-aos="zoom-in-up" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
+            <div  data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
                 <h1 className="home-main-header"><span>Nick</span> <span>Stricker</span></h1>
                 </div>
-                <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and serve.</p>
+                <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and grow.</p>
                 <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
-                <div className="home-main-image" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
+                <div className="home-main-image" data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
+                <div className="home-main-image-2" ></div>
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}
                 </div>
             </div>
