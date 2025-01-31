@@ -76,3 +76,54 @@ $highlight: #76E7B3;
     }
     
 }
+.item{
+    animation-name: floating;
+//   animation-delay: 1s;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.item:nth-child(5n + 1){
+    animation-delay: 0.5s;
+}
+.item:nth-child(5n + 2){
+    animation-delay: 1s;
+}
+.item:nth-child(5n + 3){
+    animation-delay: 1.5s;
+}
+.item:nth-child(5n + 4){
+    animation-delay: 2s;
+}
+.item:nth-child(5n + 5){
+    animation-delay: 2.5s;
+}
+.item:nth-child(5n + 6){
+    animation-delay: 3s;
+}
+.item:nth-child(5n + 7){
+    animation-delay: 3.5s;
+}
+.item:nth-child(5n + 8){
+    animation-delay: 4s;
+}
+.item:nth-child(5n + 9){
+    animation-delay: 4.5s;
+}
+.item:nth-child(5n + 10){
+    animation-delay: 5s;
+}
+.item:nth-child(5n + 11){
+    animation-delay: 5.5s;
+}
+// .item:nth-child(4n + 6){
+//     animation-delay: 3s;
+// }
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    40%  { transform: translate(0, 0px); }
+    60%  { transform: translate(6px, 6px); }
+    80% { transform: translate(0, -0px); } 
+    to   { transform: translate(0, -0px); }    
+}

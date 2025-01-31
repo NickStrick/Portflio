@@ -25,7 +25,6 @@ function animateWave() {
     return
     const path = document.querySelectorAll('#homeSplitOne path:first-child');
     const svg = document.getElementById('homeSplitOne');
-    console.log(path)
     // Initial path data
     const initialPath = path.getAttribute('d');
     
@@ -67,7 +66,7 @@ const Home = () => {
                 </div>
                 <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and grow.</p>
                 <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
-                <div className="home-main-image" data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
+                <div className="home-main-image">
                 <div className="home-main-image-2" ></div>
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}
                 </div>

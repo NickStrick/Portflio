@@ -18,11 +18,13 @@ import Cert from './components/certificates/Certificate.js'
 import Footer from './components/footer/Footer.js'
 import Contact from './components/contact/Contact.js'
 import Experiences from './components/Experience.js';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
   const [openNav, setNav] = useState(false);
   const [animate, setAnimate] = useState(false);
+  const [carosel, setCarosel] = useState(0);
   let appContainer = 'app-container'
   let isSecondaryColor = path == '/projects' || path == '/experience';
   if(path == '/experience') appContainer += ' experience-container'
@@ -42,7 +44,6 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
-      console.log('run AOS init')
       setTimeout(()=>setAnimate(true),1000);
       AOS.init();
       let navlist  = document.querySelector('.nav-list');
@@ -75,13 +76,39 @@ function App() {
             top: rect.top + window.scrollY
           };
         }
+
     
         window.addEventListener('scroll', handleScroll);
-    
+        setTimeout(function(){animationLoop()}, 5000)
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
+
+    function animationLoop(){
+      if(document.querySelector('.home-main-image').classList.contains('main-image-fadeout')){
+        let image1 = document.querySelector('.home-main-image')
+        let image2 = document.querySelector('.home-main-image-2')
+        document.querySelector('.home-main-image').classList.add("main-image-fadein");
+        // image1.classList.remove(".main-image-fadeout");
+        // image2.classList.add("main-image-fadeout");
+        image2.classList.remove(".main-image-fadein");
+      }else{
+        let image1 = document.querySelector('.home-main-image')
+        let image2 = document.querySelector('.home-main-image-2')
+        // image1.classList.add("main-image-fadeout");
+        image1.classList.remove(".main-image-fadein");
+        image2.classList.add("main-image-fadein");
+        // image2.classList.remove(".main-image-fadeout");
+      }
+      function fadeTransition(ele1, ele2){
+        ele1.classList.remove(".main-image-fadein");
+        // ele1.classList.add("main-image-fadeout");
+        ele2.classList.add("main-image-fadein");
+        // ele2.classList.remove(".main-image-fadeout");
+      }
+
+    }
   
       // isSecondaryColor = false
   return (
