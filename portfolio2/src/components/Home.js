@@ -66,10 +66,10 @@ const Home = () => {
                 </div>
                 <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and grow.</p>
                 <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
-                <div className="home-main-image">
-                <div className="home-main-image-2" ></div>
+                <div className="home-main-image"></div>
+                <div className="home-main-image home-main-image-2" ></div>
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}
-                </div>
+                
             </div>
         </div>
         <SplitLine fillColor={'#98FF98'} />
