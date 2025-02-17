@@ -81,7 +81,7 @@ Mentored student developers by participating in code reviews, knowledge sharing,
 Lead 1:1 mentoring sessions to provide impactful encouragement and support to students
     </p>
   </VerticalTimelineElement>
-  <VerticalTimelineElement
+  {/* <VerticalTimelineElement
     className="vertical-timeline-element--education"
     contentStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  rgb(233, 30, 99)' }}
@@ -94,7 +94,7 @@ Lead 1:1 mentoring sessions to provide impactful encouragement and support to st
     <p className="vertical-timeline-p">
       Creative Direction, User Experience, Visual Design
     </p>
-  </VerticalTimelineElement>
+  </VerticalTimelineElement> */}
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
     contentStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}

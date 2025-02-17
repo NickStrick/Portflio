@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Contact.scss'
+import './HoloText.scss'
 import axios from 'axios';
+import Holo from './HoloText.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
@@ -206,9 +208,10 @@ function Contact(props) {
         <div className="section-container">
             <div className="section-content contact-content" >
                 
-                <div className='section-column horizontal-column'>
-                <p><FontAwesomeIcon icon={faMapMarkerAlt} /></p>
-                    <p>Chicago, IL</p>
+                <div className='horizontal-column'>
+                {/* <p><FontAwesomeIcon icon={faMapMarkerAlt} /></p> */}
+                    {/* <p>Greater Chicago Area, IL</p> */}
+                    <Holo />
                 </div>
                 <div className='section-column'>
                  

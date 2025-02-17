@@ -26,7 +26,7 @@ const pData = [
         techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'PassportJS', 'NodeJS', 'Express', 'Postgres', 'Cloudinary', 'Filepond'],
         teamMemebers: 1,
         weeksCompleted: 20,
-        pills: ['Front End','Back End'],
+        pills: ['Planning','Front End','Back End', 'React', 'Node.js', 'Postgres'],
         contribution: `I was the sole developer for all things Softball Science. Ui, Fron-end, Back-end, Project planning. I learned a lot in the making of the Softball Science website. for starters, It allowed me to gain experience in customer feedback. Asking the user for stories about how they would like to use the app and what features would save them time and money. The customer is always right, ans it is crucial that whoever you are working with and for has felt heard. 
 
         The client asked me to build the ability to inject video into thier site and the ability to upload whatever files, images, and viedos they would like into the side. Seeing as this was a side project that was making me little money, I was initally reluctant to do such intensive and time consuming work for the client. However i reminded myself that there is not just monetary value to my work. There is educational, experiencial, and reputational value to my work, and that is what i focused my attention on. Allowing for a forgiving deadline, i started my work, created a plan to follow, and wrote a Node JS backend database to hold the client's data and configured the webstie to display videos where ever was desired. I completed the work long before deadline, and gained knowledge in Node JS and embeded videos that i hadn't known before. The client was happy with the work and Expressed much gratitude.
@@ -43,7 +43,7 @@ const pData = [
         techUsed: ['ReactJs', 'SASS'],
         teamMemebers: 1,
         weeksCompleted: 1,
-        pills: ['Front End'],
+        pills: ['Front End', 'React', 'Bootstrap'],
         contribution: 'I was the sole develoepr for this site. The client asked for merely a functional landing page, and that is what i devlivered. This project gave me another point of experience in negotiation, plannning, and estimation of commission projects.'
       },
       {
@@ -56,7 +56,7 @@ const pData = [
         techUsed: ['ReactJs', 'SASS'],
         teamMemebers: 1,
         weeksCompleted: 0.1,
-        pills: ['Front End'],
+        pills: ['Front End', 'React'],
         contribution: 'This was my first Real world functional landing page that allowed my client to advertise merchendise and encourage users to join their meetup group. I loved helping a small group of individuals who are passionate about thier plants and flowers come together and connect in more meaningfull ways! '
       },
       {
@@ -69,7 +69,7 @@ const pData = [
         techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'Auth0', 'NodeJS', 'Express', 'SendGrid', 'Cloudinary', 'Stripe', 'Postgres'],
         teamMemebers: 9,
         weeksCompleted: 8,
-        pills: ['Team Lead','Front End','Back End'],
+        pills: ['Team Lead','Front End','Back End', 'React', 'Node.js', 'Auth0'],
         contribution: 'I was responsible for maintaining momentum by overseeing project planning and updates, leading meetings, maintaining manager and stakeholder relationships, communicating effectively, solving conflicts, deployment, and debugging as well as contributing to the authentication of the app whenever possible.'
     
       },
@@ -83,7 +83,7 @@ const pData = [
       techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'PassportJS', 'NodeJS', 'Express', 'Postgres', 'Cloudinary', 'Filepond'],
       teamMemebers: 5,
       weeksCompleted: 5,
-      pills: ['Front End', 'Back End'],
+      pills: ['Front End', 'Back End', 'React', 'Node.js', 'Postgres', 'SQL'],
       contribution: 'I was responsible for frontend organization and  many frontend pages, such as project page, create project page, and edit project page as well as styling and debugging much of the website. I also worked on all CRUD operations and endpoints for reviews, comments, and favorites'
     },
     {
@@ -96,7 +96,7 @@ const pData = [
       techUsed: ['ReactJs', 'Bootstrap', 'Django'],
       teamMemebers: 3,
       weeksCompleted: 1,
-      pills: ['Back End'],
+      pills: ['Back End', 'React', 'Django', 'SQL'],
       contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
   
     },
@@ -111,7 +111,7 @@ const pData = [
       techUsed: ['ReactJs', 'Express', 'SQL', 'BcryptJS'],
       teamMemebers: 3,
       weeksCompleted: 1,
-      pills: ['Back End'],
+      pills: ['Back End', 'SQL', 'Encryption'],
       contribution: 'I was Solely responsible for the Back end of this project. Some key features were authentication, ability to register and edit user data, creating, editing and deleteing fundraising projects as well as donating to projects or organizations. I worked well with a team of two frontend react engineers, and helped them debug to get our product fully functional.'
   
     },

@@ -27,6 +27,7 @@
     /* border: 3px solid rgb(35,40,40); */
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     min-height:360px;
+    transition: all 0.2s;
 }
 .project-container{
     position: relative;
@@ -64,6 +65,9 @@
     padding:30px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    max-height:300px;
+    columns: 100px;
 }
 .info-pill{
     padding: 10px 15px;
@@ -75,7 +79,7 @@
 .project-container:hover .img-overlay{
     /* background-color: rgba(255,255,255,0.15);
     color:black; */
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .img-overlay span{
     display: block;
@@ -123,6 +127,11 @@
 .proj-item-0 .img-overflow{
     /*  rgb(88,37,108) */
     background: #71217B;
+    transition: background 0.3s;;
+}
+.proj-item-0:hover .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #55145c;
 }
 .proj-item-0 .proj-svg{
     fill:#71217B;
@@ -130,6 +139,10 @@
 .proj-item-1 .img-overflow{
     /* #F89F73  */
     background: #7FB98D;
+    transition: background 0.3s;;
+}
+.proj-item-1:hover .img-overflow{
+    background: #55815f;
 }
 .proj-item-1 .proj-svg{
     fill:#7FB98D;
@@ -137,6 +150,11 @@
 .proj-item-3 .img-overflow{
     /* #B14C9C  */
     background: #245AA9;
+    transition: background 0.3s;;
+}
+.proj-item-3:hover .img-overflow{
+    /* #B14C9C  */
+    background: #193e77;
 }
 .proj-item-3 .proj-svg{
     fill:#245AA9;
@@ -144,19 +162,34 @@
 .proj-item-2 .img-overflow{
     /* #FFAB61  */
     background: #71685D;
+    transition: background 0.3s;;
 }
+.proj-item-2:hover .img-overflow{
+    /* #FFAB61  */
+    background: #4d4133;
+}
+
 .proj-item-2 .proj-svg{
     fill:#71685D;
 }
 .proj-item-4 .img-overflow{
     /* #FFAB61  */
-    background: #ffb576;
+    background: #f89c4c;
+    transition: background 0.3s;;
+}
+.proj-item-4:hover .img-overflow{
+    /* #FFAB61  */
+    background: #a15c1f;
 }
 .proj-item-4 .proj-svg{
     fill:#ffb576;
 }
 .proj-item-5 .img-overflow{
     background: #4C2C72;
+    transition: background 0.3s;;
+}
+.proj-item-5:hover .img-overflow{
+    background: #381d58;
 }
 .proj-item-5 .proj-svg{
     fill:#4C2C72;
@@ -164,6 +197,11 @@
 .proj-item-6 .img-overflow{
     /* #rgb(174,65,16)  */
     background: #81905A;
+    transition: background 0.3s;;
+}
+.proj-item-6:hover .img-overflow{
+    /* #rgb(174,65,16)  */
+    background: #667445;
 }
 .proj-item-6 .proj-svg{
     fill:#81905A;
