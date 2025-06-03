@@ -16,6 +16,22 @@
     gap: 2.5rem;
     justify-content: center;
     padding:150px;
+     margin-top: 85px;
+}
+.contact-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.main-btn.main-btn-icon.platform-link{
+    aspect-ratio: auto !important;
+    padding:15px 35px;
+    // border-radius: 100%;
+}
+.platform-link:after{
+    // border-radius: 100%;
 }
 .fa-location-dot {
     font-size: 2rem;
@@ -183,6 +199,68 @@ input:-webkit-autofill:active{
     // height: 100vh;
     z-index: 0;
     transform: scale(1.5);
+}
+.contact-info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 150px;
+    gap:60px;
+    
+    .contact-info-line{
+        width: 100%;
+        height: 1px;
+        background-color: var(--main-accent);
+        gap:20px;
+        position:relative;
+        .contact-info-box{
+            margin-top:-10px;
+            display: inline-flex;
+            float: left;
+            width: fit-content;
+        }
+        .contact-info-name{
+            background-color: var(--main-background);
+            color: var(--main-accent);
+            padding: 0 10px;
+            font-weight: 600;
+            width:200px;
+            padding-left:2%;
+        }
+        .contact-info-value{
+            background-color: var(--main-background);
+            padding: 0 10px;
+            font-weight: 600;
+            padding-right: 5px;
+        }
+        .copy-icon{
+            display: flex;
+            padding: 10px 10px;
+            margin-top:-10px;
+            padding-right: 35px;
+             background-color: var(--main-background);
+              font-weight: 600;
+              transition: all 0.3s ease;
+        }
+        .copy-icon:hover{
+            color: var(--main-accent);
+            transform: scale(1.15);
+        }
+    }
+    .copy-screen{
+        display:none;
+        position: absolute;
+        right:0;
+        bottom:5px;
+        font-weight: bold;
+    }
+    .contact-info-line.show-copy{
+        .copy-screen{
+            display:block
+        }
+    }
 }
 @media (max-width: 930px) {
     .work-column{

@@ -19,6 +19,7 @@ const Project = (props) => {
     return (
 
         <div className={`project-container item proj-item-${props.index}`} onClick={handleProjClick}>
+            <div className="img-back"></div>
             <div className={`img-overflow`} >
             <WaveSvg fillColor={'#98FF98'} index={props.index}/>
             </div>

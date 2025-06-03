@@ -5,7 +5,7 @@ export default function Holo({ fillColor }) {
         <div className="holo-body">
         <div className="holo-section">
             <div class="isolate">
-                <div class="noise"><FontAwesomeIcon icon={faMapMarkerAlt} />Greater Chicago Area, IL</div>
+                <div class="noise"><FontAwesomeIcon icon={faMapMarkerAlt} /> <br></br>Chicago IL</div>
                 <div class="overlay"></div>
             </div>
         </div>

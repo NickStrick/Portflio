@@ -127,16 +127,16 @@ function App() {
           <div className="container"><img className="logo-img" src={NsLogo}  data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000"/>
             <ul className={`nav-list${openNav? ' list-open':''}${isSecondaryColor? ' gray-list':''}${animate ? ' show-nav' : ''}`} >
               <li className="nav-li">
-                <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Home</span></Link>
+                <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
               
               <li className="nav-li">
-                <Link onClick={()=> setPage('/projects')} to="/projects" className={path == '/projects'?'nav-link active':'nav-link'} >Projects<span>Projects</span></Link>
+                <Link onClick={()=> setPage('/projects')} to="/projects" className={path == '/projects'?'nav-link active':'nav-link'} >Projects<span style={{whiteSpace:'nowrap'}}>Projects</span></Link>
                 <div className={path == '/projects'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
               <li className="nav-li">
-                <Link onClick={()=> setPage('/skills')} to="/skills" className={path == '/skills'?'nav-link active':'nav-link'} >Skills<span>Skills</span></Link>
+                <Link onClick={()=> setPage('/skills')} to="/skills" className={path == '/skills'?'nav-link active':'nav-link'} >Skills & Certs<span style={{whiteSpace:'nowrap'}}>Skills & Certs</span></Link>
                 <div className={path == '/skills'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
               <li className="nav-li">

@@ -6,7 +6,8 @@ import axios from 'axios';
 import Holo from './HoloText.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush, faHammer, faHandshakeSimple, faCopy} from '@fortawesome/free-solid-svg-icons'
+import { faUpwork } from '@fortawesome/free-brands-svg-icons';
 import BackgroundSvg from '../../images/contact/dotsvg.js'
 
 
@@ -159,6 +160,17 @@ function Contact(props) {
         e.preventDefault()
         setHelp(!helpOpen)
     }
+    function buttonClick(link){
+        window.open(link, "_blank");
+    }
+    let contactLinks = [
+        {link:'https://www.upwork.com/freelancers/~017de34218f020bdcb?mp_source=share', name:'Upwork', icon:faUpwork, displayText: 'work', iconStyle:{marginBottom: '-5px'}},
+        {link:'https://www.fiverr.com/users/nic_stricker', name:'Fiverr', icon:null, displayText: 'fiverr.',iconStyle:{}},
+    ]
+    let contactInfo = [
+        {name:'Email Inquires to', value:'nickolasstricker@gmail.com'},
+        {name:'or text to', value:'(630) 405-8427'},
+    ]
     return (    
     <div className="content-container"><BackgroundSvg />
         <div className="section-container">
@@ -175,7 +187,7 @@ function Contact(props) {
                 </div>
                 <div className='section-column'>
                     
-                    <form id="adsModalForm" onSubmit={handleSubmit} data-id={inputObj.id}>
+                    {/* <form id="adsModalForm" onSubmit={handleSubmit} data-id={inputObj.id}>
                     <div className="formGroup">
                             <label>Name</label>
                             <div className="form-input-group">
@@ -201,7 +213,42 @@ function Contact(props) {
                            
                             <button type="submit" className="formButton">Send an email &nbsp; &nbsp; <FontAwesomeIcon icon={faPaperPlane} /><span className="formButton-overlay"></span> </button>
                         </div>
-                    </form>
+                    </form> */}
+                    <div className='contact-links'>
+                        {contactLinks.map((platform, index)=>{
+                            return(
+                                <div className='contact-link' key={index}>
+                                    <button title={platform.name} onClick={()=>buttonClick(platform.link)} className="platform-link main-btn main-btn-icon">
+                                         {platform.icon && <FontAwesomeIcon style={platform.iconStyle} icon={platform.icon} />}
+                                         {platform.displayText && <span>{platform.displayText}</span>}
+                                    </button>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div className='contact-info-section'>
+                        {contactInfo.map((info, index)=>{
+                            return(
+                                <div className='contact-info-line' key={index} id={'contactInfo' + index}>
+                                    <div className='contact-info-box'>
+                                        <span className='contact-info-name'>{info.name}</span>
+                                        <span className='contact-info-value'>{info.value}</span>
+                                        <FontAwesomeIcon icon={faCopy} className='copy-icon' onClick={()=>{
+                                            navigator.clipboard.writeText(info.value);
+                                            document.getElementById('contactInfo' + index).classList.add('show-copy');
+                                            setTimeout(() => {
+                                                document.getElementById('contactInfo' + index).classList.remove('show-copy');
+                                            }, 1500);
+                                        }} />
+                                        
+                                    </div>
+                                    <div  className="copy-screen">
+                                        <span className="copy-screen-text">Copied to clipboard!</span>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
