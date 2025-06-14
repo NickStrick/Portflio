@@ -20,6 +20,7 @@ import Cert from './components/certificates/Certificate.js'
 import Footer from './components/footer/Footer.js'
 import Contact from './components/contact/Contact.js'
 import Experiences from './components/Experience.js';
+import Services from './components/services/Services.js';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
@@ -143,6 +144,10 @@ function App() {
                 <Link onClick={()=> setPage('/experience')} to="/experience" className={path == '/experience'?'nav-link active':'nav-link'} >Experience<span>Experience</span></Link>
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
+              <li className="nav-li">
+                <Link onClick={()=> setPage('/services')} to="/services" className={path == '/services'?'nav-link active':'nav-link'} >Services<span>Services</span></Link>
+                <div className={path == '/services'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+              </li>
             </ul>
             <div className='nav-right' data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
               <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
@@ -165,7 +170,7 @@ function App() {
           <Route path="/projects"  element={ <Projects  />}  />
           <Route path="/experience" element={<Experiences />} />
           <Route path="/about" element={<About />} />
-          
+           <Route path="/services" element={<Services />} />
           <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
