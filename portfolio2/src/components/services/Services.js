@@ -1,9 +1,15 @@
 import './Services.scss';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faPenRuler, faMobileScreen, faScrewdriverWrench, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faPenRuler, faMobileScreen, faScrewdriverWrench, faComments, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-const Services = () => {
+const Services = ({ setPage }) => {
+  // function setPage(newPath){
+  //   if(openNav)  setNav(!openNav)
+  //   window.scrollTo(0, 0)
+  //   setPath(newPath)
+  // }
   const servicesList = [
     {
       name: 'One-Page Websites',
@@ -45,16 +51,17 @@ const Services = () => {
 
         <div className="workflow">
           <h2>How It Works</h2>
-          <ol>
-            <li><strong>Discovery Call (Free):</strong> We talk about your idea and goals.</li>
-            <li><strong>Quote & Timeline:</strong> I send a simple plan with fixed pricing.</li>
-            <li><strong>We Build It Together:</strong> Weekly updates, great communication, and delivery you can trust.</li>
+          <ol className="custom-list">
+            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Discovery Call (Free):</strong> We talk about your idea and goals.</li>
+            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Quote & Timeline:</strong> I send a simple plan with fixed pricing.</li>
+            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>We Build It Together:</strong> Weekly updates, great communication, and delivery you can trust.</li>
           </ol>
         </div>
 
         <div className="cta-section">
           <h2>Ready to Get Started?</h2>
-          <p>Email me at <a href="mailto:youremail@example.com">nickolasstricker@gmail.com</a> or <a href="/contact">fill out the contact form</a> to get started.</p>
+          {/* <a class="nav-contact page-contact" href="/contact">Contact Me<span class="nav-contact-overlay"></span></a> */}
+          <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact page-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
     </div>

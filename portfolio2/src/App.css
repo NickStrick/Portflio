@@ -580,3 +580,12 @@ margin-top:0.5rem;
   animation: spin 1s infinite linear;
   opacity: 1 !important;
 }
+.nav-contact.page-contact{
+      text-decoration: none;
+    color: var(--main-background);
+    font-weight: 600;
+    margin-top: 26px;
+    position: relative;
+    display: block;
+    max-width: 300px;
+}

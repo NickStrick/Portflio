@@ -170,7 +170,7 @@ function App() {
           <Route path="/projects"  element={ <Projects  />}  />
           <Route path="/experience" element={<Experiences />} />
           <Route path="/about" element={<About />} />
-           <Route path="/services" element={<Services />} />
+           <Route path="/services" element={<Services setPage={setPage}  />} />
           <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
