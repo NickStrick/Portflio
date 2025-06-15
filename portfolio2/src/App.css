@@ -21,6 +21,7 @@
   /* --main-dark-accent.container:#5e9e5e; */
   --main-dark-accent: linear-gradient(to right, 60% #98FF98, 40% #7dd37d);
   --main-darker-accent:#69b569;
+  --main-darkest-accent:#4a7e4a;
   --ff0000: #ff0000;
 }
 *:not(svg):not(.icon-btn){

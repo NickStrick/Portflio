@@ -2,14 +2,19 @@ import './Services.scss';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faPenRuler, faMobileScreen, faScrewdriverWrench, faComments, faCertificate } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Services = ({ setPage }) => {
+    const navigate = useNavigate();
   // function setPage(newPath){
   //   if(openNav)  setNav(!openNav)
   //   window.scrollTo(0, 0)
   //   setPath(newPath)
   // }
+   const clickContact = () => {
+    navigate('/contact'); // Navigates to the /about path
+    setPage('/contact')
+  };
   const servicesList = [
     {
       name: 'One-Page Websites',
@@ -41,8 +46,8 @@ const Services = ({ setPage }) => {
 
         <div className="services-grid">
           {servicesList.map((service, index) => (
-            <div className="service-card" key={index}>
-              <FontAwesomeIcon icon={service.icon} className="service-icon" />
+            <div className="service-card" key={index} onClick={()=> clickContact()}>
+              <FontAwesomeIcon icon={service.icon} className="service-icon gradientText" />
               <h3>{service.name}</h3>
               <p>{service.description}</p>
             </div>
