@@ -16,6 +16,42 @@ import ProjectDetail from './Projects/ProjectDetail.js';
 
 
 const pData = [
+  {
+        name: "Connecting Dots (for latinX Professionals)",
+        description: 'A website for the LatinX community of Chicago to connect with each other and find events in the area. Connecting Dots uplifts the latinX community by providing a platform for networking, sharing resources, and building relationships. ',
+        img: softSciLogo,
+        link: 'https://github.com/NickStrick/Connecting-Dots',
+        deployed: 'https://connecting-dots-five.vercel.app/',
+        role: 'Wed Developer',
+        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        teamMemebers: 1,
+        weeksCompleted: 1,
+        pills: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        contribution: `I was the sole developer for Connecting Dots. UI, Front-end, Back-end, and Project Planning—I handled everything. Building this site was deeply fulfilling. It let me serve the LatinX community of Chicago and form real connections with members. I was proud to build a platform that helped bring people together and grow the community.
+
+The team needed a site that showcased events, shared updates, and encouraged new members to get involved. I spoke with organizers to understand their goals and translated that into features that were practical and engaging. The site became more than a page—it became a digital home for the community.
+
+Though unpaid, the project offered huge value in experience. I built a Node.js backend, a React front-end, and created a flexible system for content updates. I learned a lot, delivered early, and saw how impactful tech can be when it supports a real mission.
+
+In the end, I gained technical and planning skills, and a sense of pride in building something that matters.`
+      },
+      {
+        name: "Claro Flow",
+        description: 'A sleek landing page for ClaroFlow, a modern workflow SaaS tool built for remote teams. The site highlights features like task automation, team collaboration, and real-time analytics to boost productivity and streamline operations.',
+        img: softSciLogo,
+        link: 'https://github.com/NickStrick/ClaroFlow',
+        deployed: 'https://claro-flow.vercel.app/',
+        role: 'Wed Developer',
+        techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'PassportJS', 'NodeJS', 'Express', 'Postgres', 'Cloudinary', 'Filepond', , 'AWS S3', 'AWS Lambda', 'AWS DynamoDB'],
+        teamMemebers: 1,
+        weeksCompleted: 1,
+        pills: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS'],
+        contribution: `I was the sole developer behind the ClaroFlow landing page—a sleek, responsive site for a modern workflow SaaS product. I built the UI to reflect the app’s streamlined focus: speed, clarity, and productivity. Every section was crafted to highlight key features like automation, collaboration tools, and analytics, while maintaining a clean and intuitive design.
+
+Working from marketing copy and product goals, I designed and developed the front end from scratch, ensuring smooth interactions and a strong first impression. The site includes dynamic pricing sections, testimonials, and a call-to-action system to drive early signups. I optimized performance and responsiveness across devices, using lightweight styling and scalable components.
+
+This project helped me improve my skills in UI design, front-end speed optimization, and building user-focused landing experiences that convert.`
+      },
     {
         name: "Softball Science",
         description: 'Softball Science was created by two women with a long history in the world of softball and life. We have used our combined expertise, that includes over 30 years of coaching experience along with 20 years of data analytics to create Softball Science. We have created a metrically driven program specifically designed to enhance the raw power behind your softball swing.',
@@ -31,7 +67,7 @@ const pData = [
 
         The client asked me to build the ability to inject video into thier site and the ability to upload whatever files, images, and viedos they would like into the side. Seeing as this was a side project that was making me little money, I was initally reluctant to do such intensive and time consuming work for the client. However i reminded myself that there is not just monetary value to my work. There is educational, experiencial, and reputational value to my work, and that is what i focused my attention on. Allowing for a forgiving deadline, i started my work, created a plan to follow, and wrote a Node JS backend database to hold the client's data and configured the webstie to display videos where ever was desired. I completed the work long before deadline, and gained knowledge in Node JS and embeded videos that i hadn't known before. The client was happy with the work and Expressed much gratitude.
         
-        In the end, I learned new Technical, Buisness, Planning, and Communication skills in the creation of Softball Science. And continue to suport my client to this day.`
+        In the end, I learned new Technical, Buisness, Planning, and Communication skills in the creation of Softball Science. And continue to support my client to this day.`
       },
       {
         name: "Do Well 2 Transform",

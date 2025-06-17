@@ -124,17 +124,41 @@
 .proj-svg{
     filter: drop-shadow(0px 0px 25px  rgb(0 0 0 / 0.28));
 }
+.proj-item--1 .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #2563EB;
+    transition: background 0.3s;;
+}
+.proj-item--1:hover .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #2253bd;
+}
+.proj-item--1 .proj-svg{
+    fill:#2563EB;
+}
+.proj-item--2 .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #81329E;
+    transition: background 0.3s;;
+}
+.proj-item--2:hover .img-overflow{
+    /*  rgb(88,37,108) */
+    background: #751580;
+}
+.proj-item--2 .proj-svg{
+    fill:#81329E;
+}
 .proj-item-0 .img-overflow{
     /*  rgb(88,37,108) */
-    background: #71217B;
+    background: #C15E94;
     transition: background 0.3s;;
 }
 .proj-item-0:hover .img-overflow{
     /*  rgb(88,37,108) */
-    background: #55145c;
+    background: #994b76;
 }
 .proj-item-0 .proj-svg{
-    fill:#71217B;
+    fill:#C15E94;
 }
 .proj-item-1 .img-overflow{
     /* #F89F73  */
@@ -149,15 +173,15 @@
 }
 .proj-item-3 .img-overflow{
     /* #B14C9C  */
-    background: #245AA9;
+    background: #6483C1;
     transition: background 0.3s;;
 }
 .proj-item-3:hover .img-overflow{
     /* #B14C9C  */
-    background: #193e77;
+    background: #284c94;
 }
 .proj-item-3 .proj-svg{
-    fill:#245AA9;
+    fill:#6483C1;
 }
 .proj-item-2 .img-overflow{
     /* #FFAB61  */
