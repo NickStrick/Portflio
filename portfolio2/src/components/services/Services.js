@@ -39,6 +39,7 @@ const Services = ({ setPage }) => {
   ];
 
   return (
+    <div className='content-container'>
     <div className="services section-container">
       <div className="section-content">
         <h1 className="port-head">Services</h1>
@@ -69,6 +70,7 @@ const Services = ({ setPage }) => {
           <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact page-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

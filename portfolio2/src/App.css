@@ -98,7 +98,8 @@ a, a span{
 }
 
 .content-container h1 {
-font-size: 6rem;
+  padding-top:1rem;
+font-size: 3.6rem;
 letter-spacing: .02em;
 font-weight: 700;
 text-transform: uppercase;

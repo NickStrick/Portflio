@@ -9,6 +9,8 @@ import rangoLogo from '../images/old/rangoDjango.png'
 import softSciLogo from '../images/softsci.png'
 import doWellLogo from '../images/doWell.png'
 import wineAndRose from '../images/projects/rose.jpg'
+import dots from '../images/projects/connectingdots.jpg'
+import claroflowLogo from '../images/projects/claroflow.png'
 
 import ProjectList from './Projects/ProjectList.js'
 import ProjectDetail from './Projects/ProjectDetail.js';
@@ -19,7 +21,7 @@ const pData = [
   {
         name: "Connecting Dots (for latinX Professionals)",
         description: 'A website for the LatinX community of Chicago to connect with each other and find events in the area. Connecting Dots uplifts the latinX community by providing a platform for networking, sharing resources, and building relationships. ',
-        img: softSciLogo,
+        img: dots,
         link: 'https://github.com/NickStrick/Connecting-Dots',
         deployed: 'https://connecting-dots-five.vercel.app/',
         role: 'Wed Developer',
@@ -38,7 +40,7 @@ In the end, I gained technical and planning skills, and a sense of pride in buil
       {
         name: "Claro Flow",
         description: 'A sleek landing page for ClaroFlow, a modern workflow SaaS tool built for remote teams. The site highlights features like task automation, team collaboration, and real-time analytics to boost productivity and streamline operations.',
-        img: softSciLogo,
+        img: claroflowLogo,
         link: 'https://github.com/NickStrick/ClaroFlow',
         deployed: 'https://claro-flow.vercel.app/',
         role: 'Wed Developer',
