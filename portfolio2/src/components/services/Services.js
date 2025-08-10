@@ -1,7 +1,7 @@
 import './Services.scss';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faPenRuler, faMobileScreen, faScrewdriverWrench, faComments, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faUserTie, faComments, faCertificate, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Services = ({ setPage }) => {
@@ -18,24 +18,24 @@ const Services = ({ setPage }) => {
   const servicesList = [
     {
       name: 'One-Page Booking Websites',
-      icon: faCode,
+      icon: faImage,
       description: 'Clean, fast, responsive landing pages to help you land clients and launch your brand.',
     },
     {
       name: 'Multi-page Schedueling Platforms',
-      icon: faMobileScreen,
+      icon: faCalendarDays,
       description: 'All encompassing web app to scheduele events, list offers, build trust with traffic, and turn that traffic into paying customers.',
+    },{
+      name: 'Professional Profile Websites',
+      icon: faUserTie,
+      description: 'Personalized websites that showcase your skills, experience, and personality to attract potential clients and employers. SEO optimized to help you get found.',
     },
     {
       name: 'Free Consulting Calls',
       icon: faComments,
       description: 'Book a call to get feedback on your current idea or website from a professional developer with experience in marketing & brand building.',
     },
-    {
-      name: 'Fixes & Upgrades',
-      icon: faScrewdriverWrench,
-      description: 'Need speed, SEO, or UI improvements? I’ll tune up or revamp your existing site.',
-    },
+    
     
   ];
 
