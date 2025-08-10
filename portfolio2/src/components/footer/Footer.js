@@ -7,6 +7,7 @@ import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 import SplitThree from '../../images/splitters/bottom-wave-3.js'
+import NsLogo from '../../images/NStransDark.png'
 
 const Footer = (props) => {
     const navigate = useNavigate();
@@ -61,7 +62,8 @@ const Footer = (props) => {
                 </div> */}
             </div>
             <div className='footer-end'>
-
+                <img style={{height: '200px',position: 'absolute',right: 0,marginTop: '-10px'}} src={NsLogo} className='nslogo' />
+                <p>© {new Date().getFullYear()} Nick Stricker</p>
             </div>
         </div >
     );

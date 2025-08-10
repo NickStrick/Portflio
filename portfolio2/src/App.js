@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // new emojiCursor({ emoji: ["🔥", "🐬", "🦆"] });
 
 import DotUnderline from './images/DottedLine.js';
-import NsLogo from './images/NS-trans-1.png'
+import NsLogo from './images/NStrans.png'
 
 import About from './components/About.js'
 import Home from './components/Home.js'

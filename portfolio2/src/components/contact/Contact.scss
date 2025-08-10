@@ -80,10 +80,18 @@
     right:calc(50% - 35px);
     top:47px;
     transform: rotate(-20deg);
+    animation-name: shake;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
 }
 .work-icons svg:hover{
     transform: rotate(0);
 }
+   @keyframes shake {
+      0% { transform: rotate(-20deg); }
+      50% { transform: rotate(0); }
+      100% { transform: rotate(-20deg); }
+    }
 form .formGroup{
     display: flex;
     flex-direction: column;

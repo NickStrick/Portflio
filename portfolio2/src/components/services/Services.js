@@ -43,7 +43,7 @@ const Services = ({ setPage }) => {
     <div className="services section-container">
       <div className="section-content">
         <h1 className="port-head">Services</h1>
-        <p className="intro-text">I help small business owners and creators build fast, modern websites and apps—without the tech overwhelm.</p>
+        <p className="intro-text">I build strategically designed, customizable websites for coaches, mentors, and event organizers, who need a website that coverts traffic to booked clients, and presents brands that leave a lasting impression.</p>
 
         <div className="services-grid">
           {servicesList.map((service, index) => (
