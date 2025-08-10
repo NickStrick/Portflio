@@ -17,25 +17,26 @@ const Services = ({ setPage }) => {
   };
   const servicesList = [
     {
-      name: 'One-Page Websites',
+      name: 'One-Page Booking Websites',
       icon: faCode,
-      description: 'Clean, fast, responsive landing pages to help you launch your brand or offer quickly.',
+      description: 'Clean, fast, responsive landing pages to help you land clients and launch your brand.',
     },
     {
-      name: 'Web App MVPs',
+      name: 'Multi-page Schedueling Platforms',
       icon: faMobileScreen,
-      description: 'React/React Native prototypes to help you validate ideas and showcase functionality.',
+      description: 'All encompassing web app to scheduele events, list offers, build trust with traffic, and turn that traffic into paying customers.',
+    },
+    {
+      name: 'Free Consulting Calls',
+      icon: faComments,
+      description: 'Book a call to get feedback on your current idea or website from a professional developer with experience in marketing & brand building.',
     },
     {
       name: 'Fixes & Upgrades',
       icon: faScrewdriverWrench,
       description: 'Need speed, SEO, or UI improvements? I’ll tune up or revamp your existing site.',
     },
-    {
-      name: 'Consulting Calls',
-      icon: faComments,
-      description: 'Book a call to get dev guidance or feedback on your current idea or website.',
-    },
+    
   ];
 
   return (
@@ -59,7 +60,7 @@ const Services = ({ setPage }) => {
           <h2>How It Works</h2>
           <ol className="custom-list">
             <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Discovery Call (Free):</strong> We talk about your idea and goals.</li>
-            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Quote & Timeline:</strong> I send a simple plan with fixed pricing.</li>
+            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Quote & Timeline:</strong> We build a simple plan with fixed pricing.</li>
             <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>We Build It Together:</strong> Weekly updates, great communication, and delivery you can trust.</li>
           </ol>
         </div>
