@@ -24,7 +24,7 @@ const Services = ({ setPage }) => {
     {
       name: 'Multi-page Schedueling Platforms',
       icon: faCalendarDays,
-      description: 'All encompassing web app to scheduele events, list offers, build trust with traffic, and turn that traffic into paying customers.',
+      description: 'All encompassing web app to scheduele events, list offers, build trust with traffic, and turn that traffic into paying customers or community memebers.',
     },{
       name: 'Professional Profile Websites',
       icon: faUserTie,
