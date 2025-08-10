@@ -169,7 +169,7 @@ function Contact(props) {
     ]
     let contactInfo = [
         {name:'Email Inquires to', value:'nickolasstricker@gmail.com'},
-        {name:'or text to', value:'(630) 405-8427'},
+        {name:'or call / text to', value:'(630) 405-8427'},
     ]
     return (    
     <div className="content-container"><BackgroundSvg />

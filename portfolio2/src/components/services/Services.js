@@ -44,7 +44,9 @@ const Services = ({ setPage }) => {
     <div className="services section-container">
       <div className="section-content">
         <h1 className="port-head">Services</h1>
-        <p className="intro-text">I build strategically designed, customizable websites for coaches, mentors, and event organizers, who need a website that coverts traffic to booked clients, and presents brands that leave a lasting impression.</p>
+        <p className="intro-text intro-text-1">I build strategically designed, customizable websites for <span className="highlight-text">coaches</span>, <span className="highlight-text">mentors</span>, and <span className="highlight-text">event organizers</span> 
+        </p><p className="intro-text intro-text-2">who need a website that coverts traffic to <span className="highlight-text">booked clients</span>, 
+          </p><p className="intro-text intro-text-3">and presents <span className="highlight-text">branding</span> that leaves a lasting impression.</p>
 
         <div className="services-grid">
           {servicesList.map((service, index) => (
@@ -66,9 +68,10 @@ const Services = ({ setPage }) => {
         </div>
 
         <div className="cta-section">
-          <h2>Ready to Get Started?</h2>
+          <h2>Are you opposed to a chat?</h2>
+          <strong>If not,</strong>
           {/* <a class="nav-contact page-contact" href="/contact">Contact Me<span class="nav-contact-overlay"></span></a> */}
-          <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact page-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
+          <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
     </div>

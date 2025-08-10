@@ -9,7 +9,9 @@ import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import SplitThree from '../../images/splitters/bottom-wave-3.js'
 import NsLogo from '../../images/NStransDark.png'
 
-const Footer = (props) => {
+import Nextbutton from '../NextButton.js'
+
+const Footer = ({setPage}) => {
     const navigate = useNavigate();
     let footerColor = 'rgb(35,40,40)'
     // const [showMail, setMail] = useState(false)
@@ -31,6 +33,7 @@ const Footer = (props) => {
     return (
 
         <div className="footer content-container" style={styleobj}>
+            <Nextbutton  setPage={setPage}/>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
             <div className="footer-content" data-aos="fade-right">

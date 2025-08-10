@@ -69,7 +69,7 @@ a, a span{
 .app-container.experience-container{
     /* background-color: var(--second-background); */
   background:rgba(60,62,70,1);
-  background: radial-gradient(circle, rgba(60,62,70,1) 0%, rgba(30,32,40,1) 0%, rgba(60,62,70,1) 45%);
+  /* background: radial-gradient(circle, rgba(60,62,70,1) 0%, rgba(30,32,40,1) 0%, rgba(60,62,70,1) 45%); */
 }
 .app-container.projects-container{
   background-color: var(--second-background);
@@ -586,8 +586,8 @@ margin-top:0.5rem;
       text-decoration: none;
     color: var(--main-background);
     font-weight: 600;
-    margin-top: 26px;
+    /* margin-top: 26px; */
     position: relative;
-    display: block;
+    display: inline-block;
     max-width: 300px;
 }

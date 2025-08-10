@@ -21,7 +21,6 @@ import Footer from './components/footer/Footer.js'
 import Contact from './components/contact/Contact.js'
 import Experiences from './components/Experience.js';
 import Services from './components/services/Services.js';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
@@ -131,7 +130,10 @@ function App() {
                 <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
                 <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
-              
+              <li className="nav-li">
+                <Link onClick={()=> setPage('/services')} to="/services" className={path == '/services'?'nav-link active':'nav-link'} >Services<span>Services</span></Link>
+                <div className={path == '/services'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+              </li>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/projects')} to="/projects" className={path == '/projects'?'nav-link active':'nav-link'} >Projects<span style={{whiteSpace:'nowrap'}}>Projects</span></Link>
                 <div className={path == '/projects'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
@@ -144,10 +146,7 @@ function App() {
                 <Link onClick={()=> setPage('/experience')} to="/experience" className={path == '/experience'?'nav-link active':'nav-link'} >Experience<span>Experience</span></Link>
                 <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
               </li>
-              <li className="nav-li">
-                <Link onClick={()=> setPage('/services')} to="/services" className={path == '/services'?'nav-link active':'nav-link'} >Services<span>Services</span></Link>
-                <div className={path == '/services'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
-              </li>
+              
             </ul>
             <div className='nav-right' data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
               <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact">Contact Me<span className="nav-contact-overlay"></span></Link>
@@ -174,7 +173,8 @@ function App() {
           <Route path="/skills" element={<div className="content-container"><Skills /><Cert /></div>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        
+        <Footer   setPage={setPage}/>
       </div>
     </Router>
   );
