@@ -48,6 +48,10 @@ const Services = ({ setPage }) => {
         </p><p className="intro-text intro-text-2">who need a website that coverts traffic to <span className="highlight-text">booked clients</span>, 
           </p><p className="intro-text intro-text-3">and presents <span className="highlight-text">branding</span> that leaves a lasting impression.</p>
 
+        <div>
+
+          <a href="https://www.strickerdigital.com" class="btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
+        </div>
         <div className="services-grid">
           {servicesList.map((service, index) => (
             <div className="service-card" key={index} onClick={()=> clickContact()}>
@@ -71,7 +75,7 @@ const Services = ({ setPage }) => {
           <h2>Are you opposed to a chat?</h2>
           <strong>If not,</strong>
           {/* <a class="nav-contact page-contact" href="/contact">Contact Me<span class="nav-contact-overlay"></span></a> */}
-          <Link onClick={()=> setPage('/contact')} to="/contact" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
+          <Link onClick={()=> setPage('/contact')} to="https://calendly.com/nickstrickerbiz/30min-1" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
     </div>

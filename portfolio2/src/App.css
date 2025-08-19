@@ -22,6 +22,8 @@
   --main-dark-accent: linear-gradient(to right, 60% #98FF98, 40% #7dd37d);
   --main-darker-accent:#69b569;
   --main-darkest-accent:#4a7e4a;
+  --strickdig-green: #1ea100;
+  --strickdig-orange: #c57104;
   --ff0000: #ff0000;
 }
 *:not(svg):not(.icon-btn){
@@ -592,4 +594,47 @@ margin-top:0.5rem;
     position: relative;
     display: inline-block;
     max-width: 300px;
+}
+.btn-gradient {
+    display: inline-block;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: .025em;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    background-image: linear-gradient(to right, var(--strickdig-green) 0, var(--strickdig-orange) 40%, var(--strickdig-orange) 50%, var(--strickdig-green) 100%);
+    background-size: calc(200% + 4px) calc(100% + 4px);
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    background-position: 0 0;
+    animation: btnunhover 2s;
+    animation-play-state: paused;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-decoration: none;
+}
+.btn-gradient:hover {
+      /* border-color: var(--color-accent); */
+      cursor: pointer;
+       animation: btnhover 2s forwards;
+  }
+@keyframes btnunhover {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+        /* background-size: 300% 100%; Expand as it moves */
+    }
+}
+@keyframes btnhover {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -100% 0%;
+        /* background-size: 300% 100%; Expand as it moves */
+    }
 }
