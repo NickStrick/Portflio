@@ -168,7 +168,7 @@ function Contact(props) {
         {link:'https://www.fiverr.com/users/nic_stricker', name:'Fiverr', icon:null, displayText: 'fiverr.',iconStyle:{}},
     ]
     let contactInfo = [
-        {name:'Email Inquires to', value:'nickolasstricker@gmail.com'},
+        {name:'Email Inquires to', value:'nick@strickerdigital.com'},
         {name:'or call / text to', value:'(630) 405-8427'},
     ]
     return (    
