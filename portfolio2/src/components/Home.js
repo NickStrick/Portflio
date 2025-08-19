@@ -66,7 +66,7 @@ const Home = () => {
                 </div>
                 <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and grow.</p>
                 <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
-                <a href="https://www.strickerdigital.com" class="header-btn btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
+                <a data-aos="fade-right" href="https://www.strickerdigital.com" class="header-btn btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
                 <div className="home-main-image"></div>
                 <div className="home-main-image home-main-image-2" ></div>
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}

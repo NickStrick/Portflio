@@ -50,8 +50,8 @@ const Services = ({ setPage }) => {
 
         <div>
 
-          <a href="https://www.strickerdigital.com" class="btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
-          <a href="https://www.strickerdigital.com/core" class="btn-gradient ml mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Build a Multi-page feature rich platform</a>
+          <a data-aos="fade-right" href="https://www.strickerdigital.com" class="btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
+          <a data-aos="fade-left" href="https://www.strickerdigital.com/core" class="btn-gradient ml mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Build a Multi-page feature rich platform</a>
         </div>
         <div className="services-grid">
           {servicesList.map((service, index) => (
