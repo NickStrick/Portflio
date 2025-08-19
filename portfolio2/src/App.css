@@ -406,13 +406,15 @@ margin-top:0.5rem;
 @media (max-width: 960px) {
   
   .content-container h1{
-    font-size: 3rem;
+    font-size: 2.1rem;
     word-break: break-all;
   }
   .container{
     width:100%;
   }
   .section-content{
+    margin-right:0;
+    margin-left:0;
     width: calc(100% - 20px);
   }
   .nav-list{

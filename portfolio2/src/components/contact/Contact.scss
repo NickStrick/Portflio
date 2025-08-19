@@ -271,6 +271,27 @@ input:-webkit-autofill:active{
     }
 }
 @media (max-width: 930px) {
+    .contact-info-box{
+        flex-direction: column;
+        display:flex;
+        gap:15px;
+    }
+    .contact-info-section .contact-info-line .copy-icon{
+        margin-top:0;
+        width:20px;
+    }
+    .contact-info-section .contact-info-line{
+        height: auto;
+        display: flex;
+        background-color: transparent;
+    }
+    .span-block{
+        font-size: 30px;
+    }
+    .contact-links{
+        flex-direction: column;
+        align-items: center;
+    }
     .work-column{
         margin-bottom: 160px;
     }

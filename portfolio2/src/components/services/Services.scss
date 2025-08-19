@@ -9,7 +9,7 @@
 
   .port-head {
     text-transform: uppercase;
-    font-size: 3.5rem;
+    // font-size: 3.5rem;
     margin-bottom: 1rem;
     padding-top: 1rem;
   }
@@ -149,6 +149,21 @@ animation: gradientAnimation 15s ease infinite;
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 900px){
+  .services {
+    .intro-text {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+       .workflow .custom-list li {
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;  
+        align-items: flex-start;
+        text-align: left;
+      }
+  } 
+}
 
 @keyframes gradientAnimation {
 0% {

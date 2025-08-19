@@ -61,9 +61,9 @@ const Services = ({ setPage }) => {
         <div className="workflow">
           <h2>How It Works</h2>
           <ol className="custom-list">
-            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Discovery Call (Free):</strong> We talk about your idea and goals.</li>
-            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Quote & Timeline:</strong> We build a simple plan with fixed pricing.</li>
-            <li><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>We Build It Together:</strong> Weekly updates, great communication, and delivery you can trust.</li>
+            <li><span><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Discovery Call (Free):</strong></span> <span>We talk about your idea and goals.</span></li>
+            <li><span><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>Quote & Timeline:</strong> </span><span>We build a simple plan with fixed pricing.</span></li>
+            <li><span><FontAwesomeIcon icon={faCertificate} className="list-icon" /><strong>We Build It Together:</strong></span> <span>Weekly updates, great communication, and delivery you can trust.</span></li>
           </ol>
         </div>
 

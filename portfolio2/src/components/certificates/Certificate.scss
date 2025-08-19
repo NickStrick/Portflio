@@ -90,9 +90,10 @@
 @media (max-width: 900px){
     .cert-list .image{
         background-size: contain;
+        background-color: white;
         width: 92vw;
         height: 92vw;
-        border-radius: 120px;
+        border-radius: 10px;
         overflow: hidden;
     }
     .cert-list .image div{

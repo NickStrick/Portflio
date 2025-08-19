@@ -71,7 +71,6 @@ const Certificate = (props) => {
                                 onClick={() => handleLinkClick(cert.link)}
                                 style={{
                                     backgroundImage: `url(${cert.cert})`,
-                                    backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     width: cert.width,
                                     cursor: 'pointer'

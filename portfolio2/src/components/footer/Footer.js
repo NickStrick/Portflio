@@ -14,6 +14,7 @@ import Nextbutton from '../NextButton.js'
 const Footer = ({setPage}) => {
     const navigate = useNavigate();
     let footerColor = 'rgb(35,40,40)'
+    let styleobj = {paddingTop:'2rem'}
     // const [showMail, setMail] = useState(false)
     function handleEmailClick() {
         window.scroll(0,0)
@@ -22,17 +23,17 @@ const Footer = ({setPage}) => {
 
     if(window.location.pathname.includes('skills')){
         footerColor = 'white'
+        styleobj.backgroundColor = 'white'
     }else if(window.location.pathname.includes('projects') || window.location.pathname.includes('experience')){
         footerColor = 'rgb(60,62,70)'
     }
-    let styleobj = {paddingTop:'0px'}
-    console.log(window.location.pathname)
     if(window.location.pathname == '/'){
         styleobj = {paddingTop:'12rem'}
     }
     return (
 
         <div className="footer content-container" style={styleobj}>
+            
             <Nextbutton  setPage={setPage}/>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
@@ -65,8 +66,8 @@ const Footer = ({setPage}) => {
                 </div> */}
             </div>
             <div className='footer-end'>
-                <img style={{height: '200px',position: 'absolute',right: 0,marginTop: '-10px'}} src={NsLogo} className='nslogo' />
-                <p>© {new Date().getFullYear()} Nick Stricker</p>
+                <img src={NsLogo} className='nslogo' />
+                <p>© {new Date().getFullYear()} Stricker Digital</p>
             </div>
         </div >
     );
