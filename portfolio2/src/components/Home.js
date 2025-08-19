@@ -58,7 +58,7 @@ const Home = () => {
 
 
     return (
-    <div className="content-container">
+    <div className="content-container home">
         <div className="section-container">
             <div className="section-content home-first-content">
             <div  data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" data-aos-easing="ease-out-back">
@@ -66,13 +66,14 @@ const Home = () => {
                 </div>
                 <p className="home-indent" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-delay="3000" data-aos-easing="ease-out-back">Learn, create, collaborate, and grow.</p>
                 <p className="home-indent home-indent-two" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="left" data-aos-delay="3000" data-aos-easing="ease-out-back">The solution expert.</p>
+                <a href="https://www.strickerdigital.com" class="header-btn btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
                 <div className="home-main-image"></div>
                 <div className="home-main-image home-main-image-2" ></div>
                     {/* <img id='pfp' src={PfpThree} alt='Nick S profile picture' /> */}
                 
             </div>
         </div>
-        <SplitLine fillColor={'#98FF98'} />
+        <SplitLine fillColor={'#28da00'} />
         <div className="page-split-padding-light"></div>
         <div className="section-container section-container-white home-second-conatiner">
             <div className="section-content" data-aos="fade-left">
@@ -81,7 +82,7 @@ const Home = () => {
                 <p>{summary12}</p>
             </div>
         </div>
-        <SplitTwo fillColor={'#98FF98'} />
+        <SplitTwo fillColor={'#28da00'} />
         <div className="page-split-padding-dark split-wave-2"></div>
         <div className="section-container home-bottom-conatiner">
             <div className="section-content" data-aos="fade-right">

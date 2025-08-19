@@ -128,23 +128,23 @@ function App() {
             <ul className={`nav-list${openNav? ' list-open':''}${isSecondaryColor? ' gray-list':''}${animate ? ' show-nav' : ''}`} >
               <li className="nav-li">
                 <Link onClick={()=> setPage('/')} to="/" className={path == '/'?'nav-link active':'nav-link'} >Intro<span>Intro</span></Link>
-                <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+                <div className={path == '/'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#28da00'} /></div>
               </li>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/services')} to="/services" className={path == '/services'?'nav-link active':'nav-link'} >Services<span>Services</span></Link>
-                <div className={path == '/services'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+                <div className={path == '/services'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#28da00'} /></div>
               </li>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/projects')} to="/projects" className={path == '/projects'?'nav-link active':'nav-link'} >Projects<span style={{whiteSpace:'nowrap'}}>Projects</span></Link>
-                <div className={path == '/projects'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+                <div className={path == '/projects'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#28da00'} /></div>
               </li>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/skills')} to="/skills" className={path == '/skills'?'nav-link active':'nav-link'} >Skills & Certs<span style={{whiteSpace:'nowrap'}}>Skills & Certs</span></Link>
-                <div className={path == '/skills'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+                <div className={path == '/skills'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#28da00'} /></div>
               </li>
               <li className="nav-li">
                 <Link onClick={()=> setPage('/experience')} to="/experience" className={path == '/experience'?'nav-link active':'nav-link'} >Experience<span>Experience</span></Link>
-                <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#98FF98'} /></div>
+                <div className={path == '/experience'?'nav-underline underline active':'nav-underline underline'} ><DotUnderline fillColor={'#28da00'} /></div>
               </li>
               
             </ul>

@@ -87,6 +87,9 @@ transition: border  0.3s ease, transform 0.3s ease;
       color: white;
     }
   }
+  .ml{
+    margin-left: 3rem;
+  }
 .cta-section strong{
   margin-right: 1rem;
 }
@@ -110,7 +113,9 @@ transition: border  0.3s ease, transform 0.3s ease;
       display: flex;
       align-items: center;
       margin-bottom: 0.9em;
+      gap: 30px;
     }
+    
     .custom-list li strong {
       font-weight: bold;
       // color: var(--main-accent); /* Purple-ish */
@@ -165,6 +170,9 @@ animation: gradientAnimation 15s ease infinite;
       .cta-section a{
         margin-top:2rem;
       }
+      .ml{
+    margin-left: 0;
+  }
   } 
 }
 

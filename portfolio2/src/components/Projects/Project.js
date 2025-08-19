@@ -21,7 +21,7 @@ const Project = (props) => {
         <div className={`project-container item proj-item-${props.index}`} onClick={handleProjClick}>
             <div className="img-back"></div>
             <div className={`img-overflow`} >
-            <WaveSvg fillColor={'#98FF98'} index={props.index}/>
+            <WaveSvg fillColor={'#28da00'} index={props.index}/>
             </div>
             <div className="img-overlay">
                 <span>{name}</span>
@@ -33,7 +33,7 @@ const Project = (props) => {
              </div>
             
             <div className="svg-contain">
-                <ArrowSvg fillColor={'#98FF98'} index={props.index}/>
+                <ArrowSvg fillColor={'#28da00'} index={props.index}/>
                 <FontAwesomeIcon icon={faArrowRight} />
                 {/* <div className="svg-text">{'More'}</div> */}
                 {/* <img className="svg-text" src={arrow} /> */}

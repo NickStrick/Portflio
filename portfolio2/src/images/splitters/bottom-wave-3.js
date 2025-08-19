@@ -1,5 +1,5 @@
 
-export default function Logo({ fillColor='rgb(152, 255, 152)' }) {
+export default function Logo({ fillColor='#28da00' }) {
     return (
         
         <svg className="split-svg split-svg-wave-2 footer-wave"  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 1024 562">
@@ -13,11 +13,11 @@ export default function Logo({ fillColor='rgb(152, 255, 152)' }) {
         <defs>
         <linearGradient id="paint0_linear_9174_234436" x1="477.172" x2="347.405" y1="357.335" y2="-15.236" gradientUnits="userSpaceOnUse">
         <stop stop-color={fillColor}/>
-        <stop offset="1" stop-color="rgb(152, 255, 152)"/>
+        <stop offset="1" stop-color="#28da00"/>
         </linearGradient>
         <linearGradient id="paint1_linear_9174_234436" x1="894.45" x2="364.156" y1="146.14" y2="344.71" gradientUnits="userSpaceOnUse">
-        <stop stop-color="rgb(152, 255, 152)"/>
-        <stop offset="1" stop-color="rgb(152, 255, 152)"/>
+        <stop stop-color="#28da00"/>
+        <stop offset="1" stop-color="#28da00"/>
         </linearGradient>
         <clipPath id="clip0_9174_234436">
         <path fill="#fff" d="M-128 0h1280v561.333H-128z"/>

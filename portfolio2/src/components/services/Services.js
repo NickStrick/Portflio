@@ -17,7 +17,7 @@ const Services = ({ setPage }) => {
   };
   const servicesList = [
     {
-      name: 'One-Page Booking Websites',
+      name: 'Free One-Page Booking Websites',
       icon: faImage,
       description: 'Clean, fast, responsive landing pages to help you land clients and launch your brand.',
     },
@@ -51,6 +51,7 @@ const Services = ({ setPage }) => {
         <div>
 
           <a href="https://www.strickerdigital.com" class="btn-gradient mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Get your free landing page</a>
+          <a href="https://www.strickerdigital.com/core" class="btn-gradient ml mt-10 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover">Build a Multi-page feature rich platform</a>
         </div>
         <div className="services-grid">
           {servicesList.map((service, index) => (
@@ -75,7 +76,7 @@ const Services = ({ setPage }) => {
           <h2>Are you opposed to a chat?</h2>
           <strong>If not,</strong>
           {/* <a class="nav-contact page-contact" href="/contact">Contact Me<span class="nav-contact-overlay"></span></a> */}
-          <Link onClick={()=> setPage('/contact')} to="https://calendly.com/nickstrickerbiz/30min-1" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
+          <Link  to="https://calendly.com/nickstrickerbiz/30min-1" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
     </div>

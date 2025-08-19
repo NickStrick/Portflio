@@ -37,7 +37,7 @@ const Footer = ({setPage}) => {
             <Nextbutton  setPage={setPage}/>
             <SplitThree fillColor={footerColor} />
             <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
-            <div className="footer-content" data-aos="fade-right">
+            <div className="footer-content" >
                 <div className="icon-btn">
                 <FontAwesomeIcon icon={faGithub}  target="_blank" onClick={() => window.open('https://github.com/NickStrick')}/>
                 </div>

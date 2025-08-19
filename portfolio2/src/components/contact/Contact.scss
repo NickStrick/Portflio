@@ -6,6 +6,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     z-index: 1;
+    margin: 0 auto;
 }
 .contact-content .section-column{
     width:50%;
@@ -284,6 +285,7 @@ input:-webkit-autofill:active{
         height: auto;
         display: flex;
         background-color: transparent;
+        margin-left:15vw; 
     }
     .span-block{
         font-size: 30px;
