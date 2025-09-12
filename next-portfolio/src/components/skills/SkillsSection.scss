@@ -1,0 +1,129 @@
+$background-base: #282c34;
+$background-light: #4b566e;
+$highlight: #76E7B3;
+
+.skills{
+    .skills-head{
+            width: 100%;
+            border-bottom: 1px solid gray;
+            border-top: 1px solid gray;
+            margin:  25px 0 60px;
+            padding: 10px;
+            font-size: 1.9rem;
+            text-align: center;
+            background: $background-light;
+    }
+    .skill-list{
+        margin: 25px auto 0px;
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item{
+            position: relative;
+            width: 105px;
+            height: 105px;
+            text-align: center;
+            margin: 0 20px 60px;
+            p{
+                color:#3f3f3f;
+                font-weight:800;
+                position: relative;
+
+                z-index: 2;
+                margin: 0;
+                padding: 8px 0 16px;
+            }
+            .skill-image{
+                position: relative;
+                z-index: 2;
+                height: 50%;
+                overflow: hidden;
+                margin-top:12px;
+                // margin-bottom: 5px;
+                img{
+                    height:85%;
+
+                }
+                #ReactJSLogo{
+                    height: 90%;
+
+                }
+                #SQLLogo{
+                    height: 90%;
+
+                }
+            }
+            
+        }
+        
+        
+
+    }
+}
+.skillSvg{
+    position: absolute;
+    top:-37px;
+    left:-41px;
+    width: 190px;
+    transform: scaleY(-1);;
+    max-width: 400px;
+}
+@media (max-width: 930px) {
+    .skills .skill-list{
+        margin: 35px auto 0 !important;
+        width:100%;
+    }
+    
+}
+.item{
+    animation-name: floating;
+//   animation-delay: 1s;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.item:nth-child(5n + 1){
+    animation-delay: 0.5s;
+}
+.item:nth-child(5n + 2){
+    animation-delay: 1s;
+}
+.item:nth-child(5n + 3){
+    animation-delay: 1.5s;
+}
+.item:nth-child(5n + 4){
+    animation-delay: 2s;
+}
+.item:nth-child(5n + 5){
+    animation-delay: 2.5s;
+}
+.item:nth-child(5n + 6){
+    animation-delay: 3s;
+}
+.item:nth-child(5n + 7){
+    animation-delay: 3.5s;
+}
+.item:nth-child(5n + 8){
+    animation-delay: 4s;
+}
+.item:nth-child(5n + 9){
+    animation-delay: 4.5s;
+}
+.item:nth-child(5n + 10){
+    animation-delay: 5s;
+}
+.item:nth-child(5n + 11){
+    animation-delay: 5.5s;
+}
+// .item:nth-child(4n + 6){
+//     animation-delay: 3s;
+// }
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    40%  { transform: translate(0, 0px); }
+    60%  { transform: translate(6px, 6px); }
+    80% { transform: translate(0, -0px); } 
+    to   { transform: translate(0, -0px); }    
+}

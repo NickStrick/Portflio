@@ -1,0 +1,212 @@
+// @import '../../utilities/imports.scss';
+
+.footer{
+    // background: red;
+    min-height: fit-content;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    .split-svg {
+        min-width: 400px;
+    }
+    .gitLogo{
+        opacity: .7;
+        color: black;
+    }
+    .gitLogo:hover{
+        opacity: 1;
+        // cursor: pointer;
+    }
+    .git{
+        height: 60px;
+        margin-right: 100px;
+    }
+    .mail{
+        width: 60px;
+        margin-left: 100px;
+    }
+
+    .mail-div{
+        position: relative;
+        .mail-text{
+            position: absolute;
+            left: 85px;
+            top: -4px;
+            // background: white;
+            
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                border: 2px solid gray;
+                font-size: .8rem;
+                width: 60px;
+                padding:  0 2px;
+                height: 50px;
+                margin-right: 10px;
+                box-shadow: 1px 2px 2px black;
+            }
+            #mailInput{
+                font-size: 1.1rem;
+                background: black;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            //Tooltip
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+              }
+              
+              .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 140px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -75px;
+                opacity: 0;
+                transition: opacity 0.3s;
+              }
+              
+              .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+              }
+              
+              .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+              }
+
+        }
+        
+    }
+}
+.footer-content{
+    position: absolute;
+    background-color: transparent;
+    fill: rgb(35,40,40);
+    color: rgb(35,40,40);
+    padding-right:60%;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    .icon-btn{
+        max-width: 122px;
+        width:80px;
+        height:80px;
+        aspect-ratio: 1;
+        margin-right: 15px;
+        padding:20px;
+        border-radius: 100%;
+        // cursor: pointer;
+        transition: 0.3s ease-in-out;
+        svg{
+            height:80px;
+            width:80px;
+        }
+    }
+    .icon-btn:hover{
+        color: white;
+        background-color: rgb(35,40,40);
+    }
+}
+.nslogo{
+    height: 200px;
+    position: absolute;
+    right: 0px;
+    margin-top: -10px;
+}
+.footer-end{
+    background: white;
+    width:100%;
+    height:380px;
+    // position: relative;
+    p{
+        color:gray;
+        position: absolute;
+        bottom:0;
+        left:30px;
+    }
+}
+
+@media (max-width: 990px){
+    .footer{
+        .footer-content{
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+            padding: 0;
+            width: 100%;
+        }
+        .git{
+            margin-right: 75px;
+        }
+        .mail{
+            margin-left: 75px;
+        }
+    }
+    .nslogo{
+    height: 80px;
+    position: absolute;
+    right: auto;
+    margin-top: -100px;
+    left:0
+}
+}
+@media (max-width: 700px){
+    .holo-body .noise, .noise svg{
+        font-size: 2rem !important;
+    }
+    .horizontal-column{
+        padding-left:0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .footer-end{
+        height: 420px;
+    }
+    .footer{
+        .git{
+            margin-right: 35px;
+        }
+        .mail{
+            margin-left: 35px;
+        }
+    }
+}
+
+.next-button{
+    position: absolute;
+    top: 30%;
+    right:30%;
+    z-index: 900;
+    min-width:280px;
+}
+@media (max-width: 900px){
+    .next-button{
+        position: absolute;                                                                                                                                                                                                                               
+        top: 2rem;
+        right:6vw;
+        width:88vw;
+        z-index: 1000;
+    }
+}
+

@@ -1,0 +1,104 @@
+
+
+.certificates{
+    margin: 55px 2% 0px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+// .lambda-cert{
+//     width: 260px;
+//     height:260px;
+//     overflow: hidden;
+    
+//     :hover{
+//         background-color: white;
+//     }
+// } 
+#wave-cert{
+    transform: rotate((180deg));
+    margin-top:-2px;
+}
+
+.cert-list {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap:25px;
+}
+.cert-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    transition: transform 0.3s ease-in-out;
+}
+.cert-item.bordered .image{
+    border: 2px solid gainsboro;
+}
+.cert-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cert-text h2{
+   max-width: 420px;
+}
+.certimage-container{
+    width: fit-content;
+    padding:15px;
+    // background-color: #000;
+    transition: 0.25s;
+    border-radius:14px
+}
+.certimage-container:hover{
+    background-color: var(--main-accent);
+    // border: 1px solid var(--main-darker-accent);
+}
+.cert-list .image{
+    background-size: 90%;
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 260px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.cert-list .image div{
+    width: 260px;
+    height: 260px;
+    transition: 0.25s;
+}
+.cert-list .image div:hover{
+    cursor: pointer;
+    background: rgba(50,50,50, .175);
+}
+.cert-list .image div:active{
+    background: rgba(0,0,0, .475);
+}
+/* Social buttons */
+.cert-list .image.lambda-cert{
+    background-image: url('../../images/old/certs/full-stack-web-development.png');
+}
+
+@media (max-width: 900px){
+    .cert-list .image{
+        background-size: contain;
+        background-color: white;
+        width: 92vw;
+        height: 92vw;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .cert-list .image div{
+        width: 92vw;
+        height: 92vw;
+}
+}

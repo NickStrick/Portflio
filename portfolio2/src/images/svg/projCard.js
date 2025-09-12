@@ -1,6 +1,6 @@
 export default function Split({ fillColor, index }) {
     return (
-        <svg class="proj-svg" id={"proj-svg-"+index} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <svg fill={fillColor} class="proj-svg" id={"proj-svg-"+index} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
                     <defs> 
                         <linearGradient id={"proj-gradient-"+index} x1="0" x2="1" y1="1" y2="0">
                             <stop id="stop1" stop-color="rgb(35,40,40)" offset="0%"></stop>

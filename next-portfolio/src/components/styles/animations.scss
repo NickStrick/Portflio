@@ -1,0 +1,199 @@
+
+// #homeSplitOne path:first-child {
+//     // animation-iteration-count: infinite;
+//     // animation-timing-function: linear;
+//     // animation:homeWave11Animation 7s;
+//     // animation: waveMotion 2s ease-in-out infinite;
+// }
+// #homeSplitOne path:last-child {
+//     animation:homeWave12Animation 7s;
+// }
+// .wave-path {
+//     animation: waveMotion 2s ease-in-out infinite;
+//   }
+
+//   @keyframes waveMotion {
+//     0% {
+//       transform: translateY(0);
+//     }
+//     25% {
+//       transform: translateY(-20px); /* Move up */
+//     }
+//     50% {
+//       transform: translateY(0); /* Back to original position */
+//     }
+//     75% {
+//       transform: translateY(20px); /* Move down */
+//     }
+//     100% {
+//       transform: translateY(0); /* Back to original position */
+//     }
+//   }
+// @keyframes homeWave11Animation {
+//     //-733.416, -276.949
+//     //-295.752, -689.373 
+//     0%{
+//         d: path("M136.106 -271.377C166.053 -276.949 193.587 -295.752 210.53 -321.067C486.511 -733.416 1193.46 -689.373 1505.06 -477.44C1826.66 -258.708 1969.39 178.561 1919.28 360.754C1772.48 894.471 1197.78 895.939 818.27 724.511C718.216 679.316 595.66 699.849 509.92 768.422C-189.965 1328.18 -1320.08 -0.434126 136.106 -271.377Z");
+//     }
+//     50%{
+//         d: path("M136.106 -271.377C486.511 -733.416 1193.46 -689.373 1505.06 -477.44C1826.66 -258.708 1969.39 178.561 1919.28 360.754C1772.48 894.471 1197.78 895.939 818.27 724.511C718.216 679.316 595.66 699.849 509.92 768.422C-189.965 1328.18 -1320.08 -0.434126 136.106 -271.377ZC166.053 -276.949 193.587 -295.752 210.53 -321.067");
+//     }
+//     100%{
+//         d: path("M136.106 -271.377C166.053 -276.949 193.587 -295.752 210.53 -321.067C486.511 -733.416 1193.46 -689.373 1505.06 -477.44C1826.66 -258.708 1969.39 178.561 1919.28 360.754C1772.48 894.471 1197.78 895.939 818.27 724.511C718.216 679.316 595.66 699.849 509.92 768.422C-189.965 1328.18 -1320.08 -0.434126 136.106 -271.377Z");
+//     }
+// }
+// @keyframes homeWave12Animation {
+//     0%{
+//         d: path("")
+//     }
+//     50%{
+        
+//     }
+//     100%{
+        
+//     }
+// }
+
+$primary: #28da00;
+$primary-ultralight: mix(white, $primary, 80%);
+$primary-light: mix(white, $primary, 20%);
+$primary-dark: mix(black, $primary, 25%);
+$primary-ultradark: mix(black, $primary, 80%);
+$black: #333333;
+$white: #eeeeee;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+$open-sans: 'Open Sans', Helvetica, arial, sans-serif;
+$raleway: 'Raleway', 'Open Sans', sans-serif;
+
+// Misc
+$max-width: 800px;
+
+
+// ------------------------------------------------------
+
+
+// *,
+// *:before,
+// *:after {
+//     box-sizing: border-box;
+// }
+
+// html {
+//     font-family: $open-sans;
+//     color: $primary;
+//     background-color: $black;
+// }
+
+// h1, h2, h3,
+// h4, h5, h6 {
+//     font-family: $raleway;
+//     text-align: center;
+// }
+
+// a {
+//     color: $black;
+//     text-decoration: none;
+// }
+
+// img {
+//     max-width: 100%;
+// }
+
+// .header {
+//     position: relative;
+//     overflow: visible;
+    
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         bottom: 0;
+//         left: 50%;
+//         width: 50px;
+//         height: 2px;
+//         background-color: $primary;
+//         transform: translateX(-50%);
+//     }
+// }
+
+// .pen__heading {}
+
+// .pen__subheading {
+//     margin-bottom: 0;
+    
+//     a {
+//         color: $primary;
+        
+//         &:hover,
+//         &:focus {
+//             color: $primary-light;
+//         }
+//     }
+// }
+
+// .container {
+//     overflow: hidden;
+//     width: 100%;
+//     max-width: $max-width;
+//     margin: 0 auto;
+//     padding: 2rem 1rem;
+// }
+
+// .col {
+//     padding: 1rem;
+    
+//     @media (min-width: $max-width) {
+//         width: 50%;
+//         float: left;
+
+//         &:nth-of-type(2n+1) {
+//             clear: left;
+//         }        
+//     }
+    
+//     &.col--full {
+//         width: 100%;
+//     }
+// }
+
+
+// ------------------------------------------------------
+
+
+html,
+body {
+    &,
+    * {
+        cursor: none;        
+    }
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    z-index: 90000;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    $size: 12px;
+    width: $size;
+    height: $size;
+    background-color: $primary;
+    border: 2px solid var(--main-background);
+}
+
+.cursor-dot-outline {
+    $size: 40px;
+    width: $size;
+    height: $size;
+    background-color: rgba($primary-light, 0.5);
+}
