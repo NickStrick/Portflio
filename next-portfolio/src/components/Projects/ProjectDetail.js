@@ -58,7 +58,7 @@ const Project = (props) => {
                         <p className="quick-info"><strong>Desription</strong> {description}</p>
                     </div>
                     <div className="project-btns">
-                        <button onClick={()=>buttonClick(deployed)} className="project-a main-btn" >Deployed Site</button>
+                        {deployed&&deployed.length?<button onClick={()=>buttonClick(deployed)} className="project-a main-btn" >Deployed Site</button>:null}
                         <button onClick={()=>buttonClick(link)} className="project-a main-btn main-btn-icon"><FontAwesomeIcon icon={faGithub}/></button>
                     </div>
             </div>
@@ -66,16 +66,16 @@ const Project = (props) => {
        
         <div className="image-section-container"> 
         <WaveSvg2 index={'1'}/>
-        <div className="section-container section-container-image-background" style={{backgroundImage:`url(${img})`}}>
+        <div className="section-container section-container-image-background" style={{backgroundImage:`url(${img.src})`}}>
         </div>
         <div className="section-container section-container-image">
             <div className=" section-content proj-image-content" >
-                    <div className="project-image" style={{backgroundImage:`url(${img})`}}></div>
+                    <div className="project-image" style={{backgroundImage:`url(${img.src})`}}></div>
             </div>
             
         </div>
         <div className=" section-content proj-image-content" >
-                    <div className="project-image" style={{backgroundImage:`url(${img})`}}></div>
+                    <div className="project-image" style={{backgroundImage:`url(${img.src})`}}></div>
             </div>
         <WaveSvg2 index={'2'}/>
         </div>
