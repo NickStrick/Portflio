@@ -1,10 +1,9 @@
-import React from 'react';
+
 import './ProjectDetail.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
-import WaveSvg from '../../images/projects/project-split.js'
-import WaveSvg2 from '../../images/projects/project-split-2.js'
+import WaveSvg2 from '../../../public/images/projects/project-split-2.js'
 
 const Project = (props) => {
     if (!(props.project.name)) {

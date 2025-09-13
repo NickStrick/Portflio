@@ -1,77 +1,83 @@
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import './Footer.scss';
+'use client';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-import SplitThree from '../../images/splitters/bottom-wave-3.js'
-import NsLogo from '../../images/NStransDark.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import Nextbutton from '../NextButton.js'
+// ⬇️ Update these paths as needed
+import SplitThree from '../../../public/images/splitters/bottom-wave-3';
+import NextButton from '../NextButton';
 
-const Footer = ({setPage}) => {
-    const navigate = useNavigate();
-    let footerColor = 'rgb(35,40,40)'
-    let styleobj = {paddingTop:'2rem'}
-    // const [showMail, setMail] = useState(false)
-    function handleEmailClick() {
-        window.scroll(0,0)
-        navigate("/contact");
-      }
+// If you moved the PNG to /public:
+import NsLogo from '../../../public/images/NStransDark.png';
+import './Footer.scss'
 
-    if(window.location.pathname.includes('skills')){
-        footerColor = 'white'
-        styleobj.backgroundColor = 'white'
-    }else if(window.location.pathname.includes('projects') || window.location.pathname.includes('experience')){
-        footerColor = 'rgb(60,62,70)'
-    }
-    if(window.location.pathname == '/'){
-        styleobj = {paddingTop:'12rem'}
-    }
-    return (
+// If Footer.scss was a global stylesheet in CRA, move its content to app/globals.css,
+// or convert it to a CSS module (Footer.module.scss) and import that instead.
+// import './Footer.scss';
 
-        <div className="footer content-container" style={styleobj}>
-            
-            <Nextbutton  setPage={setPage}/>
-            <SplitThree fillColor={footerColor} />
-            <div className="page-split-padding-dark split-wave-3" style={{background:footerColor}}></div>
-            <div className="footer-content" >
-                <div className="icon-btn">
-                <FontAwesomeIcon icon={faGithub}  target="_blank" onClick={() => window.open('https://github.com/NickStrick')}/>
-                </div>
-                <div className="icon-btn" target="_blank"  onClick={() => window.open('https://www.linkedin.com/in/nick-stricker-1ba8a7192/')} >
-                <FontAwesomeIcon icon={faLinkedin} />
-                </div>
-                <div className="icon-btn" onClick={handleEmailClick}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                </div>
-                {/* <img src={gitLogo} className='gitLogo git' target="_blank" onClick={() => window.open('https://github.com/NickStrick')} />
-                <img src={linkedin} className='gitLogo linkedin' target="_blank" onClick={() => window.open('https://www.linkedin.com/in/nick-stricker-1ba8a7192/')} /> */}
-                {/* <div className='mail-div'>
-                    <img src={mail} className='gitLogo mail' target="_blank" onClick={() => setMail(!showMail)} />
-                    <div className='mail-text'>
-                        {showMail &&
-                            <div className="tooltip">
-                                <button onClick={myFunction} onMouseOut={outFunc}>
-                                    <span className="tooltiptext" id="myTooltip">Copy to clipboard</span>
-                                    Copy text
-                            </button>
-                            </div>
-                        }
-                        {showMail && <input type="text" id='mailInput' value='strickerdev@gmail.com' readOnly={true} />}
+export default function Footer() {
+  const router = useRouter();
+  const pathname = usePathname() || '/';
 
-                    </div>
-                </div> */}
-            </div>
-            <div className='footer-end'>
-                <img src={NsLogo} className='nslogo' />
-                <p>© {new Date().getFullYear()} Stricker Digital</p>
-            </div>
-        </div >
-    );
+  // Derived style (was based on window.location.pathname)
+  let footerColor = 'rgb(35,40,40)';
+  const styleobj = { paddingTop: '2rem' };
+
+  if (pathname.includes('skills')) {
+    footerColor = 'white';
+    styleobj.backgroundColor = 'white';
+  } else if (pathname.includes('projects') || pathname.includes('experience')) {
+    footerColor = 'rgb(60,62,70)';
+  }
+  if (pathname === '/') {
+    styleobj.paddingTop = '12rem';
+  }
+
+  function handleEmailClick() {
+    window.scrollTo(0, 0);
+    router.push('/contact');
+  }
+
+  return (
+    <div className="footer content-container" style={styleobj}>
+      <NextButton />
+
+      <SplitThree fillColor={footerColor} />
+      <div className="page-split-padding-dark split-wave-3" style={{ background: footerColor }} />
+
+      <div className="footer-content">
+        <button
+          className="icon-btn"
+          aria-label="GitHub"
+          onClick={() => window.open('https://github.com/NickStrick', '_blank', 'noopener,noreferrer')}
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </button>
+
+        <button
+          className="icon-btn"
+          aria-label="LinkedIn"
+          onClick={() =>
+            window.open('https://www.linkedin.com/in/nick-stricker-1ba8a7192/', '_blank', 'noopener,noreferrer')
+          }
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </button>
+
+        <button className="icon-btn" aria-label="Email / Contact" onClick={handleEmailClick}>
+          <FontAwesomeIcon icon={faEnvelope} />
+        </button>
+      </div>
+
+      <div className="footer-end">
+        <Image src={NsLogo} alt="NS Logo" className="nslogo" priority  height={200} width={200}/>
+        <p>© {new Date().getFullYear()} Stricker Digital</p>
+      </div>
+    </div>
+  );
 }
-
-
-export default Footer;

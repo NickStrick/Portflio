@@ -1,25 +1,31 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+'use client';
+
+import  { useState } from 'react';
+
+// ⛳ If these were global styles in CRA, move them to app/globals.css
+// or convert to a CSS Module (Projects.module.css) and import that instead.
 import './styles/Projects.css';
-import React, { useState } from 'react';
 
-import riyLogo from '../images/old/RIY.png'
-import mympyLogo from '../images/old/Mympy.png'
-import luncherLogo from '../images/old/luncherApp.png'
-import rangoLogo from '../images/old/rangoDjango.png'
-import softSciLogo from '../images/softsci.png'
-import doWellLogo from '../images/doWell.png'
-import wineAndRose from '../images/projects/rose.jpg'
-import dots from '../images/projects/connectingdots.jpg'
-import Amanda from '../images/amanda.jpg'
-import Luke from '../images/projects/luke.png'
-import Connor from '../images/projects/connor.png'
-import CMF from '../images/projects/CMF.png'
-import claroflowLogo from '../images/projects/claroflow.png'
+// ---- Images ----
+// Option A (recommended): move images to /public and reference with /path
+// Option B: keep static imports and pass them down (Next can handle this)
+import riyLogo from '../../public/images/old/RIY.png';
+import mympyLogo from '../../public/images/old/Mympy.png';
+import luncherLogo from '../../public/images/old/luncherApp.png';
+import rangoLogo from '../../public/images/old/rangoDjango.png';
+import softSciLogo from '../../public/images/softsci.png';
+import doWellLogo from '../../public/images/doWell.png';
+import wineAndRose from '../../public/images/projects/rose.jpg';
+import dots from '../../public/images/projects/connectingdots.jpg';
+import Amanda from '../../public/images/projects/amanda.jpg';
+import Luke from '../../public/images/projects/luke.png';
+import Connor from '../../public/images/projects/connor.png';
+import CMF from '../../public/images/projects/CMF.png';
+import claroflowLogo from '../../public/images/projects/claroflow.png';
 
-import ProjectList from './Projects/ProjectList.js'
-import ProjectDetail from './Projects/ProjectDetail.js';
-
-
+// ---- Child components (adjust paths if different) ----
+import ProjectList from './Projects/ProjectList';
+import ProjectDetail from './Projects/ProjectDetail';
 
 const pData = [
     {
@@ -34,7 +40,7 @@ const pData = [
         weeksCompleted: 0.2,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         contribution: ``,
-        color:'#d26cec'
+        color:'#d26cec', hover: '#a66cec'
       },
    {
         name: "Coach Luke Stricker",
@@ -47,7 +53,8 @@ const pData = [
         teamMemebers: 1,
         weeksCompleted: 0.2,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``
+        contribution: ``,
+        color: '#f43f5e', hover:'#460b0b'
       },
    {
         name: "Connor Murray Music",
@@ -60,7 +67,8 @@ const pData = [
         teamMemebers: 1,
         weeksCompleted: 0.2,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``
+        contribution: ``,
+        color: '#ffae00', hover:'#ff7a00'
       },
   {
         name: "Amanda G Professional",
@@ -73,7 +81,8 @@ const pData = [
         teamMemebers: 1,
         weeksCompleted: 0.2,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``
+        contribution: ``,
+        color:'#65a30d', hover:'#166534'
       },
   {
         name: "Connecting Dots (for latinX Professionals)",
@@ -93,7 +102,8 @@ The team needed a site that showcased events, shared updates, and encouraged new
 Though unpaid, the project offered huge value in experience. I built a Node.js backend, a React front-end, and created a flexible system for content updates. I learned a lot, delivered early, and saw how impactful tech can be when it supports a real mission.
 
 In the end, I gained technical and planning skills, and a sense of pride in building something that matters.`
-      },
+        ,color: '#81329E', hover: '#751580',
+},
       {
         name: "Claro Flow",
         description: 'A sleek landing page for ClaroFlow, a modern workflow SaaS tool built for remote teams. The site highlights features like task automation, team collaboration, and real-time analytics to boost productivity and streamline operations.',
@@ -110,7 +120,8 @@ In the end, I gained technical and planning skills, and a sense of pride in buil
 Working from marketing copy and product goals, I designed and developed the front end from scratch, ensuring smooth interactions and a strong first impression. The site includes dynamic pricing sections, testimonials, and a call-to-action system to drive early signups. I optimized performance and responsiveness across devices, using lightweight styling and scalable components.
 
 This project helped me improve my skills in UI design, front-end speed optimization, and building user-focused landing experiences that convert.`
-      },
+      ,color: '#2563EB', hover: '#2253bd',
+},
     {
         name: "Softball Science",
         description: 'Softball Science was created by two women with a long history in the world of softball and life. We have used our combined expertise, that includes over 30 years of coaching experience along with 20 years of data analytics to create Softball Science. We have created a metrically driven program specifically designed to enhance the raw power behind your softball swing.',
@@ -127,6 +138,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         The client asked me to build the ability to inject video into thier site and the ability to upload whatever files, images, and viedos they would like into the side. Seeing as this was a side project that was making me little money, I was initally reluctant to do such intensive and time consuming work for the client. However i reminded myself that there is not just monetary value to my work. There is educational, experiencial, and reputational value to my work, and that is what i focused my attention on. Allowing for a forgiving deadline, i started my work, created a plan to follow, and wrote a Node JS backend database to hold the client's data and configured the webstie to display videos where ever was desired. I completed the work long before deadline, and gained knowledge in Node JS and embeded videos that i hadn't known before. The client was happy with the work and Expressed much gratitude.
         
         In the end, I learned new Technical, Buisness, Planning, and Communication skills in the creation of Softball Science. And continue to support my client to this day.`
+      ,color: '#C15E94', hover: '#994b76',
       },
       {
         name: "Do Well 2 Transform",
@@ -140,6 +152,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         weeksCompleted: 1,
         pills: ['Front End', 'React', 'Bootstrap'],
         contribution: 'I was the sole develoepr for this site. The client asked for merely a functional landing page, and that is what i devlivered. This project gave me another point of experience in negotiation, plannning, and estimation of commission projects.'
+      ,color: '#7FB98D', hover: '#55815f',
       },
       {
         name: "Wine And Roses",
@@ -153,6 +166,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         weeksCompleted: 0.1,
         pills: ['Front End', 'React'],
         contribution: 'This was my first Real world functional landing page that allowed my client to advertise merchendise and encourage users to join their meetup group. I loved helping a small group of individuals who are passionate about thier plants and flowers come together and connect in more meaningfull ways! '
+      , color: '#71685D', hover: '#4d4133',
       },
       {
         name: "Mympy Dreams",
@@ -166,7 +180,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         weeksCompleted: 8,
         pills: ['Team Lead','Front End','Back End', 'React', 'Node.js', 'Auth0'],
         contribution: 'I was responsible for maintaining momentum by overseeing project planning and updates, leading meetings, maintaining manager and stakeholder relationships, communicating effectively, solving conflicts, deployment, and debugging as well as contributing to the authentication of the app whenever possible.'
-    
+        ,color: '#6483C1', hover: '#284c94',
       },
     {
       name: "Review It Yourself",
@@ -180,6 +194,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       weeksCompleted: 5,
       pills: ['Front End', 'Back End', 'React', 'Node.js', 'Postgres', 'SQL'],
       contribution: 'I was responsible for frontend organization and  many frontend pages, such as project page, create project page, and edit project page as well as styling and debugging much of the website. I also worked on all CRUD operations and endpoints for reviews, comments, and favorites'
+      ,color: '#f89c4c', hover: '#a15c1f',
     },
     {
       name: "Jango Rango Dungeon",
@@ -193,7 +208,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       weeksCompleted: 1,
       pills: ['Back End', 'React', 'Django', 'SQL'],
       contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
-  
+      ,color: '#4C2C72', hover: '#381d58',
     },
     
     {
@@ -208,22 +223,22 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       weeksCompleted: 1,
       pills: ['Back End', 'SQL', 'Encryption'],
       contribution: 'I was Solely responsible for the Back end of this project. Some key features were authentication, ability to register and edit user data, creating, editing and deleteing fundraising projects as well as donating to projects or organizations. I worked well with a team of two frontend react engineers, and helped them debug to get our product fully functional.',
-      color: '#81905A'
+      color: '#81905A', hover: '#667445'
     },
   
   ]
-  const Project = (props) => {
-    const [detailedProject, setDetail] = useState(null)
-      console.log('project list')
-      return (
-        <div className="content-container">
-            
-            {detailedProject == null 
-            ? <div className="section-container"><ProjectList setDetail={setDetail} {...props} projects={pData}/></div>
-            : <ProjectDetail setDetail={setDetail} {...props} project={detailedProject}/> }
+ export default function Projects(props) {
+  const [detailedProject, setDetail] = useState(null);
+
+  return (
+    <div className="content-container">
+      {detailedProject === null ? (
+        <div className="section-container">
+          <ProjectList setDetail={setDetail} {...props} projects={pData} />
         </div>
-      );
-  }
-  
-  
-  export default Project;
+      ) : (
+        <ProjectDetail setDetail={setDetail} {...props} project={detailedProject} />
+      )}
+    </div>
+  );
+}

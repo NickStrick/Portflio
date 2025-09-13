@@ -1,5 +1,7 @@
-import Image from "next/image";
+'use client';
+import Services from '../../components/services/Services';
 
-export default function Contact() {
-  return (<></>)
+
+export default function Page() {
+  return <Services />;
 }

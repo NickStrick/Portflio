@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
-import ArrowSvg from '../../images/svg/projCard.js'
-import WaveSvg from '../../images/projects/itemSvg.js'
+import ArrowSvg from '../../../public/images/svg/projCard.js'
+import WaveSvg from '../../../public/images/projects/itemSvg.js'
 
 const Project = (props) => {
     let style = {}
@@ -14,7 +14,7 @@ const Project = (props) => {
         style = {backgroundColor: `${props.project.color}`};
         svgStyle = {fill: `${props.project.color}`};
     }
-    const { img, description, name, link, pills } = props.project
+    const {  name, pills } = props.project
 
     function handleProjClick(){
         console.log('click', props.project)
@@ -24,7 +24,9 @@ const Project = (props) => {
     console.log('style',props.project.name, style.backgroundColor)
     return (
 
-        <div className={`project-container item proj-item-${props.index} bg-blue-200`} onClick={handleProjClick} style={style}>
+        <div className={`project-container item proj-item-${props.index} bg-blue-200`} onClick={handleProjClick} style={style}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = props.project.hover)}
+    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = props.project.color)}>
             <div className="img-back"></div>
             <div className={`img-overflow`} >
             <WaveSvg fillColor={'#28da00'} index={props.index}/>
@@ -32,8 +34,8 @@ const Project = (props) => {
             <div className="img-overlay">
                 <span>{name}</span>
                 <div className="info-pill-conatiner">
-                    {pills.map(pill => {
-                        return <div className="info-pill">{pill}</div>
+                    {pills.map((pill) => {
+                        return <div key={props.index+pill} className="info-pill">{pill}</div>
                     })}
                 </div>
              </div>
@@ -50,7 +52,7 @@ const Project = (props) => {
             {/* <div className="info"> */}
                 
                 {/* <p aria-label={'project-description'}>{description}</p> */}
-                {/* <button class="main-btn" target="_blank" onClick={projectPage}>Learn More<span className="main-btn-overlay"></span></button> */}
+                {/* <button className="main-btn" target="_blank" onClick={projectPage}>Learn More<span className="main-btn-overlay"></span></button> */}
                 {/* <div className='project-links'>
 
                     <img src={gitLogo} target="_blank" onClick={() => window.open(link)} />

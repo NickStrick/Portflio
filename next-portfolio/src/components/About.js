@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 // About component
 const About = () => (
     <div className="content-container">

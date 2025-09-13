@@ -3,7 +3,7 @@ export default function Logo({ fillColor='#28da00' }) {
     return (
         
         <svg className="split-svg split-svg-wave-2 footer-wave"  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 1024 562">
-        <g clip-path="url(#clip0_9174_234436)">
+        <g clipPath="url(#clip0_9174_234436)">
         <g filter="url(#filter0_d_9174_234436)">
         <path fill="url(#paint0_linear_9174_234436)" d="M536.91 258.845c-188.148 265.589-427.483-244.818-726.4-23.82-211.018 156.012-32.025 260.972 91.49 309.21h1163.98l276.54-381.444s-46.78-277.134-243.48-67.5C902.336 304.927 725.058-6.743 536.91 258.846Z"/>
         </g>
@@ -12,18 +12,18 @@ export default function Logo({ fillColor='#28da00' }) {
         </g>
         <defs>
         <linearGradient id="paint0_linear_9174_234436" x1="477.172" x2="347.405" y1="357.335" y2="-15.236" gradientUnits="userSpaceOnUse">
-        <stop stop-color={fillColor}/>
-        <stop offset="1" stop-color="#28da00"/>
+        <stop stopColor={fillColor}/>
+        <stop offset="1" stopColor="#28da00"/>
         </linearGradient>
         <linearGradient id="paint1_linear_9174_234436" x1="894.45" x2="364.156" y1="146.14" y2="344.71" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#28da00"/>
-        <stop offset="1" stop-color="#28da00"/>
+        <stop stopColor="#28da00"/>
+        <stop offset="1" stopColor="#28da00"/>
         </linearGradient>
         <clipPath id="clip0_9174_234436">
         <path fill="#fff" d="M-128 0h1280v561.333H-128z"/>
         </clipPath>
-        <filter id="filter0_d_9174_234436" width="1664.33" height="562.145" x="-297.107" y="3.981" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <filter id="filter0_d_9174_234436" width="1664.33" height="562.145" x="-297.107" y="3.981" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
         <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
         <feOffset dx="7.297" dy="4.49"/>
         <feGaussianBlur stdDeviation="8.7"/>

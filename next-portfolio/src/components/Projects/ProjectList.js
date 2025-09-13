@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+
 import Project from './Project.js';
 // let sWidth = screen.width;
 
 const ProjectList = (props) => {
-    let sWidth = window.screen.width;
     let middle = props.projects.length % 2 !== 0 ? ((props.projects.length + 1) / 2) : props.projects.length / 2;
 
     return (

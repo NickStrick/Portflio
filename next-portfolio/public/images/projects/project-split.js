@@ -2,12 +2,12 @@
 export default function Split({index}) {
     // #373737 rgb(35,40,40)
     return (
-        <svg id={`wave${index}`} class={`split-svg project-detail-split-${index}`}  viewBox="0 0 1440 260" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg id={`wave${index}`} className={`split-svg project-detail-split-${index}`}  viewBox="0 0 1440 260" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
         <linearGradient id={`sw-gradient-${index}`} x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgb(60,62,70)" offset="0%">
+        <stop stopColor="rgb(60,62,70)" offset="0%">
         </stop>
-        <stop stop-color="rgb(60,62,70)" offset="100%">
+        <stop stopColor="rgb(60,62,70)" offset="100%">
         </stop>
         </linearGradient>
         </defs>
@@ -15,9 +15,9 @@ export default function Split({index}) {
         </path>
         <defs>
         <linearGradient id={`sw-gradient-1-${index}`} x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgb(60,62,70)" offset="0%">
+        <stop stopColor="rgb(60,62,70)" offset="0%">
         </stop>
-        <stop stop-color="rgb(60,62,70)" offset="100%">
+        <stop stopColor="rgb(60,62,70)" offset="100%">
         </stop>
         </linearGradient>
         </defs>

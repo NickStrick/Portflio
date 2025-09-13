@@ -1,18 +1,17 @@
 
 import './styles/Experiences.scss';
-import React, { useState } from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinStars} from '@fortawesome/free-solid-svg-icons'
 
-  const Experiences = (props) => {
+  const Experiences = () => {
       return (
         <div className="content-container experience-container">
           <div className="section-content">
           <h1 className='port-head'>Experience</h1>
           <p>The experience i have is fueled by the passion that i have for tinkering, inovatting, problem solving, and helping people. </p>
-          <p>Let's work together to create a better future for you and your buisness.</p>
+          <p>{`Let's work together to create a better future for you and your buisness.`}</p>
             </div><VerticalTimeline>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
@@ -162,7 +161,7 @@ including product releases, debugging, code reviews, and stakeholder management
 - Coached students on how to present their final project
 `}
                     </div>
-                    <strong>Teacher's Assistant, Bloom Institute of Technology | Feb 2019 - July 2020</strong>
+                    <strong>{`Teacher's Assistant, Bloom Institute of Technology | Feb 2019 - July 2020`}</strong>
                     <div className="pararaph">
                         {`
 - Led team of 8+ students in daily code challenges in Javascript, Java, and Python

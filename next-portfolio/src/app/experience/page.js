@@ -1,5 +1,6 @@
-import Image from "next/image";
+'use client'; // if component uses hooks; otherwise you can remove
+import Experiences from '../../components/Experience';
 
-export default function Contact() {
-  return (<></>)
+export default function Page() {
+  return <Experiences />;
 }

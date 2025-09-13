@@ -1,13 +1,13 @@
-import React from 'react';
+
 import './Certificate.scss';
 
-import lambdaCert from '../../images/old/certs/full-stack-web-development.png'; 
-import AWStechCert from '../../images/old/certs/awsCloud.png';
-import GoogleAICert from '../../images/old/certs/GAIEssentials.png';
-import RNCert from '../../images/old/certs/ReactNative.png';  
-import CertsSVG from '../../images/skills/CertSplit.js'
+import lambdaCert from '../../../public/images/old/certs/full-stack-web-development.png'; 
+import AWStechCert from '../../../public/images/old/certs/awsCloud.png';
+import GoogleAICert from '../../../public/images/old/certs/GAIEssentials.png';
+import RNCert from '../../../public/images/old/certs/ReactNative.png';  
+import CertsSVG from '../../../public/images/skills/CertSplit.js'
 
-const Certificate = (props) => {
+const Certificate = () => {
     let lamb_cert_url= 'https://www.youracclaim.com/badges/b2683aac-d322-43a3-bc78-5101de3c6485/public_url';
     let list_of_certs = [
         {
@@ -70,7 +70,7 @@ const Certificate = (props) => {
                                 className='image lambda-cert'
                                 onClick={() => handleLinkClick(cert.link)}
                                 style={{
-                                    backgroundImage: `url(${cert.cert})`,
+                                    backgroundImage: `url(${cert.cert.src})`,
                                     backgroundPosition: 'center',
                                     width: cert.width,
                                     cursor: 'pointer'

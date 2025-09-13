@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintBrush, faHammer, faHandshakeSimple, faPaperPlane, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 export default function Holo({ fillColor }) {
+    console.log(fillColor)
     return (
         <div className="holo-body">
         <div className="holo-section">
-            <div class="isolate">
-                <div class="noise"><FontAwesomeIcon icon={faMapMarkerAlt} /> <br></br>Chicago IL</div>
-                <div class="overlay"></div>
+            <div className="isolate">
+                <div className="noise"><FontAwesomeIcon icon={faMapMarkerAlt} /> <br></br>Chicago IL</div>
+                <div className="overlay"></div>
             </div>
         </div>
         </div>

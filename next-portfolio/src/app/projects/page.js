@@ -1,5 +1,8 @@
-import Image from "next/image";
+'use client'; // ← if Projects uses useState or events (it does)
 
-export default function Contact() {
-  return (<></>)
+import Projects from '../../components/Projects';
+
+
+export default function Page() {
+  return <Projects />;
 }
