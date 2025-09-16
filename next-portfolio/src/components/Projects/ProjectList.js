@@ -10,7 +10,9 @@ const ProjectList = (props) => {
 
 
             <div className="projects section-content" >
-                <h1 className='port-head'>Projects</h1>
+                <h1 className='port-head proj-head'>Projects
+                    {/* <span className='proj-count'> - {props.projects.length} </span> */}
+                    </h1>
                 <div className='projects-columns '>
                     <div className='project-list'>
                         {props.projects.map((project, index) => {

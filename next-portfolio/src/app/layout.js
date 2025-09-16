@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 // If you use global SCSS, import it here too:
 // import './globals.scss';
+import { Analytics } from "@vercel/analytics/next"
 
 import ClientShell from '../components/shell/ClientShell';
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ClientShell>{children}</ClientShell>
+        <Analytics />
       </body>
     </html>
   );

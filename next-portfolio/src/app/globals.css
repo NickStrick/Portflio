@@ -668,3 +668,12 @@ margin-top:0.5rem;
         /* background-size: 300% 100%; Expand as it moves */
     }
 }
+.proj-count{
+  font-size: 2rem;
+  color:#b3b3b3;
+  margin-left: 20px;
+}
+.proj-head{
+  display:flex;
+  align-items: center;
+}
