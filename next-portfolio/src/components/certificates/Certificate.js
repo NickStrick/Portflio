@@ -2,6 +2,7 @@
 import './Certificate.scss';
 
 import lambdaCert from '../../../public/images/old/certs/full-stack-web-development.png'; 
+import GoogleDigitalMarketing from '../../../public/images/old/certs/GoogleDigitalMarketing.png'; 
 import AWStechCert from '../../../public/images/old/certs/awsCloud.png';
 import GoogleAICert from '../../../public/images/old/certs/GAIEssentials.png';
 import RNCert from '../../../public/images/old/certs/ReactNative.png';  
@@ -11,10 +12,18 @@ const Certificate = () => {
     let lamb_cert_url= 'https://www.youracclaim.com/badges/b2683aac-d322-43a3-bc78-5101de3c6485/public_url';
     let list_of_certs = [
         {
-            name: 'Full-Stack Web Development + Technical Interviewing',
+            name: 'Full-Stack Web Development + Technical Interviewing Certificate',
             by: 'Bloom Institute of Technology',
             cert: lambdaCert,
             link: lamb_cert_url,
+            width:'260px',
+            className: ''
+        },
+         {
+            name: 'Google Digital Marketing and E-Commerce Professional Certificate',
+            by: 'Google, Coursera',
+            cert: GoogleDigitalMarketing,
+            link: "https://www.credly.com/badges/d9c7ccca-44fe-4710-9a58-96d26970db36/public_url",
             width:'260px',
             className: ''
         },

@@ -40,52 +40,12 @@ const pData = [
         weeksCompleted: 0.2,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         contribution: ``,
-        color:'#d26cec', hover: '#a66cec'
+        color:'#d26cec', hover: '#a66cec',
+        type: 'Business Website'
       },
-   {
-        name: "Coach Luke Stricker",
-        description: 'A Lead Capture website for Hitting lessons, taught by an experienced professional Coach. ',
-        img: Luke,
-        link: 'https://github.com/NickStrick/Coach-Luke',
-        deployed: 'https://coach-luke-stricker.vercel.app/',
-        role: 'Wed Developer',
-        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
-        teamMemebers: 1,
-        weeksCompleted: 0.2,
-        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``,
-        color: '#f43f5e', hover:'#460b0b'
-      },
-   {
-        name: "Connor Murray Music",
-        description: 'A Lead Capture website for Music lessons, taught by an experienced professional musician. ',
-        img: Connor,
-        link: 'https://github.com/NickStrick/Connor-Murray-Music',
-        deployed: 'https://connor-murray-music.vercel.app/',
-        role: 'Wed Developer',
-        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
-        teamMemebers: 1,
-        weeksCompleted: 0.2,
-        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``,
-        color: '#ffae00', hover:'#ff7a00'
-      },
+      
   {
-        name: "Amanda G Professional",
-        description: 'A professional profile website for a BCBA Certified Psychologist & Nerodivergent therapist. ',
-        img: Amanda,
-        link: 'https://github.com/NickStrick/Amanda-Grau-professional-profile',
-        deployed: 'https://amanda-grau-professional-profile.vercel.app/',
-        role: 'Wed Developer',
-        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
-        teamMemebers: 1,
-        weeksCompleted: 0.2,
-        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
-        contribution: ``,
-        color:'#65a30d', hover:'#166534'
-      },
-  {
-        name: "Connecting Dots (for latinX Professionals)",
+        name: "Connecting Dots LatinX",
         description: 'A website for the LatinX community of Chicago to connect with each other and find events in the area. Connecting Dots uplifts the latinX community by providing a platform for networking, sharing resources, and building relationships. ',
         img: dots,
         link: 'https://github.com/NickStrick/Connecting-Dots',
@@ -103,25 +63,39 @@ Though unpaid, the project offered huge value in experience. I built a Node.js b
 
 In the end, I gained technical and planning skills, and a sense of pride in building something that matters.`
         ,color: '#81329E', hover: '#751580',
+        type: 'Eduator & Event Organizer Website'
 },
-      {
-        name: "Claro Flow",
-        description: 'A sleek landing page for ClaroFlow, a modern workflow SaaS tool built for remote teams. The site highlights features like task automation, team collaboration, and real-time analytics to boost productivity and streamline operations.',
-        img: claroflowLogo,
-        link: 'https://github.com/NickStrick/ClaroFlow',
-        deployed: 'https://claro-flow.vercel.app/',
+   {
+        name: "Coach Luke Stricker",
+        description: 'A Lead Capture website for Hitting lessons, taught by an experienced professional Coach. ',
+        img: Luke,
+        link: 'https://github.com/NickStrick/Coach-Luke',
+        deployed: 'https://coach-luke-stricker.vercel.app/',
         role: 'Wed Developer',
-        techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'PassportJS', 'NodeJS', 'Express', 'Postgres', 'Cloudinary', 'Filepond', , 'AWS S3', 'AWS Lambda', 'AWS DynamoDB'],
+        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
         teamMemebers: 1,
-        weeksCompleted: 1,
-        pills: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS'],
-        contribution: `I was the sole developer behind the ClaroFlow landing page—a sleek, responsive site for a modern workflow SaaS product. I built the UI to reflect the app’s streamlined focus: speed, clarity, and productivity. Every section was crafted to highlight key features like automation, collaboration tools, and analytics, while maintaining a clean and intuitive design.
-
-Working from marketing copy and product goals, I designed and developed the front end from scratch, ensuring smooth interactions and a strong first impression. The site includes dynamic pricing sections, testimonials, and a call-to-action system to drive early signups. I optimized performance and responsiveness across devices, using lightweight styling and scalable components.
-
-This project helped me improve my skills in UI design, front-end speed optimization, and building user-focused landing experiences that convert.`
-      ,color: '#2563EB', hover: '#2253bd',
-},
+        weeksCompleted: 0.2,
+        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        contribution: ``,
+        color: '#f43f5e', hover:'#460b0b',
+        type: 'Coach/Trainer Website'
+      },
+   {
+        name: "Connor Murray Music",
+        description: 'A Lead Capture website for Music lessons, taught by an experienced professional musician. ',
+        img: Connor,
+        link: 'https://github.com/NickStrick/Connor-Murray-Music',
+        deployed: 'https://connor-murray-music.vercel.app/',
+        role: 'Wed Developer',
+        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
+        teamMemebers: 1,
+        weeksCompleted: 0.2,
+        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        contribution: ``,
+        color: '#ffae00', hover:'#ff7a00',
+        type: 'Teacher Website'
+      },
+      
     {
         name: "Softball Science",
         description: 'Softball Science was created by two women with a long history in the world of softball and life. We have used our combined expertise, that includes over 30 years of coaching experience along with 20 years of data analytics to create Softball Science. We have created a metrically driven program specifically designed to enhance the raw power behind your softball swing.',
@@ -139,6 +113,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         
         In the end, I learned new Technical, Buisness, Planning, and Communication skills in the creation of Softball Science. And continue to support my client to this day.`
       ,color: '#C15E94', hover: '#994b76',
+      type: 'Coach/Trainer Website'
       },
       {
         name: "Do Well 2 Transform",
@@ -153,7 +128,42 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         pills: ['Front End', 'React', 'Bootstrap'],
         contribution: 'I was the sole develoepr for this site. The client asked for merely a functional landing page, and that is what i devlivered. This project gave me another point of experience in negotiation, plannning, and estimation of commission projects.'
       ,color: '#7FB98D', hover: '#55815f',
+      type: 'Coach/Trainer Website'
       },
+  {
+        name: "Amanda G Professional",
+        description: 'A professional profile website for a BCBA Certified Psychologist & Nerodivergent therapist. ',
+        img: Amanda,
+        link: 'https://github.com/NickStrick/Amanda-Grau-professional-profile',
+        deployed: 'https://amanda-grau-professional-profile.vercel.app/',
+        role: 'Wed Developer',
+        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
+        teamMemebers: 1,
+        weeksCompleted: 0.2,
+        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        contribution: ``,
+        color:'#65a30d', hover:'#166534',
+        type: 'Professional Profile Website'
+      },
+      {
+        name: "Claro Flow",
+        description: 'A sleek landing page for ClaroFlow, a modern workflow SaaS tool built for remote teams. The site highlights features like task automation, team collaboration, and real-time analytics to boost productivity and streamline operations.',
+        img: claroflowLogo,
+        link: 'https://github.com/NickStrick/ClaroFlow',
+        deployed: 'https://claro-flow.vercel.app/',
+        role: 'Wed Developer',
+        techUsed: ['ReactJs', 'Redux', 'Bootstrap', 'PassportJS', 'NodeJS', 'Express', 'Postgres', 'Cloudinary', 'Filepond', , 'AWS S3', 'AWS Lambda', 'AWS DynamoDB'],
+        teamMemebers: 1,
+        weeksCompleted: 1,
+        pills: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS'],
+        contribution: `I was the sole developer behind the ClaroFlow landing page—a sleek, responsive site for a modern workflow SaaS product. I built the UI to reflect the app’s streamlined focus: speed, clarity, and productivity. Every section was crafted to highlight key features like automation, collaboration tools, and analytics, while maintaining a clean and intuitive design.
+
+Working from marketing copy and product goals, I designed and developed the front end from scratch, ensuring smooth interactions and a strong first impression. The site includes dynamic pricing sections, testimonials, and a call-to-action system to drive early signups. I optimized performance and responsiveness across devices, using lightweight styling and scalable components.
+
+This project helped me improve my skills in UI design, front-end speed optimization, and building user-focused landing experiences that convert.`
+      ,color: '#2563EB', hover: '#2253bd',
+      type: 'Funnel Website'
+},
       {
         name: "Wine And Roses",
         description: 'Wine and Roses is a resource for asiring gradeners to find private and group lessons on flower arrangements and plant design.',
@@ -167,6 +177,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         pills: ['Front End', 'React'],
         contribution: 'This was my first Real world functional landing page that allowed my client to advertise merchendise and encourage users to join their meetup group. I loved helping a small group of individuals who are passionate about thier plants and flowers come together and connect in more meaningfull ways! '
       , color: '#71685D', hover: '#4d4133',
+      type: 'Event Organizer Website'
       },
       {
         name: "Mympy Dreams",
@@ -181,6 +192,7 @@ This project helped me improve my skills in UI design, front-end speed optimizat
         pills: ['Team Lead','Front End','Back End', 'React', 'Node.js', 'Auth0'],
         contribution: 'I was responsible for maintaining momentum by overseeing project planning and updates, leading meetings, maintaining manager and stakeholder relationships, communicating effectively, solving conflicts, deployment, and debugging as well as contributing to the authentication of the app whenever possible.'
         ,color: '#6483C1', hover: '#284c94',
+      type: 'Crowdfunding e-commerece'
       },
     {
       name: "Review It Yourself",
@@ -195,21 +207,22 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       pills: ['Front End', 'Back End', 'React', 'Node.js', 'Postgres', 'SQL'],
       contribution: 'I was responsible for frontend organization and  many frontend pages, such as project page, create project page, and edit project page as well as styling and debugging much of the website. I also worked on all CRUD operations and endpoints for reviews, comments, and favorites'
       ,color: '#f89c4c', hover: '#a15c1f',
+      type: 'Tutorial Marketplace'
     },
-    {
-      name: "Jango Rango Dungeon",
-      description: 'This project randomly Generates a map of 100 or more rooms. I used my knowledge of search algorithms and data structures to procedural generate a dungeon and be able to traverse it. We used Django to send information of the dungeon to the front end.',
-      img: rangoLogo,
-      link: '',
-      deployed: '',
-      role: 'Wed Developer',
-      techUsed: ['ReactJs', 'Bootstrap', 'Django'],
-      teamMemebers: 3,
-      weeksCompleted: 1,
-      pills: ['Back End', 'React', 'Django', 'SQL'],
-      contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
-      ,color: '#4C2C72', hover: '#381d58',
-    },
+    // {
+    //   name: "Jango Rango Dungeon",
+    //   description: 'This project randomly Generates a map of 100 or more rooms. I used my knowledge of search algorithms and data structures to procedural generate a dungeon and be able to traverse it. We used Django to send information of the dungeon to the front end.',
+    //   img: rangoLogo,
+    //   link: '',
+    //   deployed: '',
+    //   role: 'Wed Developer',
+    //   techUsed: ['ReactJs', 'Bootstrap', 'Django'],
+    //   teamMemebers: 3,
+    //   weeksCompleted: 1,
+    //   pills: ['Back End', 'React', 'Django', 'SQL'],
+    //   contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
+    //   ,color: '#4C2C72', hover: '#381d58',
+    // },
     
     {
       name: "Luncher App",
@@ -223,7 +236,8 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       weeksCompleted: 1,
       pills: ['Back End', 'SQL', 'Encryption'],
       contribution: 'I was Solely responsible for the Back end of this project. Some key features were authentication, ability to register and edit user data, creating, editing and deleteing fundraising projects as well as donating to projects or organizations. I worked well with a team of two frontend react engineers, and helped them debug to get our product fully functional.',
-      color: '#81905A', hover: '#667445'
+      color: '#81905A', hover: '#667445',
+      type: 'Non-Profit Fundraising App'
     },
   
   ]

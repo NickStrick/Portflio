@@ -6,9 +6,9 @@ const SkillItem = (props) => {
     return (
         <div className="item">
             <div className='skill-image'>
-                <Image src={logo} alt={skill} id={props.id} />
+                <Image src={logo} alt={skill} id={props.id} width={44} height={44} />
             </div>
-            <p>{skill}</p>
+            <p className="skill-text">{skill}</p>
             <BlobSvg  index={props.index}/>
 
         </div >

@@ -14,7 +14,7 @@ const Project = (props) => {
         style = {backgroundColor: `${props.project.color}`};
         svgStyle = {fill: `${props.project.color}`};
     }
-    const {  name, pills } = props.project
+    const {  name, pills, type } = props.project
 
     function handleProjClick(){
         console.log('click', props.project)
@@ -32,6 +32,7 @@ const Project = (props) => {
             <WaveSvg fillColor={'#28da00'} index={props.index}/>
             </div>
             <div className="img-overlay">
+                <div className="project-type"><div className="project-type-text">{type}</div></div>
                 <span>{name}</span>
                 <div className="info-pill-conatiner">
                     {pills.map((pill) => {
