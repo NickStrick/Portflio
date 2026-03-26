@@ -12,7 +12,8 @@ export default function NextButton() {
     '/':         ['/services',   'Check out my services'],
     '/services': ['/projects',   'View my projects'],
     '/projects': ['/skills',     'Explore my skills'],
-    '/skills':   ['/experience', 'See my experience'],
+    '/skills':   ['/certifications', 'View my certifications'],
+    '/certifications': ['/experience', 'See my experience'],
     '/experience': ['/contact',  'Get in touch'],
     '/contact':  ['',            ''],
   };
@@ -29,10 +30,10 @@ export default function NextButton() {
         window.scrollTo(0, 0);
         router.push(nextPath);
       }}
-      className="next-button nav-contact"
+      className="next-button btn-inverted "
     >
       {nextLabel}
-      <span className="nav-contact-overlay"></span>
+      {/* <span className="nav-contact-overlay"></span> */}
     </Link>
   );
 }

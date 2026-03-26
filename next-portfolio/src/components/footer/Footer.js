@@ -29,8 +29,8 @@ export default function Footer() {
   const styleobj = { paddingTop: '2rem' };
 
   if (pathname.includes('skills')) {
-    footerColor = 'white';
-    styleobj.backgroundColor = 'white';
+    // footerColor = 'white';
+    // styleobj.backgroundColor = 'white';
   } else if (pathname.includes('projects') || pathname.includes('experience')) {
     footerColor = 'rgb(60,62,70)';
   }

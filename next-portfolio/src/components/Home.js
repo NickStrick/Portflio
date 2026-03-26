@@ -11,20 +11,14 @@ import './styles/animations.scss';
 // If you want the profile image, put the file in /public and use next/image.
 
 const summary1 =
-  "Hi, I'm Nick. I'm a full stack web developer that loves making creative solutions to complex problems. I help any person or buisness that has dreams to achieve, and a mission to share! Let's achieve together!";
+  "Hi, I'm Nick. I'm a full-stack developer with 8 years of experience building real products for real businesses. I'm also the founder of Stricker Digital, where I help local businesses grow online through better websites, smarter marketing, and modern tech.";
 const summary12 =
-  "I have experience in Front-end Development, Back-end Development, as well as Leadership positions in tech. My technical strengths are Javascript, React.js, and Node.js. But I am always on a quest to learn new things, and gain new knowledge!";
-const summary2 = `I spent the last several years working as senior developer and mentor. Before that, I was leading and mentoring computer science students. After highschool, curious about coding, I completed some credits toward a computer science degree
-while i worked in retail. I spent free time creating small games, studying C sharp and javascript,
-and looking for resources to learn more and find out what I could make. I followed small courses on coding through things such as Youtube,
-    Udemy, or Watch and Code. I spent these past two years enrolled in Lambda School as a student and as a contract teaching assistant. 
+  "I believe in learning relentlessly, building things that matter, and bringing people along for the ride. If you have a vision worth building, let's make it real together.";
+const summary2 = `My path into tech started with curiosity, picking up JavaScript through YouTube tutorials and Udemy courses while working retail after high school. That obsession turned into a career.
+I sharpened my skills at Lambda School, studying full-stack web development and CS fundamentals, then stayed on as a contract Teaching Assistant leading daily standups, mentoring students through JavaScript, Java, and Python, and bridging the gap between stakeholders and dev teams on real projects.
     `;
-const summary3 = `During my time as a student, I learned Full Stack web development 
-    and computer science fundamentals, along with an assortment of librarys, frameworks and algorithms. With that I created some pretty cool projects that I’m proud of. 
-    I was a contract worker for Lambda School as well, where I frist worked as a Team lead above students, leading daily meetings, solving any debugging issues, 
-    helping my students learn the cirriculum in javscript, java, and python. The times I was working on a project with a team, I was responsible with the relationship between the stakeholder and the team,
-    and managed our planning. I also debugged and filled any gaps in the conribution to the project where nessesary. I spent most of my time in meetings getting to know my students 
-    and solving problems or planning with them and creating documentation.`;
+const summary3 = `Today I'm a senior developer at Expocad, where I build and maintain the 3E platform using React, Node.js, and AWS. Outside of my day job, I run Stricker Digital, a web and digital marketing agency focused on helping local businesses in Chicago generate real revenue online. I'm also actively pursuing my AWS Solutions Architect certification as I work toward roles in solutions architecture and tech consulting.
+Everything I do is rooted in the same belief: technology should empower people, not intimidate them.`;
 
 
 export default function Home() {
@@ -107,10 +101,10 @@ export default function Home() {
       <div className="page-split-padding-light"></div>
 
       <div className="section-container section-container-white home-second-conatiner">
-        <div className="section-content" data-aos="fade-left">
+        <div className="section-content intro-section-content" data-aos="fade-left">
           <h1>Intro</h1>
-          <p>{summary1}</p>
-          <p>{summary12}</p>
+          <p className="intro-p">{summary1}</p>
+          <p className="intro-p">{summary12}</p>
         </div>
       </div>
 
@@ -118,10 +112,10 @@ export default function Home() {
       <div className="page-split-padding-dark split-wave-2"></div>
 
       <div className="section-container home-bottom-conatiner">
-        <div className="section-content" data-aos="fade-right">
+        <div className="section-content intro-section-content" data-aos="fade-right">
           <h1 style={{ marginLeft: 'auto', textAlign: 'right' }}>Background</h1>
-          <p>{summary2}</p>
-          <p>{summary3}</p>
+          <p className="intro-p">{summary2}</p>
+          <p className="intro-p">{summary3}</p>
           {/* <p>{summary4}</p>  // Optional trailing paragraph you had defined */}
         </div>
       </div>

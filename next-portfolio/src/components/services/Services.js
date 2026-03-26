@@ -130,9 +130,9 @@ export default function Services() {
               href="https://calendly.com/nickstrickerbiz/30min-1"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-contact page-contact"
+              className="btn-inverted  page-contact"
             >
-              Let&apos;s get started<span className="nav-contact-overlay"></span>
+              Let&apos;s get started
             </a>
           </div>
         </div>

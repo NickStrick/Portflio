@@ -4,6 +4,7 @@ import './Certificate.scss';
 import lambdaCert from '../../../public/images/old/certs/full-stack-web-development.png'; 
 import GoogleDigitalMarketing from '../../../public/images/old/certs/GoogleDigitalMarketing.png'; 
 import AWStechCert from '../../../public/images/old/certs/awsCloud.png';
+import AWSSolutionsArchitectAssociate from '../../../public/images/old/certs/aws-certified-solutions-architect-associate.svg';
 import GoogleAICert from '../../../public/images/old/certs/GAIEssentials.png';
 import RNCert from '../../../public/images/old/certs/ReactNative.png';  
 import CertsSVG from '../../../public/images/skills/CertSplit.js'
@@ -11,6 +12,14 @@ import CertsSVG from '../../../public/images/skills/CertSplit.js'
 const Certificate = () => {
     let lamb_cert_url= 'https://www.youracclaim.com/badges/b2683aac-d322-43a3-bc78-5101de3c6485/public_url';
     let list_of_certs = [
+        {
+            name: 'AWS Certified Solutions Architect - Associate',
+            by: 'Amazon Web Services',
+            cert: AWSSolutionsArchitectAssociate,
+            link: 'https://www.credly.com/badges/4f4d415d-289d-47aa-9532-5e09ce86239f/public_url',
+            width:'260px',
+            className: 'bordered'
+        },
         {
             name: 'Full-Stack Web Development + Technical Interviewing Certificate',
             by: 'Bloom Institute of Technology',
@@ -55,15 +64,16 @@ const Certificate = () => {
 
     function handleLinkClick(link) {
         // window.scrollTo(0,0)
+        if (!link) return;
         window.open(link, "_blank");
       }
 
     return (<>
-        <CertsSVG />
-        <div className="page-split-padding-light"></div>
-        <div className="section-container section-container-white ">
+        {/* <CertsSVG /> */}
+        {/* <div className="page-split-padding-light"></div> */}
+        <div className="section-container ">
         <div className="section-content " id='certificate'>
-            <h1 className='cert-head'>Certificates</h1>
+            <h1 className='cert-head'>Certifications</h1>
             <div className='cert-list' >
                      
                 {list_of_certs.map((cert, index) => {
@@ -77,12 +87,12 @@ const Certificate = () => {
                                 <div className="certimage-background"></div>
                                 <div
                                 className='image lambda-cert'
-                                onClick={() => handleLinkClick(cert.link)}
+                                onClick={cert.link ? () => handleLinkClick(cert.link) : undefined}
                                 style={{
                                     backgroundImage: `url(${cert.cert.src})`,
                                     backgroundPosition: 'center',
                                     width: cert.width,
-                                    cursor: 'pointer'
+                                    cursor: cert.link ? 'pointer' : 'default'
                                 }} />
                                 </div>
                         </div>

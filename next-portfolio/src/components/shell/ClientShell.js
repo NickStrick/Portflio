@@ -129,9 +129,18 @@ export default function ClientShell({ children }) {
 
               <li className="nav-li">
                 <Link onClick={() => setPage('/skills')} href="/skills" className={pathname === '/skills' ? 'nav-link active' : 'nav-link'}>
-                  Skills &amp; Certs<span style={{ whiteSpace: 'nowrap' }}>Skills &amp; Certs</span>
+                  Skills<span style={{ whiteSpace: 'nowrap' }}>Skills</span>
                 </Link>
                 <div className={pathname === '/skills' ? 'nav-underline underline active' : 'nav-underline underline'}>
+                  <DotUnderline fillColor="#28da00" />
+                </div>
+              </li>
+
+              <li className="nav-li">
+                <Link onClick={() => setPage('/certifications')} href="/certifications" className={pathname === '/certifications' ? 'nav-link active' : 'nav-link'}>
+                  Certifications<span style={{ whiteSpace: 'nowrap' }}>Certifications</span>
+                </Link>
+                <div className={pathname === '/certifications' ? 'nav-underline underline active' : 'nav-underline underline'}>
                   <DotUnderline fillColor="#28da00" />
                 </div>
               </li>
@@ -153,8 +162,8 @@ export default function ClientShell({ children }) {
               data-aos-anchor-placement="top-bottom"
               data-aos-delay="1000"
             >
-              <Link onClick={() => setPage('/contact')} href="/contact" className="nav-contact">
-                Contact Me<span className="nav-contact-overlay"></span>
+              <Link onClick={() => setPage('/contact')} href="/contact" className="btn-inverted">
+                Contact Me
               </Link>
 
               <div className="nav-mobile-btn">

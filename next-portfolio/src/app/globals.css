@@ -55,7 +55,7 @@ code {
   height:10px;
 }
 svg:not(.dot-svg), h1{
-  overflow: hidden;
+  overflow: visible;
 }
 form ::-webkit-scrollbar {
   width: 6px;
@@ -116,12 +116,18 @@ a, a span{
   padding: 0 max(30px, 10%);
   position: relative;
   width:100%;
+  z-index: 10;
 }
 .section-container-white{
   background-color: white;
   color:var(--main-background);
 }
+.intro-section-content{
+  max-width: 1500px !important;
+}
+.intro-p{
 
+}
 .content-container h1 {
   padding-top:1rem;
 font-size: 3.6rem;
@@ -644,6 +650,8 @@ margin-top:0.5rem;
 }
 .btn-g-wrap{
   margin-bottom: 3rem;
+  z-index: 10;
+    position: relative;
 }
 .btn-gradient:hover {
       /* border-color: var(--color-accent); */
@@ -692,4 +700,32 @@ margin-top:0.5rem;
 }
 .project-type-text{
   text-align: center;
+}
+.btn-inverted {
+    border-radius: 9999px;
+    background-image: linear-gradient(to right, var(--main-background) 0, var(--main-darker-accent) 40%, var(--main-darker-accent) 50%, var(--main-background) 100%);
+    border: 2px solid var(--main-darker-accent);
+}
+.btn-gradient, .btn-inverted {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: .025em;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s;
+    background-size: calc(200% + 4px) calc(100% + 4px);
+    outline: 2px solid transparent;
+    background-position: 0 0;
+    animation: btnunhover 2s;
+    animation-play-state: paused;
+    text-decoration: none;
+    text-align: center;
+} .btn-inverted:hover {
+    border-color: var(--color-accent);
+    cursor: pointer;
+    animation: btnhover 2s forwards;
 }
