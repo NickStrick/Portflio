@@ -10,24 +10,57 @@ import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinSt
         <div className="content-container experience-container">
           <div className="section-content">
           <h1 className='port-head'>Experience</h1>
-          <p>The experience i have is fueled by the passion that i have for tinkering, inovatting, problem solving, and helping people. </p>
+          <p>The experience i have is fueled by the passion that i have for tinkering, inovatting, problem solving, and empowering people and the businesses they work with. </p>
           <p>{`Let's work together to create a better future for you and your buisness.`}</p>
             </div><VerticalTimeline>
+              <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    date="October 2025 - Present"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    icon={<FontAwesomeIcon icon={faLaptopCode} />}
+  >
+    <h3 className="vertical-timeline-element-title">Founder - Web & Business consultant</h3>
+    <h4 className="vertical-timeline-element-subtitle"><span>Stricker Digital</span><span>Chicago, Illinois</span></h4>
+    <p className="vertical-timeline-p">
+    Founded and operate a boutique web and digital marketing agency serving local businesses across Chicago. Design, build, and launch custom websites and digital systems tailored to each client's revenue goals.
+Web Development & Client Solutions
+Built and delivered custom web applications including event scheduling platforms, coaching and session booking sites with integrated payment processing, and full e-commerce storefronts for florists and gift shops featuring order management, delivery logistics, and analytics dashboards. Developed an internal web builder tool to streamline project delivery across client engagements.
+Marketing & Business Growth
+Execute organic content strategies across social platforms to build brand awareness and drive inbound leads. Run paid ad campaigns and manage warm and cold outbound through calls and emails. Implemented automated email workflows for e-commerce order confirmations, follow-ups, and customer retention.
+
+    </p>
+  </VerticalTimelineElement>
+   <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    date="January 2025 - Present"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    icon={<FontAwesomeIcon icon={faLaptopCode} />}
+  >
+    <h3 className="vertical-timeline-element-title">Senior Full Stack Developer</h3>
+    <h4 className="vertical-timeline-element-subtitle"><span>Expocad by A.C.T</span><span>Aurora, Illinois</span></h4>
+    <p className="vertical-timeline-p">
+    Led full-stack feature development on the enterprise event management platform, owning both client-facing interfaces and backend integration.
+Built a real-time messaging system using WebSockets, modeled after Microsoft Teams, enabling direct and group communication across the platform. Contributed to full-stack feature delivery by building and consuming C# .NET API endpoints and executing schema migrations to support evolving platform requirements.
+    </p>
+  </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-    date="February 2022 - Present"
+    date="February 2022 - January 2025"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<FontAwesomeIcon icon={faLaptopCode} />}
   >
     <h3 className="vertical-timeline-element-title">Senior Front End Developer</h3>
     <h4 className="vertical-timeline-element-subtitle"><span>Expocad by A.C.T</span><span>Aurora, Illinois</span></h4>
     <p className="vertical-timeline-p">
-    On-call support to mentor junior developers by providing guidance on best practices and industry standards throughout the development process. 
-Planned, maintained, supported, and troubleshooted complex, interactive web application features by following coding guidelines and rigorously testing against diverse user scenarios before deployment. 
-Streamlined and optimized codebase by refactoring and modularizing CSS3, HTML5, and JavaScript files.
-
+    Planned, built, and maintained complex interactive features across a large-scale enterprise event management platform used by show managers, exhibitors, and attendees.
+Engineered a multi-step contracting workflow to guide users through structured data entry and approval processes. Designed and built customizable analytics dashboards tailored to three distinct user roles, show managers, exhibitors, and attendees, each with configurable views and data display properties for digesting event performance and engagement data.
+Built interactive floorplan views for event layout visualization and management. Streamlined and optimized the codebase through refactoring and modularizing CSS3, HTML5, and JavaScript files. Mentored junior developers on-call, providing guidance on best practices, coding standards, and debugging across the development lifecycle.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
