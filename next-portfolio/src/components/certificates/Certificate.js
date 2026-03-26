@@ -7,7 +7,6 @@ import AWStechCert from '../../../public/images/old/certs/awsCloud.png';
 import AWSSolutionsArchitectAssociate from '../../../public/images/old/certs/aws-certified-solutions-architect-associate.svg';
 import GoogleAICert from '../../../public/images/old/certs/GAIEssentials.png';
 import RNCert from '../../../public/images/old/certs/ReactNative.png';  
-import CertsSVG from '../../../public/images/skills/CertSplit.js'
 
 const Certificate = () => {
     let lamb_cert_url= 'https://www.youracclaim.com/badges/b2683aac-d322-43a3-bc78-5101de3c6485/public_url';
@@ -69,8 +68,6 @@ const Certificate = () => {
       }
 
     return (<>
-        {/* <CertsSVG /> */}
-        {/* <div className="page-split-padding-light"></div> */}
         <div className="section-container ">
         <div className="section-content " id='certificate'>
             <h1 className='cert-head'>Certifications</h1>

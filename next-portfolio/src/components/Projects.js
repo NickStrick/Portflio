@@ -9,15 +9,14 @@ import './styles/Projects.css';
 // ---- Images ----
 // Option A (recommended): move images to /public and reference with /path
 // Option B: keep static imports and pass them down (Next can handle this)
-import riyLogo from '../../public/images/old/RIY.png';
-import mympyLogo from '../../public/images/old/Mympy.png';
-import luncherLogo from '../../public/images/old/luncherApp.png';
-import rangoLogo from '../../public/images/old/rangoDjango.png';
-import softSciLogo from '../../public/images/softsci.png';
-import doWellLogo from '../../public/images/doWell.png';
-import wineAndRose from '../../public/images/projects/rose.jpg';
-import dots from '../../public/images/projects/connectingdots.jpg';
-import Amanda from '../../public/images/projects/amanda.jpg';
+  import riyLogo from '../../public/images/old/RIY.png';
+  import mympyLogo from '../../public/images/old/Mympy.png';
+  import luncherLogo from '../../public/images/old/luncherApp.png';
+  import softSciLogo from '../../public/images/softsci.png';
+  import doWellLogo from '../../public/images/doWell.png';
+  import wineAndRose from '../../public/images/projects/rose.jpg';
+  import dots from '../../public/images/projects/connectingdots.jpg';
+  import Amanda from '../../public/images/projects/amanda.jpg';
 import Luke from '../../public/images/projects/luke.png';
 import Connor from '../../public/images/projects/connor.png';
 import CMF from '../../public/images/projects/CMF.png';

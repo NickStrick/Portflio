@@ -24,7 +24,7 @@ import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinSt
     <h3 className="vertical-timeline-element-title">Founder - Web & Business consultant</h3>
     <h4 className="vertical-timeline-element-subtitle"><span>Stricker Digital</span><span>Chicago, Illinois</span></h4>
     <p className="vertical-timeline-p">
-    Founded and operate a boutique web and digital marketing agency serving local businesses across Chicago. Design, build, and launch custom websites and digital systems tailored to each client's revenue goals.
+    Founded and operate a boutique web and digital marketing agency serving local businesses across Chicago. Design, build, and launch custom websites and digital systems tailored to each client&apos;s revenue goals.
 Web Development & Client Solutions
 Built and delivered custom web applications including event scheduling platforms, coaching and session booking sites with integrated payment processing, and full e-commerce storefronts for florists and gift shops featuring order management, delivery logistics, and analytics dashboards. Developed an internal web builder tool to streamline project delivery across client engagements.
 Marketing & Business Growth
