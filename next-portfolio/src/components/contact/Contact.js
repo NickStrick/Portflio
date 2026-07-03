@@ -7,6 +7,7 @@ import Holo from './HoloText.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaintBrush, faHammer, faHandshakeSimple, faCopy} from '@fortawesome/free-solid-svg-icons'
 import BackgroundSvg from '../../../public/images/contact/dotsvg.js'
+import Socials from '../socials/Socials'
 
 
 // function initateConfetti(){
@@ -170,17 +171,17 @@ function Contact() {
          {link:'https://www.strickerdigital.com', name:'strickerdigital', icon:null, displayText: 'View my offers',iconStyle:{}},
     ]
     let contactInfo = [
-        {name:'Email Inquires to', value:'nick@strickerdigital.com'},
+        {name:'Email Inquires to', value:'nickolasstricker@gmail.com'},
         {name:'or call / text to', value:'(630) 405-8427'},
     ]
     let intentOptions = [
         {
             label: 'I want to interview Nick for an SE / Forward Deployed / CSE corporate role.',
-            link: 'mailto:nick@strickerdigital.com?subject=SE%2FForward%20Deployed%2FCSE%20Role%20Inquiry',
+            link: 'mailto:nickolasstricker@gmail.com?subject=SE%2FForward%20Deployed%2FCSE%20Role%20Inquiry',
         },
         {
             label: 'I need high-end enterprise architecture or cloud security consulting (Stricker Digital).',
-            link: 'mailto:nick@strickerdigital.com?subject=Enterprise%20Architecture%20%2F%20Consulting%20Inquiry',
+            link: 'mailto:nickolasstricker@gmail.com?subject=Enterprise%20Architecture%20%2F%20Consulting%20Inquiry',
         },
     ]
     return (    
@@ -273,12 +274,6 @@ function Contact() {
                             )
                         })}
                     </div>
-                    <p className="linkedin-cta">
-                        For daily architectural breakdowns and system philosophy, connect with me on{' '}
-                        <a href="https://www.linkedin.com/in/nick-stricker" target="_blank" rel="noopener noreferrer">
-                            LinkedIn
-                        </a>.
-                    </p>
                 </div>
             </div>
         </div>
@@ -291,10 +286,11 @@ function Contact() {
                     <Holo />
                 </div>
                 <div className='section-column'>
-                 
+
                 </div>
             </div>
         </div>
+        <Socials />
         <div id="overlay"></div>
     </div>
     );

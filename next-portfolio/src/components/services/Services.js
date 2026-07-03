@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSitemap, faCloud, faShieldHalved, faGears, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import Socials from '../socials/Socials';
 
 // If this was a global stylesheet in CRA, move it to app/globals.css,
 // or convert to a module: import styles from './Services.module.scss';
@@ -135,6 +136,8 @@ export default function Services() {
           </div>
         </div>
       </div>
+
+      <Socials />
     </div>
   );
 }

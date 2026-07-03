@@ -3,6 +3,8 @@
 
 import SplitLine from '../../public/images/svg/pageSplit';
 import SplitTwo from '../../public/images/splitters/bottom-wave-2';
+import HomeImageCarousel from './HomeImageCarousel';
+import Socials from './socials/Socials';
 
 // Move these styles into app/globals.css (or convert to CSS Modules) in Next.js.
 import './styles/Home.css';
@@ -43,7 +45,7 @@ export default function Home() {
             data-aos="flip-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-bottom"
-            data-aos-delay="3000"
+            data-aos-delay="1000"
             data-aos-easing="ease-out-back"
           >
             Bridging the Gap Between Complex Architecture and Enterprise Outcomes.
@@ -53,7 +55,7 @@ export default function Home() {
             data-aos="flip-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-bottom"
-            data-aos-delay="3000"
+            data-aos-delay="1000"
             data-aos-easing="ease-out-back"
           >
             Senior Full-Stack Engineer &amp; Solutions Architect, AWS certified.
@@ -63,7 +65,7 @@ export default function Home() {
             data-aos="flip-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="left"
-            data-aos-delay="3000"
+            data-aos-delay="1000"
             data-aos-easing="ease-out-back"
           >
             I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
@@ -86,14 +88,15 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="home-main-image" />
-          <div className="home-main-image home-main-image-2" />
+          <HomeImageCarousel />
 
           {/* If you want to render the image:
           <Image id="pfp" src={PfpThree} alt="Nick S profile picture" priority />
           */}
         </div>
       </div>
+
+      <Socials className="socials-home" />
 
       <SplitLine fillColor="#28da00" />
       <div className="page-split-padding-light"></div>

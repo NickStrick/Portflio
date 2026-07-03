@@ -1,0 +1,133 @@
+.socials-section{
+    width: 100%;
+    padding: 4rem max(30px, 10%) 5rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.socials-heading{
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+.socials-title{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    color: white;
+    margin: 0;
+}
+.socials-subtitle{
+    color: whitesmoke;
+    opacity: .8;
+    margin: .75rem 0 0;
+    font-size: 1.05rem;
+}
+.socials-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.socials-item{
+    display: flex;
+}
+.socials-link{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .85rem;
+    text-decoration: none;
+    color: inherit;
+}
+.socials-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 100%;
+    font-size: 28px;
+    color: white;
+    background-image: linear-gradient(to right, var(--strickdig-green) 0, var(--strickdig-orange) 40%, var(--strickdig-orange) 50%, var(--strickdig-green) 100%);
+    background-size: calc(200% + 4px) calc(100% + 4px);
+    background-position: 0 0;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    transition: transform .3s ease, background-position .6s ease, border-color .3s ease;
+}
+.socials-link:hover .socials-icon{
+    transform: translateY(-6px) scale(1.06);
+    background-position: -100% 0%;
+    border-color: white;
+}
+.socials-label{
+    font-size: .95rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.socials-contact-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 2.25rem 0 0;
+}
+.socials-contact-link{
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    color: whitesmoke;
+    opacity: .85;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity .25s ease, color .25s ease;
+}
+.socials-contact-link:hover{
+    opacity: 1;
+    color: var(--main-accent);
+}
+.socials-contact-icon{
+    font-size: 1rem;
+    color: var(--main-accent);
+}
+
+@media (max-width: 600px){
+    .socials-section{
+        padding: 3rem 20px 4rem;
+    }
+    .socials-title{
+        font-size: 1.7rem;
+    }
+    .socials-list{
+        gap: 1.75rem;
+    }
+    .socials-icon{
+        width: 62px;
+        height: 62px;
+        font-size: 24px;
+    }
+}
+
+/* Extra top clearance on the homepage only, where the rotating profile
+   photo is absolutely positioned and drops below the hero at narrower
+   widths (see .home-main-image media query in Home.css). */
+@media (max-width: 1560px){
+    .socials-home{
+        padding-top: 380px;
+    }
+}
+@media (max-width: 600px){
+    .socials-home{
+        padding-top: 260px;
+    }
+}
