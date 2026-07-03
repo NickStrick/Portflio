@@ -47,25 +47,25 @@ Beyond the code, I worked directly with stakeholders to map pain points to solut
         color: '#0ea5e9', hover: '#0369a1',
         type: 'Enterprise SaaS Platform'
       },
-      {
-        name: "The Digital Vault & Secure Retail Architecture",
-        description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
-        img: caseStudyImg,
-        link: 'https://www.strickerdigital.com',
-        deployed: 'https://www.strickerdigital.com',
-        role: 'Founder & Principal Architect',
-        techUsed: ['Architecture', 'Next.js', 'Node.js', 'AWS S3', 'OAuth 2.0', 'Auth0 Actions'],
-        teamMemebers: 1,
-        weeksCompleted: 4,
-        pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
-        contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
+//       {
+//         name: "The Digital Vault & Secure Retail Architecture",
+//         description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
+//         img: caseStudyImg,
+//         link: 'https://www.strickerdigital.com',
+//         deployed: 'https://www.strickerdigital.com',
+//         role: 'Founder & Principal Architect',
+//         techUsed: ['Architecture', 'Next.js', 'Node.js', 'AWS S3', 'OAuth 2.0', 'Auth0 Actions'],
+//         teamMemebers: 1,
+//         weeksCompleted: 4,
+//         pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
+//         contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
 
-That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
+// That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
 
-The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync client profiles server-side, keeping sensitive identity logic decoupled from the application backend, reducing database query load, and preventing downstream code complexity as the client list grows.`,
-        color: '#caa14b', hover: '#8a6d1f',
-        type: 'Luxury B2B / Secure Retail Architecture'
-      },
+// The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync client profiles server-side, keeping sensitive identity logic decoupled from the application backend, reducing database query load, and preventing downstream code complexity as the client list grows.`,
+//         color: '#caa14b', hover: '#8a6d1f',
+//         type: 'Luxury B2B / Secure Retail Architecture'
+//       },
     {
         name: "CM Florals",
         description: 'A Lead Capture website for A professional Florist with 45 years of experience. ',
