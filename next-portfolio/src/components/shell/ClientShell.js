@@ -38,6 +38,17 @@ export default function ClientShell({ children }) {
   }
 
   useEffect(() => {
+    // Chrome (and most browsers) restore the previous scroll offset on a hard
+    // reload by default, which makes the site look like it "auto scrolls" on
+    // load if you'd scrolled down before refreshing. Force manual restoration
+    // and snap to the top once, here, on first mount only (this effect does
+    // not re-run on in-app <Link> navigations since ClientShell lives in the
+    // persistent root layout).
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     cursorStart();
     setTimeout(() => setAnimate(true), 1000);
     AOS.init();

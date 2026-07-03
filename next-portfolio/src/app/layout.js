@@ -4,6 +4,14 @@ import './globals.css';
 // import './globals.scss';
 import { Analytics } from "@vercel/analytics/next"
 
+// Font Awesome ships its own CSS via a JS-injected <style> tag by default,
+// which happens after hydration and causes icons to flash at their raw SVG
+// size before snapping down. Importing the stylesheet directly and disabling
+// autoAddCss makes it part of the real CSS bundle, so it's present on first paint.
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
+
 import ClientShell from '../components/shell/ClientShell';
 
 const geistSans = Geist({
@@ -24,7 +32,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <ClientShell>{children}</ClientShell>
         <Analytics />
       </body>
