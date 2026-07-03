@@ -76,7 +76,7 @@ const Services = ({ setPage }) => {
           <h2>Are you opposed to a chat?</h2>
           <strong>If not,</strong>
           {/* <a class="nav-contact page-contact" href="/contact">Contact Me<span class="nav-contact-overlay"></span></a> */}
-          <Link  to="https://calendly.com/nickstrickerbiz/30min-1" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
+          <Link  to="https://calendly.com/nickolasstricker/30min" className="nav-contact page-contact">Let's get started<span className="nav-contact-overlay"></span></Link>
         </div>
       </div>
     </div>

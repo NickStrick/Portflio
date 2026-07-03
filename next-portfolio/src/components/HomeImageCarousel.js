@@ -7,10 +7,9 @@ const images = [
   '/images/hero/profile2.jpg',
   '/images/hero/profile3.jpg',
   '/images/hero/profile5.png',
-  '/images/hero/profileCafe.jpg',
 ];
 
-export default function HomeImageCarousel({ intervalMs = 3250 }) {
+export default function HomeImageCarousel({ intervalMs = 3550 }) {
   // [currentIndex, prevIndex] - currentIndex sits behind at full opacity,
   // prevIndex renders on top and animates its opacity down to 0, revealing
   // currentIndex underneath (a crossfade using only one animated layer).

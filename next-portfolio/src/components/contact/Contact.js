@@ -167,7 +167,7 @@ function Contact() {
     let contactLinks = [
         // {link:'https://www.upwork.com/freelancers/~017de34218f020bdcb?mp_source=share', name:'Upwork', icon:faUpwork, displayText: 'work', iconStyle:{marginBottom: '-5px'}},
         // {link:'https://www.fiverr.com/users/nic_stricker', name:'Fiverr', icon:null, displayText: 'fiverr.',iconStyle:{}},
-         {link:'https://calendly.com/nickstrickerbiz/30min-1', name:'BookAMeeting', icon:null, displayText: 'Book A Meeting',iconStyle:{}},
+         {link:'https://calendly.com/nickolasstricker/30min', name:'BookAMeeting', icon:null, displayText: 'Book A Meeting',iconStyle:{}},
          {link:'https://www.strickerdigital.com', name:'strickerdigital', icon:null, displayText: 'View my offers',iconStyle:{}},
     ]
     let contactInfo = [
@@ -277,6 +277,7 @@ function Contact() {
                 </div>
             </div>
         </div>
+        <Socials  addContactDetails={false}/>
         <div className="section-container">
             <div className="section-content contact-content" >
 
@@ -290,7 +291,6 @@ function Contact() {
                 </div>
             </div>
         </div>
-        <Socials />
         <div id="overlay"></div>
     </div>
     );

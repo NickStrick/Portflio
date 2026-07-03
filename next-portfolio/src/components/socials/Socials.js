@@ -44,8 +44,9 @@ const contactDetails = [
 
 export default function Socials({
   title = 'Connect With Me',
-  subtitle = 'Follow the work or reach out directly.',
+  subtitle = '',
   className = '',
+  addContactDetails = true,
 }) {
   return (
     <div className={`socials-section ${className}`}>
@@ -74,16 +75,18 @@ export default function Socials({
         ))}
       </ul>
 
-      <ul className="socials-contact-details">
-        {contactDetails.map((item) => (
-          <li key={item.type}>
-            <a href={item.href} className="socials-contact-link">
-              <FontAwesomeIcon icon={item.icon} className="socials-contact-icon" />
-              <span>{item.value}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      {addContactDetails && (
+        <ul className="socials-contact-details">
+          {contactDetails.map((item) => (
+            <li key={item.type}>
+              <a href={item.href} className="socials-contact-link">
+                <FontAwesomeIcon icon={item.icon} className="socials-contact-icon" />
+                <span>{item.value}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

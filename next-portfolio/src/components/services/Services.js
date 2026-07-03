@@ -121,12 +121,13 @@ export default function Services() {
               </li>
             </ol>
           </div>
+          <Socials />
 
           <div className="cta-section">
             <h2>Ready to align your architecture with your business goals?</h2>
             <strong>Let&apos;s talk.</strong>
             <a
-              href="https://calendly.com/nickstrickerbiz/30min-1"
+              href="https://calendly.com/nickolasstricker/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-inverted  page-contact"
@@ -137,7 +138,7 @@ export default function Services() {
         </div>
       </div>
 
-      <Socials />
+      
     </div>
   );
 }
