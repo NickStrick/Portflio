@@ -1,0 +1,111 @@
+Our task is to update the next.js project in our next-portfolio folder:
+Here is a complete, strategic blueprint to overhaul your personal website.
+
+The primary goal of this update is to position you precisely at the intersection of deep engineering execution and enterprise commercial value. This layout will speak directly to corporate hiring managers (for SE, Forward Deployed, and CSE roles) while simultaneously serving as a high-end landing engine for Stricker Digital’s premium enterprise architecture and cloud security consulting.
+
+1. Homepage (/)
+Strategic Focus: The Hook & The Dual-Track Value Proposition. Clear, minimalist, and authoritative.
+
+Hero Headline: > Bridging the Gap Between Complex Architecture and Enterprise Outcomes.
+
+Sub-headline: > Senior Full-Stack Engineer & Solutions Architect certified in AWS. I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
+
+Primary CTA Buttons: * [ Review Technical Projects ] (Scrolls/Links to Projects)
+
+[ Enterprise Consulting / Hire Me ] (Links to Services/Contact)
+
+The "Intersection" Paragraph (Bio Preview):
+
+Most developers focus entirely on syntax. Most sales reps focus entirely on quotas. My unfair advantage sits at the intersection of both: building production-grade SaaS, auditing security frameworks, and running deep enterprise discovery to protect and grow business margins.
+
+2. Services (/services)
+Strategic Focus: B2B Enterprise Architecture Consulting (Stricker Digital). High-margin, low-volume positioning.
+
+Page Title: High-Impact Enterprise Architecture & Technical Strategy
+
+Core Pillars (The Services):
+
+Enterprise Systems Architecture & Auditing
+
+Copy: Deconstructing monolithic or fragmented infrastructures to maximize application throughput and reduce user friction hotspots. End-to-end mapping from database models to live webhook delivery systems.
+
+Cloud Migration & Infrastructure Design (AWS)
+
+Copy: Building secure, scalable, and cost-effective cloud solutions. Specialized in setting up multi-tenant platforms, serverless microservices, and static IP compliance configurations for enterprise compliance requirements.
+
+Security Frameworks & Access Control
+
+Copy: Designing robust identity management pipelines (Auth0, OAuth 2.0, M2M authentication) to enforce zero-trust policies, dispute protection log trails, and secure multi-factor enterprise checkout components.
+
+Workflow Automation & Pipeline Optimization
+
+Copy: Aligning system mechanics with operational efficiency. Profiling API data flows and refactoring relational data patterns to yield up to 30%+ application performance gains.
+
+3. Projects (/projects)
+Strategic Focus: "Proof of Sandbox." Frame your real achievements as business case studies rather than simple code repositories.
+
+Project 1: Enterprise Tradeshow Attendee Platform & Real-Time Dashboard
+
+The Tech: React, Node.js, REST APIs, AWS, Webhooks, SQL data modeling.
+
+The Outcome: Successfully managed architecture transitions across a 600,000-line codebase. Built a real-time attendee dashboard featuring direct messaging, exhibitor list searching, and calendar sync.
+
+The Metric: Profiled API data flows to achieve a 30% performance improvement and mended friction hotspots to yield a 22% user friction reduction.
+
+Project 2: The "Digital Vault" & Secure Retail Architecture
+
+The Tech: Next.js, Node.js, AWS S3, OAuth 2.0, Auth0 Actions.
+
+The Outcome: Designed and deployed serverless checkout engines and secure, private metadata client portals customized for luxury environments demanding elite authentication.
+
+The Metric: Streamlined multi-input checkout processes into structured workflows, increasing form conversion rates by 30% month-over-month.
+
+4. Skills (/skills)
+Strategic Focus: Showcasing technical capabilities side-by-side with commercial discovery frameworks.
+
+Category 1: Technical Discovery & Pre-Sales Strategy
+
+Enterprise Discovery Mechanics, Pain-to-Solution Mapping, MEDDPICC Framework, ARC Method, Live Architecture Whiteboarding, Objection Handling, POC Development.
+
+Category 2: Cloud, Security & Infrastructure
+
+AWS (Solutions Architect Certified), Lambda, EC2, S3, CloudFront, IAM Security Policies, CI/CD Pipelines, OAuth 2.0, Auth0 Identity Management, Webhook Systems.
+
+Category 3: Development & Frameworks
+
+TypeScript, JavaScript (ES6+), React, Next.js, Node.js, Python, Java, C, Relational Data Modeling, REST API Architecture.
+
+5. Certifications (/certifications)
+Strategic Focus: Instant professional validation.
+
+Featured Certification: * Amazon Web Services (AWS): Certified Solutions Architect – Associate
+
+Add a brief context note: "Leveraged to architect cloud compliance blueprints, secure cross-tenant API structures, and scale multi-user web infrastructures."
+
+6. Experience (/experience)
+Strategic Focus: Moving away from passive description; emphasizing engineering execution, cross-functional collaboration, and technical leadership.
+
+Role 1: Senior Full-Stack Engineer & Founder | Stricker Digital
+
+Focus: Delivering high-end web frameworks, custom website builder engines, and security micro-services. Architected secure single-use access points and workflows for luxury B2B ecosystems.
+
+Role 2: Senior Software Engineer / Lead Technical Contributor
+
+Focus: Led full-stack feature shipments across a massive 600K-line enterprise platform codebase. Acted as the primary cross-functional technical point of contact across engineering, product management, and customer support channels to translate reported friction into system improvements.
+
+Role 3: Technical Teaching Assistant | Bloom Institute of Technology
+
+Focus: Mentored 10+ software engineers through rigorous full-stack tracks. Managed technical accountability loops and deconstructed engineering barriers into plain language.
+
+7. Contact (/contact)
+Strategic Focus: High-intent lead filtering.
+
+The Hook: "Let's align your technical architecture with your business goals."
+
+The Form/Options: Instead of just a blank box, use a dropdown selection option to capture the lead's intent instantly:
+
+[ ] I want to interview Nick for an SE/Forward Deployed/CSE corporate role.
+
+[ ] I need high-end enterprise architecture or cloud security consulting (Stricker Digital).
+
+The Direct Alternative: Provide a clean link to your LinkedIn page, explicitly highlighting it as your active public workspace: "For daily architectural breakdowns and system philosophy, connect with me on LinkedIn."

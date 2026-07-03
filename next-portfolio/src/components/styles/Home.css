@@ -1,12 +1,35 @@
 .home-indent{
     /* margin-left:45px; */
-    display: inline-block;
+    display: block;
+    max-width: min(620px, 100%) !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .home-indent-two{
     margin-left:30px
 }
 .home-indent:last-child{
     margin-left:35px;
+}
+.home-tagline{
+    font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif !important;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.12em;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    color: var(--main-accent);
+    margin-bottom: 0.5em;
+}
+.home-cta-group{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 2.75rem;
+    width: 100%;
+}
+.home-cta-group .header-btn{
+    margin: 0 !important;
 }
 .home-main-header{
     margin-bottom: 0;

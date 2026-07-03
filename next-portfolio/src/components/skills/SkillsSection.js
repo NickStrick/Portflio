@@ -46,41 +46,69 @@ const SkillsSection = () => {
         { skill: 'HTML5', logo: htmlLogo.src },
         { skill: 'CSS3', logo: cssLogo.src },
     ]
-//     const softSkillList = [
-//     { skill: 'Leadership', logo: '' },
-//     { skill: 'Mentorship', logo: '' },
-//     { skill: 'Collaboration', logo: '' },
-//     { skill: 'Problem Solving', logo: '' },
-//     { skill: 'Critical Thinking', logo: '' },
-//     { skill: 'Agile Methodologies', logo: '' },
-//     { skill: 'Client Management', logo: '' },
-//     { skill: 'Technical Documentation', logo: '' },
-//     { skill: 'Communication', logo: '' },
-//     { skill: 'Conflict Resolution', logo: '' },
-//     { skill: 'Planning & Organization', logo: '' },
-//     { skill: 'Adaptability', logo: '' },
-// ];
+
+    const additionalDevSkillList = ['Java', 'C', 'Relational Data Modeling'];
+
+    const discoverySkillList = [
+        'Enterprise Discovery Mechanics',
+        'Pain-to-Solution Mapping',
+        'MEDDPICC Framework',
+        'ARC Method',
+        'Live Architecture Whiteboarding',
+        'Objection Handling',
+        'POC Development',
+    ];
+
+    const cloudSkillList = [
+        'AWS (Solutions Architect Certified)',
+        'Lambda',
+        'EC2',
+        'S3',
+        'CloudFront',
+        'IAM Security Policies',
+        'CI/CD Pipelines',
+        'OAuth 2.0',
+        'Auth0 Identity Management',
+        'Webhook Systems',
+        'REST API Architecture',
+    ];
 
     return (
         <div className="skills section-container">
             <div className="section-content">
                 <h1 className='port-head'>Skills</h1>
+
                 <div className='skill-section'>
-                    {/* <div className='skill-list-title'>Tech Stack</div> */}
+                    <div className='skill-list-title'>Technical Discovery &amp; Pre-Sales Strategy</div>
+                    <div className='skill-pill-list'>
+                        {discoverySkillList.map((skill, index) => (
+                            <span className='skill-pill' key={index}>{skill}</span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='skill-section'>
+                    <div className='skill-list-title'>Cloud, Security &amp; Infrastructure</div>
+                    <div className='skill-pill-list'>
+                        {cloudSkillList.map((skill, index) => (
+                            <span className='skill-pill' key={index}>{skill}</span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='skill-section'>
+                    <div className='skill-list-title'>Development &amp; Frameworks</div>
                     <div className='skill-list'>
                         {techSkillList.map((item, index) => {
                             return <SkillItem item={item} index={index} key={index} id={`${item.skill}Logo`} />
                         })}
                     </div>
-                </div>
-                {/* <div className='skill-section'>
-                    <div className='skill-list-title'>Soft Skills</div>
-                    <div className='skill-list'>
-                        {softSkillList.map((item, index) => {
-                            return <SkillItem item={item} index={index} key={index} id={`${item.skill}Logo`} />
-                        })}
+                    <div className='skill-pill-list'>
+                        {additionalDevSkillList.map((skill, index) => (
+                            <span className='skill-pill' key={index}>{skill}</span>
+                        ))}
                     </div>
-                </div> */}
+                </div>
             </div>
         </div >
     );

@@ -11,13 +11,13 @@ import './styles/animations.scss';
 // If you want the profile image, put the file in /public and use next/image.
 
 const summary1 =
-  "Hi, I'm Nick. I'm a full-stack developer with 8 years of experience building real products for real businesses. I'm also the founder of Stricker Digital, where I help local businesses grow online through better websites, smarter marketing, and modern tech.";
+  "Most developers focus entirely on syntax. Most sales reps focus entirely on quotas. My unfair advantage sits at the intersection of both: building production-grade SaaS, architecting secure AWS infrastructure, and running deep enterprise discovery that protects and grows business margins.";
 const summary12 =
-  "I believe in learning relentlessly, building things that matter, and bringing people along for the ride. If you have a vision worth building, let's make it real together.";
+  "I believe in learning relentlessly, translating technical complexity into clear business outcomes, and bringing people along for the ride. If you have a vision worth building, let's make it real together.";
 const summary2 = `My path into tech started with curiosity, picking up JavaScript through YouTube tutorials and Udemy courses while working retail after high school. That obsession turned into a career.
-I sharpened my skills at Lambda School, studying full-stack web development and CS fundamentals, then stayed on as a contract Teaching Assistant leading daily standups, mentoring students through JavaScript, Java, and Python, and bridging the gap between stakeholders and dev teams on real projects.
+I sharpened my skills at Bloom Institute of Technology, studying full-stack web development and CS fundamentals, then stayed on as a contract Teaching Assistant leading daily standups, mentoring 10+ engineers through JavaScript, Java, and Python, and bridging the gap between stakeholders and dev teams on real projects.
     `;
-const summary3 = `Today I'm a senior developer at Expocad, where I build and maintain the 3E platform using React, Node.js, and AWS. Outside of my day job, I run Stricker Digital, a web and digital marketing agency focused on helping local businesses in Chicago generate real revenue online. I'm also actively pursuing my AWS Solutions Architect certification as I work toward roles in solutions architecture and tech consulting.
+const summary3 = `Today I'm a Senior Full-Stack Engineer shipping features across a 600,000+ line enterprise platform, and the founder of Stricker Digital, where I architect secure, high-performance web systems and run technical discovery for B2B and luxury clients. I'm AWS Solutions Architect – Associate certified and actively pursuing Sales Engineer / Forward Deployed Engineer roles where deep engineering execution meets enterprise commercial value.
 Everything I do is rooted in the same belief: technology should empower people, not intimidate them.`;
 
 
@@ -39,14 +39,14 @@ export default function Home() {
           </div>
 
           <p
-            className="home-indent"
+            className="home-indent home-indent-two home-tagline"
             data-aos="flip-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-bottom"
             data-aos-delay="3000"
             data-aos-easing="ease-out-back"
           >
-            Founder of Stricker Digital
+            Bridging the Gap Between Complex Architecture and Enterprise Outcomes.
           </p>
           <p
             className="home-indent home-indent-two"
@@ -56,7 +56,7 @@ export default function Home() {
             data-aos-delay="3000"
             data-aos-easing="ease-out-back"
           >
-            Learn, create, collaborate, and grow.
+            Senior Full-Stack Engineer &amp; Solutions Architect, AWS certified.
           </p>
           <p
             className="home-indent home-indent-two"
@@ -66,27 +66,25 @@ export default function Home() {
             data-aos-delay="3000"
             data-aos-easing="ease-out-back"
           >
-            The solution expert.
+            I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
           </p>
-           <a
-            data-aos="fade-right"
-            href="https://www.strickerdigital.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="header-btn btn-gradient mt-10 !mb-1 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-          >
-            View My Offers
-          </a>
-          <a
-            data-aos="fade-right"
-            href="https://www.strickerdigital.com/free"
-            target="_blank"
-            rel="noopener noreferrer"
-            // style={marginBottom:'1rem'}
-            className="btn-g-wrap header-btn btn-gradient mb-3 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-          >
-            Get your free landing page
-          </a>
+          <div className="home-cta-group">
+            <a
+              data-aos="fade-right"
+              href="/projects"
+              className="header-btn btn-gradient !mb-1 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
+            >
+              Review Technical Projects
+            </a>
+            <a
+              data-aos="fade-right"
+              href="/services"
+              // style={marginBottom:'1rem'}
+              className="btn-g-wrap header-btn btn-gradient w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
+            >
+              Enterprise Consulting / Hire Me
+            </a>
+          </div>
 
           <div className="home-main-image" />
           <div className="home-main-image home-main-image-2" />
@@ -102,7 +100,7 @@ export default function Home() {
 
       <div className="section-container section-container-white home-second-conatiner">
         <div className="section-content intro-section-content" data-aos="fade-left">
-          <h1>Intro</h1>
+          <h1>The Intersection</h1>
           <p className="intro-p">{summary1}</p>
           <p className="intro-p">{summary12}</p>
         </div>

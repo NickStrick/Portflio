@@ -173,14 +173,25 @@ function Contact() {
         {name:'Email Inquires to', value:'nick@strickerdigital.com'},
         {name:'or call / text to', value:'(630) 405-8427'},
     ]
+    let intentOptions = [
+        {
+            label: 'I want to interview Nick for an SE / Forward Deployed / CSE corporate role.',
+            link: 'mailto:nick@strickerdigital.com?subject=SE%2FForward%20Deployed%2FCSE%20Role%20Inquiry',
+        },
+        {
+            label: 'I need high-end enterprise architecture or cloud security consulting (Stricker Digital).',
+            link: 'mailto:nick@strickerdigital.com?subject=Enterprise%20Architecture%20%2F%20Consulting%20Inquiry',
+        },
+    ]
     return (    
     <div className="content-container"><BackgroundSvg />
         <div className="section-container">
             <div className="section-content contact-content" >
                 
                 <div className='section-column work-column'>
-                   
+
                     <span className="span-block">{`Let's`} <span className="color-text">Work</span></span> <span className="span-block">Together</span>
+                    <p className="contact-hook">{`Let's align your technical architecture with your business goals.`}</p>
                     <div className="work-icons">
                     <FontAwesomeIcon icon={faPaintBrush} />
                     <FontAwesomeIcon icon={faHammer} />
@@ -216,6 +227,17 @@ function Contact() {
                             <button type="submit" className="formButton">Send an email &nbsp; &nbsp; <FontAwesomeIcon icon={faPaperPlane} /><span className="formButton-overlay"></span> </button>
                         </div>
                     </form> */}
+                    <div className='intent-options'>
+                        {intentOptions.map((option, index) => (
+                            <button
+                                key={index}
+                                className="intent-option main-btn"
+                                onClick={() => buttonClick(option.link)}
+                            >
+                                {option.label}
+                            </button>
+                        ))}
+                    </div>
                     <div className='contact-links'>
                         {contactLinks.map((platform, index)=>{
                             return(
@@ -251,12 +273,18 @@ function Contact() {
                             )
                         })}
                     </div>
+                    <p className="linkedin-cta">
+                        For daily architectural breakdowns and system philosophy, connect with me on{' '}
+                        <a href="https://www.linkedin.com/in/nick-stricker" target="_blank" rel="noopener noreferrer">
+                            LinkedIn
+                        </a>.
+                    </p>
                 </div>
             </div>
         </div>
         <div className="section-container">
             <div className="section-content contact-content" >
-                
+
                 <div className='horizontal-column'>
                 {/* <p><FontAwesomeIcon icon={faMapMarkerAlt} /></p> */}
                     {/* <p>Greater Chicago Area, IL</p> */}

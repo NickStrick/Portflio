@@ -50,6 +50,13 @@
 .cert-text h2{
    max-width: 420px;
 }
+.cert-note{
+    max-width: 420px;
+    font-size: 0.95rem;
+    color: var(--main-accent);
+    text-align: center;
+    margin: 4px 0 0;
+}
 .certimage-container{
     width: fit-content;
     padding:15px;

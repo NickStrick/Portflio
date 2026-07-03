@@ -10,8 +10,8 @@ import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinSt
         <div className="content-container experience-container">
           <div className="section-content">
           <h1 className='port-head'>Experience</h1>
-          <p>The experience i have is fueled by the passion that i have for tinkering, inovatting, problem solving, and empowering people and the businesses they work with. </p>
-          <p>{`Let's work together to create a better future for you and your buisness.`}</p>
+          <p>Six years of full-stack engineering experience translating complex architecture into measurable business outcomes, from enterprise platform delivery to founding a B2B consulting practice. </p>
+          <p>{`Let's align your technical architecture with your business goals.`}</p>
             </div><VerticalTimeline>
               <VerticalTimelineElement
     className="vertical-timeline-element--work"
@@ -21,14 +21,14 @@ import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinSt
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<FontAwesomeIcon icon={faLaptopCode} />}
   >
-    <h3 className="vertical-timeline-element-title">Founder - Web & Business consultant</h3>
+    <h3 className="vertical-timeline-element-title">Solutions Architect / Engineer & Founder</h3>
     <h4 className="vertical-timeline-element-subtitle"><span>Stricker Digital</span><span>Chicago, Illinois</span></h4>
     <p className="vertical-timeline-p">
-    Founded and operate a boutique web and digital marketing agency serving local businesses across Chicago. Design, build, and launch custom websites and digital systems tailored to each client&apos;s revenue goals.
-Web Development & Client Solutions
-Built and delivered custom web applications including event scheduling platforms, coaching and session booking sites with integrated payment processing, and full e-commerce storefronts for florists and gift shops featuring order management, delivery logistics, and analytics dashboards. Developed an internal web builder tool to streamline project delivery across client engagements.
-Marketing & Business Growth
-Execute organic content strategies across social platforms to build brand awareness and drive inbound leads. Run paid ad campaigns and manage warm and cold outbound through calls and emails. Implemented automated email workflows for e-commerce order confirmations, follow-ups, and customer retention.
+    Founded and operate a boutique enterprise architecture and web consulting practice, running technical discovery and delivering high-end web frameworks, custom website builder engines, and security micro-services for B2B and luxury clients.
+Architecture & Security
+Architected secure, single-use access points and workflows for luxury B2B ecosystems, including serverless checkout engines, Auth0/OAuth 2.0 identity pipelines, and private client portals. Built event scheduling platforms, booking sites with integrated payment processing, and e-commerce storefronts with order management and analytics dashboards. Developed an internal web builder tool to streamline delivery across client engagements.
+Discovery & Business Growth
+Run enterprise discovery calls to scope architecture and map pain points to solutions, translating tradeoffs into plain-language business impact. Execute organic content strategy and outbound to build pipeline, and implemented automated workflows for client onboarding, order confirmations, and retention.
 
     </p>
   </VerticalTimelineElement>
@@ -40,10 +40,10 @@ Execute organic content strategies across social platforms to build brand awaren
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<FontAwesomeIcon icon={faLaptopCode} />}
   >
-    <h3 className="vertical-timeline-element-title">Senior Full Stack Developer</h3>
+    <h3 className="vertical-timeline-element-title">Senior Software Engineer / Lead Technical Contributor</h3>
     <h4 className="vertical-timeline-element-subtitle"><span>Expocad by A.C.T</span><span>Aurora, Illinois</span></h4>
     <p className="vertical-timeline-p">
-    Led full-stack feature development on the enterprise event management platform, owning both client-facing interfaces and backend integration.
+    Led full-stack feature shipments across a 600,000-line enterprise event management platform, owning both client-facing interfaces and backend integration. Acted as the primary cross-functional technical point of contact across engineering, product management, and customer support, translating reported friction into system improvements.
 Built a real-time messaging system using WebSockets, modeled after Microsoft Teams, enabling direct and group communication across the platform. Contributed to full-stack feature delivery by building and consuming C# .NET API endpoints and executing schema migrations to support evolving platform requirements.
     </p>
   </VerticalTimelineElement>
@@ -60,7 +60,7 @@ Built a real-time messaging system using WebSockets, modeled after Microsoft Tea
     <p className="vertical-timeline-p">
     Planned, built, and maintained complex interactive features across a large-scale enterprise event management platform used by show managers, exhibitors, and attendees.
 Engineered a multi-step contracting workflow to guide users through structured data entry and approval processes. Designed and built customizable analytics dashboards tailored to three distinct user roles, show managers, exhibitors, and attendees, each with configurable views and data display properties for digesting event performance and engagement data.
-Built interactive floorplan views for event layout visualization and management. Streamlined and optimized the codebase through refactoring and modularizing CSS3, HTML5, and JavaScript files. Mentored junior developers on-call, providing guidance on best practices, coding standards, and debugging across the development lifecycle.
+Built interactive floorplan views and a real-time attendee dashboard with messaging, exhibitor search, and calendar sync. Profiled API data flows and refactored relational data patterns to achieve a 30% application performance improvement and a 22% reduction in user friction. Streamlined and optimized the codebase through refactoring and modularizing CSS3, HTML5, and JavaScript files. Mentored junior developers on-call, providing guidance on best practices, coding standards, and debugging across the development lifecycle.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement

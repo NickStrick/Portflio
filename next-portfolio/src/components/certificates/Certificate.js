@@ -14,6 +14,7 @@ const Certificate = () => {
         {
             name: 'AWS Certified Solutions Architect - Associate',
             by: 'Amazon Web Services',
+            note: 'Leveraged to architect cloud compliance blueprints, secure cross-tenant API structures, and scale multi-user web infrastructures.',
             cert: AWSSolutionsArchitectAssociate,
             link: 'https://www.credly.com/badges/4f4d415d-289d-47aa-9532-5e09ce86239f/public_url',
             width:'260px',
@@ -79,6 +80,7 @@ const Certificate = () => {
                             <div className='cert-text'>
                                 <h2>{cert.name}</h2>
                                 <span>Issued by: {cert.by}</span>
+                                {cert.note && <p className="cert-note">{cert.note}</p>}
                             </div>
                             <div className='certimage-container'>
                                 <div className="certimage-background"></div>

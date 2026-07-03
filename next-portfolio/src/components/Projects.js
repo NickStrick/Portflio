@@ -9,6 +9,7 @@ import './styles/Projects.css';
 // ---- Images ----
 // Option A (recommended): move images to /public and reference with /path
 // Option B: keep static imports and pass them down (Next can handle this)
+  import caseStudyImg from '../../public/images/svg/projCard.svg';
   import riyLogo from '../../public/images/old/RIY.png';
   import mympyLogo from '../../public/images/old/Mympy.png';
   import luncherLogo from '../../public/images/old/luncherApp.png';
@@ -27,6 +28,44 @@ import ProjectList from './Projects/ProjectList';
 import ProjectDetail from './Projects/ProjectDetail';
 
 const pData = [
+    {
+        name: "Enterprise Tradeshow Attendee Platform & Real-Time Dashboard",
+        description: 'Managed architecture transitions across a 600,000-line enterprise event-management codebase. Built a real-time attendee dashboard with direct messaging, exhibitor search, and calendar sync, then profiled API data flows to cut load times and friction.',
+        img: caseStudyImg,
+        link: 'https://www.linkedin.com/in/nick-stricker',
+        deployed: '',
+        role: 'Solutions Architect / Senior Full-Stack Engineer / Lead Technical Contributor',
+        techUsed: ['Architecture', 'React', 'Node.js', 'REST APIs', 'AWS', 'Webhooks', 'SQL', 'WebSockets'],
+        teamMemebers: 1,
+        weeksCompleted: 150,
+        pills: ['Architecture', 'Front End', 'Back End', 'React', 'Node.js', 'AWS', 'WebSockets'],
+        contribution: `As the primary cross-functional technical point of contact across engineering, product, and customer support, I led feature delivery on a 600,000-line enterprise event-management platform used by show managers, exhibitors, and attendees at live tradeshows.
+
+I built a real-time attendee dashboard from the ground up, featuring direct messaging, exhibitor list searching, and calendar sync, translating reported friction from support and sales into concrete system improvements. I profiled API data flows end-to-end and refactored relational data patterns, achieving a 30% application performance improvement.
+
+Beyond the code, I worked directly with stakeholders to map pain points to solutions, mentored junior engineers through the codebase, and helped ship changes that reduced user friction by 22%, protecting renewal revenue for the platform's largest enterprise accounts.`,
+        color: '#0ea5e9', hover: '#0369a1',
+        type: 'Enterprise SaaS Platform'
+      },
+      {
+        name: "The Digital Vault & Secure Retail Architecture",
+        description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
+        img: caseStudyImg,
+        link: 'https://www.strickerdigital.com',
+        deployed: 'https://www.strickerdigital.com',
+        role: 'Founder & Principal Architect',
+        techUsed: ['Architecture', 'Next.js', 'Node.js', 'AWS S3', 'OAuth 2.0', 'Auth0 Actions'],
+        teamMemebers: 1,
+        weeksCompleted: 4,
+        pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
+        contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
+
+That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
+
+The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync client profiles server-side, keeping sensitive identity logic decoupled from the application backend, reducing database query load, and preventing downstream code complexity as the client list grows.`,
+        color: '#caa14b', hover: '#8a6d1f',
+        type: 'Luxury B2B / Secure Retail Architecture'
+      },
     {
         name: "CM Florals",
         description: 'A Lead Capture website for A professional Florist with 45 years of experience. ',

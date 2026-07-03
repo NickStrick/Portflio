@@ -13,6 +13,41 @@ $highlight: #76E7B3;
             text-align: center;
             background: $background-light;
     }
+    .skill-section{
+        margin-bottom: 45px;
+    }
+    .skill-list-title{
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--main-accent);
+        margin: 0 0 20px;
+    }
+    .skill-pill-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        max-width: 900px;
+        margin: 0 auto 20px;
+    }
+    .skill-pill{
+        border: 1px solid var(--main-accent);
+        color: white;
+        padding: 8px 18px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: all 0.25s ease;
+    }
+    .skill-pill:hover{
+        background: var(--main-accent);
+        color: var(--main-background);
+    }
     .skill-list{
         margin: 25px auto 0px;
         width: 70%;
