@@ -1,5 +1,10 @@
-'use client';
 import Cert from '../../components/certificates/Certificate';
+
+export const metadata = {
+  title: 'Certifications',
+  description:
+    'AWS Certified Solutions Architect – Associate, plus certifications in full-stack development, digital marketing, and AI.',
+};
 
 export default function Page() {
   return (

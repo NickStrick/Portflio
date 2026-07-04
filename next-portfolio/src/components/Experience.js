@@ -1,3 +1,4 @@
+'use client';
 
 import './styles/Experiences.scss';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';

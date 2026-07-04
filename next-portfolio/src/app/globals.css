@@ -426,6 +426,9 @@ margin-top:0.5rem;
 .nav-list.show-nav{
   opacity:1;
 }
+button:hover, a:hover{
+  cursor: none !important;
+}
 @media (max-width: 1300px) {
   .navbar ul.nav-list{
     margin-right: 0;

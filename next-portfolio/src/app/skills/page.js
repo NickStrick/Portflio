@@ -1,6 +1,10 @@
-'use client';
 import Skills from '../../components/skills/SkillsSection';
 
+export const metadata = {
+  title: 'Skills',
+  description:
+    'Technical discovery and pre-sales frameworks (MEDDPICC, ARC), AWS cloud & security expertise, and full-stack development skills.',
+};
 
 export default function Page() {
   return (

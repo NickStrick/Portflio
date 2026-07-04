@@ -25,8 +25,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Nick Stricker',
-  description: 'Portfolio of Nick Stricker',
+  title: {
+    default: 'Nick Stricker - Home',
+    template: 'Nick Stricker - %s',
+  },
+  description:
+    'Nick Stricker is a Solutions Engineer & Senior Full-Stack Engineer and AWS Certified Solutions Architect bridging complex technical architecture and enterprise business outcomes. Founder of Stricker Digital.',
 };
 
 export default function RootLayout({ children }) {
