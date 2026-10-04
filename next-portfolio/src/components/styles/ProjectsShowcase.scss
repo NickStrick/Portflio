@@ -3,6 +3,14 @@
   padding-bottom: 4rem;
   color: white;
 }
+/* The site-wide 10% side padding sits inside the 1200px cap and squeezed the cards
+   to ~910px; use a slimmer gutter on desktop so content reaches ~1150px wide. */
+@media (min-width: 961px) {
+  .section-content.showcase {
+    padding-left: max(24px, 2vw);
+    padding-right: max(24px, 2vw);
+  }
+}
 
 .showcase-header {
   text-align: center;
