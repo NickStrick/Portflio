@@ -1,182 +1,173 @@
-// @import '../../utilities/imports.scss';
-
 .footer{
-    // background: red;
     min-height: fit-content;
     overflow: hidden;
     position: relative;
-    background-color: transparent;margin-top:-1px;
+    background-color: transparent;
+    margin-top:-1px;
     .split-svg {
         min-width: 400px;
-        
-    }
-    .gitLogo{
-        opacity: .7;
-        color: black;
-    }
-    .gitLogo:hover{
-        opacity: 1;
-        // cursor: pointer;
-    }
-    .git{
-        height: 60px;
-        margin-right: 100px;
-    }
-    .mail{
-        width: 60px;
-        margin-left: 100px;
-    }
-
-    .mail-div{
-        position: relative;
-        .mail-text{
-            position: absolute;
-            left: 85px;
-            top: -4px;
-            // background: white;
-            
-            font-size: 1.3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            button{
-                border: 2px solid gray;
-                font-size: .8rem;
-                width: 60px;
-                padding:  0 2px;
-                height: 50px;
-                margin-right: 10px;
-                box-shadow: 1px 2px 2px black;
-            }
-            #mailInput{
-                font-size: 1.1rem;
-                background: black;
-                padding: 5px 10px;
-                border-radius: 5px;
-            }
-
-            //Tooltip
-
-            .tooltip {
-                position: relative;
-                display: inline-block;
-              }
-              
-              .tooltip .tooltiptext {
-                visibility: hidden;
-                width: 140px;
-                background-color: #555;
-                color: #fff;
-                text-align: center;
-                border-radius: 6px;
-                padding: 5px;
-                position: absolute;
-                z-index: 1;
-                bottom: 150%;
-                left: 50%;
-                margin-left: -75px;
-                opacity: 0;
-                transition: opacity 0.3s;
-              }
-              
-              .tooltip .tooltiptext::after {
-                content: "";
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                margin-left: -5px;
-                border-width: 5px;
-                border-style: solid;
-                border-color: #555 transparent transparent transparent;
-              }
-              
-              .tooltip:hover .tooltiptext {
-                visibility: visible;
-                opacity: 1;
-              }
-
-        }
-        
     }
 }
-.footer-content{
-    position: absolute;
-    background-color: transparent;
-    fill: rgb(35,40,40);
-    color: rgb(35,40,40);
-    padding-right:60%;
-    padding-left: 10%;
-    display: flex;
-    justify-content: space-between;
-    .icon-btn{
-        max-width: 122px;
-        aspect-ratio: 1;
-        margin-right: 15px;
-        padding:20px;
-        border-radius: 100%;
-        border-color: rgb(35,40,40) !important;
-        border-style: solid;
-        background-color: transparent;
-        // cursor: pointer;
-        transition: 0.3s ease-in-out;
-        svg{
-            height:80px;
-            width:80px;
-        }
-    }
-    .icon-btn:hover{
-        color: white;
-        background-color: rgb(35,40,40);
-    }
+
+.footer-wave-area{
+    position: relative;
 }
-.nslogo{
-    height: 200px;
-    width: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    position: absolute;
-    right: 0px;
-    margin-top: -10px;
-}
+
 .footer-end{
     background: white;
     width:100%;
-    height:380px;
-    // position: relative;
+    color: var(--main-background);
+    // The wave SVG (1024x562, min-width 400px) hangs below the dark band
+    // (aspect 3/1, min-height 200px); start the content just below the green curve.
+    padding: max(2.5rem, calc(max(400px, 100vw) * 0.549 - max(200px, 33.33vw) - 10vw)) max(30px, 8%) 1.5rem;
+
+    a{
+        color: var(--main-background);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    a:hover, a.active{
+        color: var(--main-darker-accent);
+    }
+}
+
+.footer-grid, .footer-bottom{
+    position: relative;
+    z-index: 1;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-brand{
+    .nslogo{
+        display: block;
+        height: 96px;
+        width: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        margin-bottom: 0.75rem;
+    }
+    .footer-bio{
+        max-width: 340px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4a5050;
+        margin: 0 0 0.75rem;
+    }
+}
+.footer-location{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6b7171;
+    margin: 0;
+}
+
+.footer-col{
+    h2{
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--strickdig-orange);
+        margin: 0.5rem 0 1rem;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        margin-bottom: 0.65rem;
+    }
+    a{
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+    a.active{
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+.footer-external{
+    font-size: 0.65rem;
+    opacity: 0.55;
+}
+.footer-connect{
+    .footer-connect-icon{
+        width: 1rem;
+        color: var(--main-darker-accent);
+    }
+    a{
+        align-items: flex-start;
+    }
+    .footer-connect-icon{
+        margin-top: 0.25em;
+    }
+}
+
+.footer-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1300px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e3e5e5;
+
     p{
-        color:gray;
-        position: absolute;
-        bottom:0;
-        left:30px;
+        margin: 0;
+        font-size: 0.85rem;
+        color: gray;
+    }
+    ul{
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    a{
+        font-size: 0.85rem;
+        color: gray;
     }
 }
 
 @media (max-width: 990px){
-    .footer{
-        .footer-content{
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
-            justify-content: center;
-            padding: 0;
-            width: 100%;
-        }
-        .git{
-            margin-right: 75px;
-        }
-        .mail{
-            margin-left: 75px;
-        }
+    .footer-grid{
+        grid-template-columns: repeat(3, 1fr);
     }
-    .nslogo{
-    height: 80px;
-    width: auto;
-    position: absolute;
-    right: auto;
-    margin-top: -100px;
-    left:0
+    .footer-brand{
+        grid-column: 1 / -1;
+    }
 }
+@media (max-width: 680px){
+    .footer-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+@media (max-width: 520px){
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media (max-width: 700px){
     .holo-body .noise, .noise svg{
         font-size: 2rem !important;
@@ -186,33 +177,21 @@
         padding-right: 0 !important;
         padding-bottom: 0 !important;
     }
-    .footer-end{
-        height: 420px;
-    }
-    .footer{
-        .git{
-            margin-right: 35px;
-        }
-        .mail{
-            margin-left: 35px;
-        }
-    }
 }
 
 .next-button{
     position: absolute;
-    top: 30%;
+    top: 35%;
     right:30%;
     z-index: 900;
     min-width:280px;
 }
 @media (max-width: 900px){
     .next-button{
-        position: absolute;                                                                                                                                                                                                                               
+        position: absolute;
         top: 2rem;
         right:6vw;
         width:88vw;
         z-index: 1000;
     }
 }
-

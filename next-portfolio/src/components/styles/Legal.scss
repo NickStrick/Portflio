@@ -1,0 +1,61 @@
+.legal{
+    max-width: 900px !important;
+    padding-bottom: 4rem;
+    line-height: 1.7;
+
+    .legal-updated{
+        color: #8b949e;
+        font-size: 0.9rem;
+        margin-top: 0;
+    }
+
+    .legal-toc{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1.5rem 0 1rem;
+
+        a{
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+        a:hover{
+            border-color: var(--main-accent);
+        }
+    }
+
+    section{
+        padding-top: 2rem;
+        // keep anchored headings clear of the fixed navbar
+        scroll-margin-top: 110px;
+    }
+    h2{
+        font-size: 1.8rem;
+        margin: 0 0 0.75rem;
+        color: var(--main-accent);
+    }
+    p, li{
+        color: #d0d6dc;
+    }
+    ul{
+        padding-left: 1.25rem;
+    }
+    li{
+        margin-bottom: 0.6rem;
+    }
+    a{
+        color: var(--main-accent);
+    }
+    .legal-back{
+        margin-top: 2.5rem;
+        a{
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}
