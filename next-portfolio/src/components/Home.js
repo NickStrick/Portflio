@@ -4,6 +4,7 @@
 import SplitLine from '../../public/images/svg/pageSplit';
 import SplitTwo from '../../public/images/splitters/bottom-wave-2';
 import HomeImageCarousel from './HomeImageCarousel';
+import HomeVsl from './HomeVsl';
 import Socials from './socials/Socials';
 
 // Move these styles into app/globals.css (or convert to CSS Modules) in Next.js.
@@ -70,6 +71,9 @@ export default function Home() {
           >
             I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
           </p>
+
+          <HomeVsl />
+
           <div className="home-cta-group">
             <a
               data-aos="fade-right"

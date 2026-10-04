@@ -11,7 +11,7 @@ import './styles/Projects.css';
 // Option B: keep static imports and pass them down (Next can handle this)
   import caseStudyImg from '../../public/images/svg/projCard.svg';
   import expocadimg from '../../public/images/projects/Expocad.png';
-  import redtailluxeLogo from '../../public/images/old/redtailluxe.jpg';
+  import redtailluxeLogo from '../../public/images/projects/redtailluxe.jpg';
   import riyLogo from '../../public/images/old/RIY.png';
   import mympyLogo from '../../public/images/old/Mympy.png';
   import luncherLogo from '../../public/images/old/luncherApp.png';
@@ -35,8 +35,8 @@ const pData = [
         name: "Enterprise Tradeshow Platform & Real-Time Dashboard",
         description: 'Managed architecture transitions across a 600,000-line enterprise event-management codebase. Built a real-time attendee dashboard with direct messaging, exhibitor search, and calendar sync, then profiled API data flows to cut load times and friction.',
         img: expocadimg,
-        link: 'https://actdev.expocad.com/',
-        deployed: 'https://actdev.expocad.com/',
+        link: 'https://www.expocad.com/',
+        deployed: 'https://www.expocad.com/',
         role: 'Solutions Architect / Senior Full-Stack Engineer / Lead Technical Contributor',
         techUsed: ['Architecture', 'React', 'Node.js', 'REST APIs', 'AWS', 'Webhooks', 'SQL', 'WebSockets'],
         teamMemebers: 1,
