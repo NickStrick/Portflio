@@ -1,4 +1,7 @@
 .proj-return{
+    display: block;
+    color: inherit;
+    text-decoration: none;
     border-radius: 60px;
     padding:15px;
     margin-bottom: -20px;
@@ -13,8 +16,11 @@
     background-color: rgba(255,255,255,0.1);
 }
 .project-a{
-    display:block;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-decoration: none;
 }
 .image-section-container{
     position: relative;
@@ -155,7 +161,7 @@
         margin-top:0;
     }
 }
-.project-btns button{
+.project-btns .project-a{
     margin-right:3rem;
 }
 .quick-info{

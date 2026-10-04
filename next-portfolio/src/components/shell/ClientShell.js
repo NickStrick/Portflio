@@ -8,9 +8,7 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// ✅ Import the React component from your source, NOT from /public
 import DotUnderline from '../../../public/images/DottedLine';
-// Footer is fine
 import Footer from '../footer/Footer';
 
 export default function ClientShell({ children }) {
@@ -22,13 +20,13 @@ export default function ClientShell({ children }) {
 
   // Derived container classes
   let appContainer = 'app-container';
-  const isSecondaryColor = pathname === '/projects' || pathname === '/experience';
+  const isProjects = pathname === '/projects' || pathname.startsWith('/projects/');
+  const isSecondaryColor = isProjects || pathname === '/experience';
   if (pathname === '/experience') appContainer += ' experience-container';
-  if (pathname === '/projects') appContainer += ' projects-container';
+  if (isProjects) appContainer += ' projects-container';
 
   function setPage(newPath) {
     if (openNav) setNav(false);
-    // Next.js scrolls to top on navigation by default, but keeping your line is harmless:
     window.scrollTo(0, 0);
     router.push(newPath);
   }
@@ -89,10 +87,9 @@ export default function ClientShell({ children }) {
         {/* NAVBAR */}
         <nav className={`navbar${isSecondaryColor ? ' second-navbar' : ''}`}>
           <div className="container">
-            {/* ✅ Use a string path for public assets */}
             <Image
               className="logo-img"
-              src="/images/NStrans.png"   // file should be at /public/images/NStrans.png
+              src="/images/NStrans.png"
               width={100}
               height={100}
               alt="NS Logo"
@@ -130,10 +127,10 @@ export default function ClientShell({ children }) {
               </li>
 
               <li className="nav-li">
-                <Link onClick={() => setPage('/projects')} href="/projects" className={pathname === '/projects' ? 'nav-link active' : 'nav-link'}>
+                <Link onClick={() => setPage('/projects')} href="/projects" className={isProjects ? 'nav-link active' : 'nav-link'}>
                   Projects<span style={{ whiteSpace: 'nowrap' }}>Projects</span>
                 </Link>
-                <div className={pathname === '/projects' ? 'nav-underline underline active' : 'nav-underline underline'}>
+                <div className={isProjects ? 'nav-underline underline active' : 'nav-underline underline'}>
                   <DotUnderline fillColor="#28da00" />
                 </div>
               </li>

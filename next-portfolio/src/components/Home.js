@@ -1,17 +1,12 @@
-// If you keep this as a plain component (no hooks), it can be a Server Component.
-// If you later add useEffect/useState here, add: 'use client';
-
+import Link from 'next/link';
 import SplitLine from '../../public/images/svg/pageSplit';
 import SplitTwo from '../../public/images/splitters/bottom-wave-2';
 import HomeImageCarousel from './HomeImageCarousel';
 import HomeVsl from './HomeVsl';
 import Socials from './socials/Socials';
 
-// Move these styles into app/globals.css (or convert to CSS Modules) in Next.js.
 import './styles/Home.css';
 import './styles/animations.scss';
-
-// If you want the profile image, put the file in /public and use next/image.
 
 const summary1 =
   "Most developers focus entirely on syntax. Most sales reps focus entirely on quotas. My unfair advantage sits at the intersection of both: building production-grade SaaS, architecting secure AWS infrastructure, and running deep enterprise discovery that protects and grows business margins.";
@@ -22,7 +17,6 @@ I sharpened my skills at Bloom Institute of Technology, studying full-stack web 
     `;
 const summary3 = `Today I'm a Senior Full-Stack Engineer shipping features across a 600,000+ line enterprise platform, and the founder of Stricker Digital, where I architect secure, high-performance web systems and run technical discovery for B2B and luxury clients. I'm AWS Solutions Architect – Associate certified and actively pursuing Sales Engineer / Forward Deployed Engineer roles where deep engineering execution meets enterprise commercial value.
 Everything I do is rooted in the same belief: technology should empower people, not intimidate them.`;
-
 
 export default function Home() {
   return (
@@ -75,28 +69,24 @@ export default function Home() {
           <HomeVsl />
 
           <div className="home-cta-group">
-            <a
+            <Link
               data-aos="fade-right"
               href="/projects"
               className="header-btn btn-gradient !mb-1 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
             >
               Review Technical Projects
-            </a>
-            <a
+            </Link>
+            <Link
               data-aos="fade-right"
               href="/services"
-              // style={marginBottom:'1rem'}
               className="btn-g-wrap header-btn btn-gradient w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
             >
               Enterprise Consulting / Hire Me
-            </a>
+            </Link>
           </div>
 
           <HomeImageCarousel />
 
-          {/* If you want to render the image:
-          <Image id="pfp" src={PfpThree} alt="Nick S profile picture" priority />
-          */}
         </div>
       </div>
 

@@ -1,23 +1,13 @@
 'use client';
 
-import React from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSitemap, faCloud, faShieldHalved, faGears, faCertificate } from '@fortawesome/free-solid-svg-icons';
 import Socials from '../socials/Socials';
 
-// If this was a global stylesheet in CRA, move it to app/globals.css,
-// or convert to a module: import styles from './Services.module.scss';
 import './Services.scss';
 
 export default function Services() {
-  const router = useRouter();
-
-  const clickContact = () => {
-    window.scrollTo(0, 0);
-    router.push('/contact');
-  };
-
   const servicesList = [
     {
       name: 'Enterprise Systems Architecture & Auditing',
@@ -76,22 +66,22 @@ export default function Services() {
               Stricker Digital Consulting
             </a>
 
-            <a
+            <Link
               data-aos="fade-left"
               href="/contact"
               className="btn-gradient ml mt-10 transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
             >
               Discuss an Architecture Audit
-            </a>
+            </Link>
           </div>
 
           <div className="services-grid">
             {servicesList.map((service, index) => (
-              <div className="service-card" key={index} onClick={clickContact}>
+              <Link href="/contact" className="service-card" key={index}>
                 <FontAwesomeIcon icon={service.icon} className="service-icon gradientText" />
                 <h3>{service.name}</h3>
                 <p>{service.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -138,7 +128,6 @@ export default function Services() {
         </div>
       </div>
 
-      
     </div>
   );
 }

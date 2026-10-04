@@ -1,7 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-// If you use global SCSS, import it here too:
-// import './globals.scss';
 import { Analytics } from "@vercel/analytics/next"
 
 // Font Awesome ships its own CSS via a JS-injected <style> tag by default,

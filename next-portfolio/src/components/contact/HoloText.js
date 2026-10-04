@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
-export default function Holo({ fillColor }) {
-    console.log(fillColor)
+export default function Holo() {
     return (
         <div className="holo-body">
         <div className="holo-section">

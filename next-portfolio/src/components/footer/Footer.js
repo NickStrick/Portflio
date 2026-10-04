@@ -12,7 +12,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import SplitThree from '../../../public/images/splitters/bottom-wave-3';
 import NextButton from '../NextButton';
 
-// If you moved the PNG to /public:
 import NsLogo from '../../../public/images/NStransDark.png';
 import './Footer.scss'
 

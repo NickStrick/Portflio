@@ -45,6 +45,8 @@
   }
 
   .service-card {
+     display: block;
+     text-decoration: none;
      background: linear-gradient(to top right, var(--main-darker-accent), var(--main-darkest-accent)); /* Purple-ish */
      color:white;
     padding: 1.5rem;
