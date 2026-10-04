@@ -19,15 +19,22 @@ const rows = [
   { key: 'result', label: 'The result', icon: faChartLine },
 ];
 
-function CaseStudyCard({ project }) {
+function CaseStudyCard({ project, flip }) {
   const study = project.caseStudy;
 
   return (
-    <article className="showcase-card case-card" data-aos="fade-up" data-aos-duration="700">
+    <article className={`showcase-card case-card${flip ? ' case-card-flip' : ''}`} data-aos="fade-up" data-aos-duration="700">
       <div className="case-media">
-        {/* Wide desktop screenshots: shown as a landscape banner, anchored to the top of the page */}
+        {/* Desktop screenshots keep their wide shape, framed like a browser window and centered beside the text */}
         <div className="case-frame">
-          <Image src={project.img} alt={`${project.name} screenshot`} fill sizes="(max-width: 1200px) 100vw, 1100px" />
+          <div className="case-browser-bar" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="case-shot">
+            <Image src={project.img} alt={`${project.name} screenshot`} fill sizes="(max-width: 900px) 100vw, 560px" />
+          </div>
         </div>
       </div>
 
@@ -103,8 +110,8 @@ export default function Projects() {
           </header>
 
           <div className="case-list">
-            {featuredProjects.map((project) => (
-              <CaseStudyCard key={project.slug} project={project} />
+            {featuredProjects.map((project, i) => (
+              <CaseStudyCard key={project.slug} project={project} flip={i % 2 === 1} />
             ))}
           </div>
 

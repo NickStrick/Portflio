@@ -4,13 +4,23 @@ import './styles/Experiences.scss';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinStars} from '@fortawesome/free-solid-svg-icons'
+import { faPeopleGroup, faGraduationCap, faBriefcase, faLaptopCode, faFaceGrinStars, faFileArrowDown} from '@fortawesome/free-solid-svg-icons'
 
   const Experiences = () => {
       return (
         <div className="content-container experience-container">
           <div className="section-content">
-          <h1 className='port-head'>Experience</h1>
+          <div className="experience-header">
+            <h1 className='port-head'>Experience</h1>
+            <a
+              href="/NickStricker-SolutionsEngineer-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-inverted experience-resume-btn"
+            >
+              <FontAwesomeIcon icon={faFileArrowDown} /> Download Résumé (PDF)
+            </a>
+          </div>
           <p>6+ years of full-stack engineering experience translating complex architecture into measurable business outcomes, from enterprise platform delivery to founding a B2B consulting practice. </p>
           <p>{`Let's align your technical architecture with your business goals.`}</p>
             </div><VerticalTimeline>
