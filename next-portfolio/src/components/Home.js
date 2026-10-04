@@ -80,6 +80,14 @@ export default function Home() {
             >
               Enterprise Consulting / Hire Me
             </Link>
+            <a
+              href="/NickStricker-SolutionsEngineer-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-inverted home-resume-btn"
+            >
+              Download Résumé (PDF)
+            </a>
           </div>
 
           <HomeImageCarousel />

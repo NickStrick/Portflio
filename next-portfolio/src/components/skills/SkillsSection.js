@@ -8,15 +8,12 @@ import cssLogo from '../../../public/images/old/skills/CSS3.png';
 import JSLogo from '../../../public/images/old/skills/JS.png';
 import nodeLogo from '../../../public/images/old/skills/nodejs-logo.png';
 import gitLogo from '../../../public/images/old/skills/git.png';
-import reduxLogo from '../../../public/images/old/skills/redux.png';
 import SQL from '../../../public/images/old/skills/SQL.png';
 import postgresLogo from '../../../public/images/old/skills/postgres.png';
 import pythonLogo from '../../../public/images/old/skills/python.png';
-import jquerylogo from '../../../public/images/old/skills/jquery.png';
 
 import AWSLogo from '../../../public/images/skills/AWS.png';
 import AILogo from '../../../public/images/skills/gemini.png';
-import flutterLogo from '../../../public/images/skills/flutter.png';
 import nextLogo from '../../../public/images/skills/next.png';
 import TSLogo from '../../../public/images/skills/ts.png';
 const SkillsSection = () => {
@@ -31,14 +28,11 @@ const SkillsSection = () => {
         { skill: 'JavaScript', logo: JSLogo.src },
         { skill: 'AWS', logo: AWSLogo.src },
         { skill: 'AI', logo: AILogo.src },
-        { skill: 'Flutter', logo: flutterLogo.src },
          { skill: 'React Native', logo: ReactLogo.src },
         { skill: 'React.js', logo: ReactLogo.src },
         { skill: 'Next.js', logo: nextLogo.src },
         { skill: 'TypeScript', logo: TSLogo.src },
-        { skill: 'Jquery', logo: jquerylogo.src },
         { skill: 'Node.js', logo: nodeLogo.src },
-        { skill: 'Redux', logo: reduxLogo.src },
         { skill: 'Python', logo: pythonLogo.src },
         { skill: 'SQL', logo: SQL.src },
         { skill: 'Git', logo: gitLogo.src },
@@ -47,16 +41,21 @@ const SkillsSection = () => {
         { skill: 'CSS3', logo: cssLogo.src },
     ]
 
-    const additionalDevSkillList = ['Java', 'C', 'Relational Data Modeling'];
+    const additionalDevSkillList = ['Java', 'C#', 'Tailwind CSS', 'Jira', 'Relational Data Modeling'];
 
     const discoverySkillList = [
+        'Discovery Calls',
         'Enterprise Discovery Mechanics',
+        'Requirements Gathering',
         'Pain-to-Solution Mapping',
+        'Tailored Demos',
         'MEDDPICC Framework',
         'ARC Method',
         'Live Architecture Whiteboarding',
         'Objection Handling',
         'POC Development',
+        'Technical Evaluations',
+        'Voice of the Customer to Product',
     ];
 
     const cloudSkillList = [
@@ -65,12 +64,27 @@ const SkillsSection = () => {
         'EC2',
         'S3',
         'CloudFront',
+        'Lightsail',
         'IAM Security Policies',
+        'PCI-Compliant Infrastructure',
+        'Static IP Configuration',
+        'CompTIA Security+ (In Progress)',
         'CI/CD Pipelines',
         'OAuth 2.0',
         'Auth0 Identity Management',
         'Webhook Systems',
         'REST API Architecture',
+        'Clover, Square & Converge Payments',
+        'Third-Party Integrations',
+        'GA4 & Analytics Pipelines',
+    ];
+    const aiSkillList = [
+        'Claude Code',
+        'Codex',
+        'Context-First Prompting',
+        'ChatGPT API in Production SaaS',
+        'Agentic Workflow Design',
+        'LLM Orchestration & Tool Use',
     ];
 
     return (
@@ -91,6 +105,15 @@ const SkillsSection = () => {
                     <div className='skill-list-title'>Cloud, Security &amp; Infrastructure</div>
                     <div className='skill-pill-list'>
                         {cloudSkillList.map((skill, index) => (
+                            <span className='skill-pill' key={index}>{skill}</span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='skill-section'>
+                    <div className='skill-list-title'>AI &amp; Prototyping</div>
+                    <div className='skill-pill-list'>
+                        {aiSkillList.map((skill, index) => (
                             <span className='skill-pill' key={index}>{skill}</span>
                         ))}
                     </div>

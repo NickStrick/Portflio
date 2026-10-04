@@ -6,7 +6,7 @@ const images = [
   '/images/hero/profile1.jpg',
   '/images/hero/profile2.jpg',
   '/images/hero/profile3.jpg',
-  '/images/hero/profile5.png',
+  '/images/hero/desk.jpg',
 ];
 
 export default function HomeImageCarousel({ intervalMs = 3550 }) {

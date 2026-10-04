@@ -22,7 +22,14 @@ const Certificate = () => {
             className: 'bordered'
         },
         {
-            name: 'Full-Stack Web Development + Technical Interviewing Certificate',
+            name: 'CompTIA Security+',
+            by: 'CompTIA',
+            note: 'In progress. Building on hands-on work with PCI-compliant infrastructure, IAM, and OAuth 2.0 API authentication.',
+            inProgress: true,
+            className: ''
+        },
+        {
+            name: 'Full Stack Web Developer + Computer Science Certificate',
             by: 'Bloom Institute of Technology',
             cert: lambdaCert,
             link: lamb_cert_url,
@@ -85,6 +92,12 @@ const Certificate = () => {
                             </div>
                             <div className='certimage-container'>
                                 <div className="certimage-background"></div>
+                                {cert.inProgress ? (
+                                <div className='image cert-pending'>
+                                    <strong>{cert.name}</strong>
+                                    <span>In Progress</span>
+                                </div>
+                                ) : (
                                 <div
                                 className='image lambda-cert'
                                 onClick={cert.link ? () => handleLinkClick(cert.link) : undefined}
@@ -94,6 +107,7 @@ const Certificate = () => {
                                     width: cert.width,
                                     cursor: cert.link ? 'pointer' : 'default'
                                 }} />
+                                )}
                                 </div>
                         </div>
                     )

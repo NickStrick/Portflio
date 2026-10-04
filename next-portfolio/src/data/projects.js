@@ -17,26 +17,26 @@ import claroflowLogo from '../../public/images/projects/claroflow.png';
 const pData = [
     {
         name: "Enterprise Tradeshow Platform & Real-Time Dashboard",
-        description: 'Managed architecture transitions across a 600,000-line enterprise event-management codebase. Built a real-time attendee dashboard with direct messaging, exhibitor search, and calendar sync, then profiled API data flows to cut load times and friction.',
+        description: 'Managed architecture transitions across a 900,000-line enterprise event-management codebase. Built a real-time attendee dashboard with direct messaging, exhibitor search, and calendar sync, then profiled API data flows to cut load times and friction.',
         img: expocadimg,
         link: 'https://www.expocad.com/',
         deployed: 'https://www.expocad.com/',
-        role: 'Solutions Architect / Senior Full-Stack Engineer / Lead Technical Contributor',
+        role: 'Senior Full-Stack Engineer (Acting Tech Lead)',
         techUsed: ['Architecture', 'React', 'Node.js', 'REST APIs', 'AWS', 'Webhooks', 'SQL', 'WebSockets'],
         teamMemebers: 1,
         weeksCompleted: 150,
         pills: ['Architecture', 'Front End', 'Back End', 'React', 'Node.js', 'AWS', 'WebSockets'],
-        contribution: `As the primary cross-functional technical point of contact across engineering, product, and customer support, I led feature delivery on a 600,000-line enterprise event-management platform used by show managers, exhibitors, and attendees at live tradeshows.
+        contribution: `As the primary cross-functional technical point of contact across engineering, product, and customer support, I led feature delivery on a 900,000-line enterprise event-management platform used by show managers, exhibitors, and attendees at live tradeshows.
 
 I built a real-time attendee dashboard from the ground up, featuring direct messaging, exhibitor list searching, and calendar sync, translating reported friction from support and sales into concrete system improvements. I profiled API data flows end-to-end and refactored relational data patterns, achieving a 30% application performance improvement.
 
-Beyond the code, I worked directly with stakeholders to map pain points to solutions, mentored junior engineers through the codebase, and helped ship changes that reduced user friction by 22%, protecting renewal revenue for the platform's largest enterprise accounts.`,
+Beyond the code, I lead client demo calls with enterprise customers and demo the platform live at national trade shows, turning what customers ask for into scoped Jira tickets. I worked directly with stakeholders to map pain points to solutions, mentored junior engineers through the codebase, and helped ship changes that reduced user friction by 22%, protecting renewal revenue for the platform's largest enterprise accounts.`,
         color: '#0ea5e9', hover: '#0369a1',
         type: 'Enterprise SaaS Platform'
       },
       {
         name: "Redtail Luxe",
-        description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
+        description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting conversion by 30% in month one.',
         img: redtailluxeLogo,
         link: 'https://www.redtailluxe.com/',
         deployed: 'https://www.redtailluxe.com/',
@@ -45,7 +45,7 @@ Beyond the code, I worked directly with stakeholders to map pain points to solut
         teamMemebers: 1,
         weeksCompleted: 4,
         pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
-        contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
+        contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Conversions rose 30% in month one.
 
 That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
 

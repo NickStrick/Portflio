@@ -169,6 +169,7 @@ function Contact() {
         // {link:'https://www.fiverr.com/users/nic_stricker', name:'Fiverr', icon:null, displayText: 'fiverr.',iconStyle:{}},
          {link:'https://calendly.com/nickolasstricker/stricker-digital-discussion', name:'BookAMeeting', icon:null, displayText: 'Book A Meeting',iconStyle:{}},
          {link:'https://www.strickerdigital.com', name:'strickerdigital', icon:null, displayText: 'View my offers',iconStyle:{}},
+         {link:'/NickStricker-SolutionsEngineer-Resume.pdf', name:'Resume', icon:null, displayText: 'View My Résumé',iconStyle:{}},
     ]
     let contactInfo = [
         {name:'Email Inquires to', value:'nickolasstricker@gmail.com'},
@@ -180,8 +181,8 @@ function Contact() {
             link: 'mailto:nickolasstricker@gmail.com?subject=SE%2FForward%20Deployed%2FCSE%20Role%20Inquiry',
         },
         {
-            label: 'I need high-end enterprise architecture or cloud security consulting (Stricker Digital).',
-            link: 'mailto:nickolasstricker@gmail.com?subject=Enterprise%20Architecture%20%2F%20Consulting%20Inquiry',
+            label: 'I want a Revenue Leak Audit or done-for-you fixes for my store or app (Stricker Digital).',
+            link: 'mailto:nickolasstricker@gmail.com?subject=Revenue%20Leak%20Audit%20Inquiry',
         },
     ]
     return (    

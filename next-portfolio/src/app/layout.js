@@ -23,6 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.nickolasstricker.com'),
   title: {
     default: 'Nick Stricker - Home',
     template: 'Nick Stricker - %s',

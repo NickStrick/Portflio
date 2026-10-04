@@ -124,6 +124,10 @@
         bottom: 10px;
     }
 }
+.home-cta-group .home-resume-btn{
+    width: fit-content;
+    padding: 0.75rem 2rem;
+}
 .home-main-header{
     margin-bottom: 0;
 }
