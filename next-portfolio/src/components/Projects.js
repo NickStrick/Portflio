@@ -10,6 +10,8 @@ import './styles/Projects.css';
 // Option A (recommended): move images to /public and reference with /path
 // Option B: keep static imports and pass them down (Next can handle this)
   import caseStudyImg from '../../public/images/svg/projCard.svg';
+  import expocadimg from '../../public/images/projects/Expocad.png';
+  import redtailluxeLogo from '../../public/images/old/redtailluxe.jpg';
   import riyLogo from '../../public/images/old/RIY.png';
   import mympyLogo from '../../public/images/old/Mympy.png';
   import luncherLogo from '../../public/images/old/luncherApp.png';
@@ -21,6 +23,7 @@ import './styles/Projects.css';
 import Luke from '../../public/images/projects/luke.png';
 import Connor from '../../public/images/projects/connor.png';
 import CMF from '../../public/images/projects/CMF.png';
+import grandWoodLogo from '../../public/images/projects/Grand.png';
 import claroflowLogo from '../../public/images/projects/claroflow.png';
 
 // ---- Child components (adjust paths if different) ----
@@ -29,11 +32,11 @@ import ProjectDetail from './Projects/ProjectDetail';
 
 const pData = [
     {
-        name: "Enterprise Tradeshow Attendee Platform & Real-Time Dashboard",
+        name: "Enterprise Tradeshow Platform & Real-Time Dashboard",
         description: 'Managed architecture transitions across a 600,000-line enterprise event-management codebase. Built a real-time attendee dashboard with direct messaging, exhibitor search, and calendar sync, then profiled API data flows to cut load times and friction.',
-        img: caseStudyImg,
-        link: 'https://www.linkedin.com/in/nick-stricker',
-        deployed: '',
+        img: expocadimg,
+        link: 'https://actdev.expocad.com/',
+        deployed: 'https://actdev.expocad.com/',
         role: 'Solutions Architect / Senior Full-Stack Engineer / Lead Technical Contributor',
         techUsed: ['Architecture', 'React', 'Node.js', 'REST APIs', 'AWS', 'Webhooks', 'SQL', 'WebSockets'],
         teamMemebers: 1,
@@ -47,35 +50,50 @@ Beyond the code, I worked directly with stakeholders to map pain points to solut
         color: '#0ea5e9', hover: '#0369a1',
         type: 'Enterprise SaaS Platform'
       },
-//       {
-//         name: "The Digital Vault & Secure Retail Architecture",
-//         description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
-//         img: caseStudyImg,
-//         link: 'https://www.strickerdigital.com',
-//         deployed: 'https://www.strickerdigital.com',
-//         role: 'Founder & Principal Architect',
-//         techUsed: ['Architecture', 'Next.js', 'Node.js', 'AWS S3', 'OAuth 2.0', 'Auth0 Actions'],
-//         teamMemebers: 1,
-//         weeksCompleted: 4,
-//         pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
-//         contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
+      {
+        name: "Redtail Luxe",
+        description: 'Designed and deployed serverless checkout engines and private, metadata-driven client portals for luxury retail environments demanding elite authentication. Streamlined multi-input checkout into a structured, linear workflow, lifting form conversion by 30% month-over-month.',
+        img: redtailluxeLogo,
+        link: 'https://www.redtailluxe.com/',
+        deployed: 'https://www.redtailluxe.com/',
+        role: 'Web Developer, platform Engineer, and architect',
+        techUsed: ['Architecture', 'Next.js', 'Node.js', 'AWS S3', 'OAuth 2.0', 'Auth0 Actions'],
+        teamMemebers: 1,
+        weeksCompleted: 4,
+        pills: ['Architecture', 'Front End', 'Back End', 'Next.js', 'AWS S3', 'Auth0', 'OAuth 2.0'],
+        contribution: `A luxury watch retailer came to me with a Wix site that looked good but converted poorly: testimonials were buried, and the checkout process was a single wall of confusing inputs. I redesigned the landing experience to build trust faster, moving testimonials and company story above the fold, then rebuilt checkout as a step-by-step, linear flow with no more than five inputs per screen. Tracked form completions rose 30% month-over-month.
 
-// That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
+That project became the blueprint for the Digital Vault: a private, single-use access architecture for high-touch B2B and luxury clients. Using Next.js, Node.js, and AWS S3, I designed serverless checkout engines and secure metadata client portals, with Auth0 Actions and OAuth 2.0 enforcing zero-trust access without adding friction for the end client.
 
-// The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync client profiles server-side, keeping sensitive identity logic decoupled from the application backend, reducing database query load, and preventing downstream code complexity as the client list grows.`,
-//         color: '#caa14b', hover: '#8a6d1f',
-//         type: 'Luxury B2B / Secure Retail Architecture'
-//       },
+The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync client profiles server-side, keeping sensitive identity logic decoupled from the application backend, reducing database query load, and preventing downstream code complexity as the client list grows.`,
+        color: '#caa14b', hover: '#8a6d1f',
+        type: 'Luxury B2B / Secure Retail Architecture'
+      },
     {
         name: "CM Florals",
-        description: 'A Lead Capture website for A professional Florist with 45 years of experience. ',
+        description: 'A E-Commerce Store and Lead Capture website for A professional Florist with 45 years of experience. ',
         img: CMF,
         link: 'https://github.com/NickStrick/CM-Florals',
-        deployed: 'https://cm-florals.vercel.app/',
-        role: 'Wed Developer',
+        deployed: 'https://www.cmfloralsandgifts.com/',
+        role: 'Web Developer, platform Engineer, and architect',
         techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
         teamMemebers: 1,
-        weeksCompleted: 0.2,
+        weeksCompleted: 4,
+        pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        contribution: ``,
+        color:'#d26cec', hover: '#a66cec',
+        type: 'Business Website'
+      },
+      {
+        name: "Grand Wood and Glass",
+        description: 'E-Commerce Store and Lead Capture website for professional Woodworking and glasswork company.',
+        img: grandWoodLogo,
+        link: 'https://github.com/NickStrick/CM-Florals',
+        deployed: 'https://www.grandwoodandglass.com/',
+        role: 'Web Developer, platform Engineer, and architect',
+        techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
+        teamMemebers: 1,
+        weeksCompleted: 4,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         contribution: ``,
         color:'#d26cec', hover: '#a66cec',
@@ -247,20 +265,6 @@ This project helped me improve my skills in UI design, front-end speed optimizat
       ,color: '#f89c4c', hover: '#a15c1f',
       type: 'Tutorial Marketplace'
     },
-    // {
-    //   name: "Jango Rango Dungeon",
-    //   description: 'This project randomly Generates a map of 100 or more rooms. I used my knowledge of search algorithms and data structures to procedural generate a dungeon and be able to traverse it. We used Django to send information of the dungeon to the front end.',
-    //   img: rangoLogo,
-    //   link: '',
-    //   deployed: '',
-    //   role: 'Wed Developer',
-    //   techUsed: ['ReactJs', 'Bootstrap', 'Django'],
-    //   teamMemebers: 3,
-    //   weeksCompleted: 1,
-    //   pills: ['Back End', 'React', 'Django', 'SQL'],
-    //   contribution: 'I primarily wroked on the dungeon generation and traversal and worked with teammates to send that data to the frontend with django'
-    //   ,color: '#4C2C72', hover: '#381d58',
-    // },
     
     {
       name: "Luncher App",
