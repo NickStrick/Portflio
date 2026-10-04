@@ -271,7 +271,51 @@ This project helped me improve my skills in UI design, front-end speed optimizat
 const slugify = (name) =>
   name.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-export const projects = pData.map((project) => ({ ...project, slug: slugify(project.name) }));
+// Plain-language case study copy (matches strickerdigital.com), keyed by project name.
+// Listed in the order they're featured on the Projects page.
+const caseStudies = {
+  'Redtail Luxe': {
+    eyebrow: 'Luxury watch store · Checkout rebuild',
+    title: "Fixing Redtail Luxe's checkout",
+    problem: 'Their Wix site looked great, but buyers kept leaving. Reviews were buried, and checkout was one big wall of confusing boxes.',
+    built: 'I moved reviews and their story to the top, so shoppers trusted them faster. Then I rebuilt checkout into short, simple steps, with 5 questions or fewer on each screen.',
+    result: '30% more shoppers finished checkout in the first month.',
+    linkLabel: 'See the live store',
+  },
+  'Enterprise Tradeshow Platform & Real-Time Dashboard': {
+    eyebrow: 'Enterprise trade show platform',
+    title: 'Helping a huge trade show app run faster',
+    problem: 'A giant app (900,000 lines of code!) used live at trade shows felt slow, and users kept getting stuck.',
+    built: 'A live attendee dashboard with chat, exhibitor search, and calendar sync. I traced every data request from start to finish and fixed the slow ones.',
+    result: 'The app ran 30% faster and user friction dropped 22%, helping keep its biggest customers renewing.',
+    linkLabel: 'See Expocad',
+  },
+  'CM Florals': {
+    eyebrow: 'Local florist · Online store',
+    title: 'Giving a 45-year florist an online store',
+    problem: 'A florist with 45 years of experience needed new customers to find her, order online, and ask about custom flowers.',
+    built: 'A custom online store with easy inquiry forms, built in 4 weeks on Next.js and AWS.',
+    result: 'One easy place for customers to shop and reach out, built just the way she pictured it.',
+    linkLabel: 'See the live store',
+  },
+  'Grand Wood and Glass': {
+    eyebrow: 'Woodworking & glass studio · Online store',
+    title: "Taking a craft studio's work online",
+    problem: 'A woodworking and glass company needed a way to sell online and bring in requests for custom pieces.',
+    built: 'A custom online store with lead capture for custom orders, built in 4 weeks on Next.js and AWS.',
+    result: 'One place for customers to shop, see the craft up close, and ask for custom work.',
+    linkLabel: 'See the live store',
+  },
+};
+
+export const projects = pData.map((project) => ({
+  ...project,
+  slug: slugify(project.name),
+  caseStudy: caseStudies[project.name] || null,
+}));
+
+export const featuredProjects = Object.keys(caseStudies).map((name) => projects.find((p) => p.name === name));
+export const moreProjects = projects.filter((project) => !project.caseStudy);
 
 export function getProjectBySlug(slug) {
   return projects.find((project) => project.slug === slug);
