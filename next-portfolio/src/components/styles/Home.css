@@ -250,6 +250,7 @@ p{
     }
     .home-carousel{
         width: clamp(220px, 62vw, 340px);
+        margin-inline: auto;
     }
 }
 @media (max-width: 960px) {
