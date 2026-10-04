@@ -89,7 +89,7 @@ The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync cli
         description: 'A website for the LatinX community of Chicago to connect with each other and find events in the area. Connecting Dots uplifts the LatinX community by providing a platform for networking, sharing resources, and building relationships. ',
         img: dots,
         link: 'https://github.com/NickStrick/Connecting-Dots',
-        deployed: 'https://connecting-dots-five.vercel.app/',
+        deployed: 'https://www.connectingdotsforlatinx.com/',
         role: 'Web Developer',
         techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         teamMemebers: 1,
