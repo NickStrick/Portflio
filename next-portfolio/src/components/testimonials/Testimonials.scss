@@ -1,0 +1,122 @@
+.testimonials {
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 2rem 0 4rem;
+
+  .testimonials-heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      color: #b8bfc6;
+      margin: 0;
+    }
+  }
+}
+
+// Masonry-style columns so short and long quotes pack together
+.testimonials-grid {
+  columns: 3 300px;
+  column-gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--main-accent);
+  background: linear-gradient(160deg, #0f2a07 0%, var(--main-darker-accent) 100%);
+  box-shadow: 0 10px 30px -18px rgba(40, 218, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px -14px rgba(40, 218, 0, 0.8);
+  }
+
+  blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  figcaption {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    strong {
+      display: block;
+    }
+    span span {
+      display: block;
+      font-size: 0.8rem;
+      color: #d7dccf;
+    }
+  }
+}
+
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial-quote-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: #f5b301;
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.testimonial-stars {
+  display: inline-flex;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: #f5b301;
+}
+
+.testimonial-photo {
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.testimonial-watermark {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  font-size: 4.5rem;
+  color: rgba(255, 255, 255, 0.07);
+  transform: scaleX(-1);
+}
+
+@media (max-width: 600px) {
+  .testimonials .testimonials-heading h2 {
+    font-size: 2rem;
+  }
+}

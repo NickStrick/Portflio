@@ -2,132 +2,193 @@
 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSitemap, faCloud, faShieldHalved, faGears, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMagnifyingGlassChart,
+  faScrewdriverWrench,
+  faCircleCheck,
+  faShieldHalved,
+  faCertificate,
+} from '@fortawesome/free-solid-svg-icons';
 import Socials from '../socials/Socials';
+import Testimonials from '../testimonials/Testimonials';
 
 import './Services.scss';
 
-export default function Services() {
-  const servicesList = [
-    {
-      name: 'Enterprise Systems Architecture & Auditing',
-      icon: faSitemap,
-      description:
-        'Deconstructing monolithic or fragmented infrastructures to maximize application throughput and reduce user friction hotspots. End-to-end mapping from database models to live webhook delivery systems.',
-    },
-    {
-      name: 'Cloud Migration & Infrastructure Design (AWS)',
-      icon: faCloud,
-      description:
-        'Building secure, scalable, and cost-effective cloud solutions. Specialized in multi-tenant platforms, serverless microservices, and static IP compliance configurations for enterprise requirements.',
-    },
-    {
-      name: 'Security Frameworks & Access Control',
-      icon: faShieldHalved,
-      description:
-        'Designing robust identity management pipelines (Auth0, OAuth 2.0, M2M authentication) to enforce zero-trust policies, dispute protection log trails, and secure multi-factor enterprise checkout components.',
-    },
-    {
-      name: 'Workflow Automation & Pipeline Optimization',
-      icon: faGears,
-      description:
-        'Aligning system mechanics with operational efficiency. Profiling API data flows and refactoring relational data patterns to yield up to 30%+ application performance gains.',
-    },
-  ];
+const AUDIT_URL = 'https://www.strickerdigital.com/audits';
+const CALENDLY_URL = 'https://calendly.com/nickolasstricker/stricker-digital-discussion';
+const btnClass = 'btn-gradient mt-10 transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none text-white';
 
+const offers = [
+  {
+    eyebrow: 'Revenue Leak Audit',
+    title: 'Find out exactly why visitors leave without buying.',
+    icon: faMagnifyingGlassChart,
+    blurb: "In 48 hours you'll know what's costing you sales, and exactly what to fix first.",
+    price: '$800',
+    priceNote: 'one fixed price, no surprise bills',
+    bullets: [
+      'A clear picture of your store or app, with every trouble spot circled',
+      'Your fix list, ranked by money, so you tackle what grows sales first',
+      'Speed, checkout, and security checked, the three places buyers drop off most',
+      'A 30-minute call, where we walk through everything together and answer your questions',
+    ],
+    guarantee: {
+      title: 'Clear answers, or your money back',
+      text: "If your problems aren't crystal clear within 24 hours of delivery, you get a full refund. No questions asked.",
+    },
+    cta: { label: 'Get your audit', href: AUDIT_URL, external: true },
+  },
+  {
+    eyebrow: 'Done-for-you fixes',
+    title: 'Want it fixed for you?',
+    icon: faScrewdriverWrench,
+    blurb: 'Skip the to-do list. Get a fixed quote and have every fix built, tested, and shipped, so you can get back to running your business.',
+    price: 'Fixed quote',
+    priceNote: 'after your audit',
+    bullets: [
+      'One fixed price, agreed before any work starts',
+      'Built, tested, and shipped, by a senior full-stack engineer',
+      'Fixes ranked by money, so your sales grow first',
+    ],
+    cta: { label: 'Get a fixed quote', href: '/contact' },
+  },
+];
+
+const stats = [
+  { value: '30%', label: 'more shoppers finished checkout' },
+  { value: '22%', label: 'fewer "this is broken" tickets' },
+  { value: '48 hrs', label: 'from kickoff to your finished audit' },
+];
+
+const steps = [
+  { title: 'Audit (48 hrs):', text: 'I check your speed, checkout, and security, and circle every spot where buyers drop off.' },
+  { title: 'Walkthrough call:', text: 'We go through your fix list together, ranked by money, and I answer your questions.' },
+  { title: 'Fixes shipped:', text: 'Fix it yourself, or get a fixed quote and I build, test, and ship every fix.' },
+];
+
+function CtaLink({ href, external, children, className, ...rest }) {
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className} {...rest}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className} {...rest}>
+      {children}
+    </Link>
+  );
+}
+
+export default function Services() {
   return (
     <div className="content-container">
       <div className="services section-container">
         <div className="section-content">
-          <h1 className="port-head">High-Impact Enterprise Architecture &amp; Technical Strategy</h1>
+          <p className="services-eyebrow">Revenue Leak Audits · Done-for-you fixes</p>
+          <h1 className="port-head">More sales from the visitors you already have.</h1>
 
-          <p className="intro-text intro-text-1">
-            I partner with{' '}
-            <span className="highlight-text">enterprise teams</span>,{' '}
-            <span className="highlight-text">B2B SaaS founders</span>, and{' '}
-            <span className="highlight-text">luxury/high-touch brands</span>
-          </p>
-          <p className="intro-text intro-text-2">
-            who need architecture that protects <span className="highlight-text">margin</span>,{' '}
-            scales securely, and removes <span className="highlight-text">friction</span> from the customer journey,
-          </p>
-          <p className="intro-text intro-text-3">
-            backed by real <span className="highlight-text">enterprise discovery</span> and measurable business outcomes.
+          <p className="intro-text">
+            Your store or app might be quietly losing buyers to{' '}
+            <span className="highlight-text">slow pages</span> and{' '}
+            <span className="highlight-text">clunky checkouts</span>. Let&apos;s find the leaks, fix them, and turn
+            more of your visitors into <span className="highlight-text">paying customers</span>.
           </p>
 
           <div className="btn-g-wrap">
-            <a
-              data-aos="fade-right"
-              href="https://www.strickerdigital.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gradient mt-10 transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-            >
-              Stricker Digital Consulting
-            </a>
-
-            <Link
-              data-aos="fade-left"
-              href="/contact"
-              className="btn-gradient ml mt-10 transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-            >
-              Discuss an Architecture Audit
-            </Link>
+            <CtaLink data-aos="fade-right" href={AUDIT_URL} external className={btnClass}>
+              Get your $800 audit
+            </CtaLink>
+            <CtaLink data-aos="fade-left" href="/contact" className={`${btnClass} ml`}>
+              Get a fixed quote
+            </CtaLink>
           </div>
 
-          <div className="services-grid">
-            {servicesList.map((service, index) => (
-              <Link href="/contact" className="service-card" key={index}>
-                <FontAwesomeIcon icon={service.icon} className="service-icon gradientText" />
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-              </Link>
+          <h2 className="services-subhead">Find the leaks. Fix the leaks. Grow your sales.</h2>
+          <p className="services-subtext">Two simple ways to turn more of your visitors into paying customers.</p>
+
+          <div className="offers-grid">
+            {offers.map((offer) => (
+              <div className="service-card offer-card" key={offer.eyebrow}>
+                <FontAwesomeIcon icon={offer.icon} className="service-icon gradientText" />
+                <span className="offer-eyebrow">{offer.eyebrow}</span>
+                <h3>{offer.title}</h3>
+                <p>{offer.blurb}</p>
+
+                <div className="offer-price">
+                  <strong>{offer.price}</strong>
+                  <span>/ {offer.priceNote}</span>
+                </div>
+
+                <ul className="offer-bullets">
+                  {offer.bullets.map((bullet) => (
+                    <li key={bullet}>
+                      <FontAwesomeIcon icon={faCircleCheck} className="list-icon" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {offer.guarantee ? (
+                  <div className="offer-guarantee">
+                    <FontAwesomeIcon icon={faShieldHalved} className="list-icon" />
+                    <div>
+                      <strong>{offer.guarantee.title}</strong>
+                      <p>{offer.guarantee.text}</p>
+                    </div>
+                  </div>
+                ) : null}
+
+                <CtaLink href={offer.cta.href} external={offer.cta.external} className="btn-inverted offer-cta">
+                  {offer.cta.label}
+                </CtaLink>
+              </div>
+            ))}
+          </div>
+
+          <div className="services-stats">
+            {stats.map((stat) => (
+              <div className="services-stat" key={stat.label}>
+                <strong>{stat.value}</strong>
+                <span>{stat.label}</span>
+              </div>
             ))}
           </div>
 
           <div className="workflow">
             <h2>How It Works</h2>
             <ol className="custom-list">
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faCertificate} className="list-icon" />
-                  <strong>Technical Discovery (Free):</strong>
-                </span>{' '}
-                <span>We map your current architecture, pain points, and business goals.</span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faCertificate} className="list-icon" />
-                  <strong>Architecture Proposal:</strong>
-                </span>{' '}
-                <span>You get a scoped plan with fixed pricing and measurable success metrics.</span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faCertificate} className="list-icon" />
-                  <strong>We Build It Together:</strong>
-                </span>{' '}
-                <span>Weekly updates, clear communication, and delivery you can trust.</span>
-              </li>
+              {steps.map((step) => (
+                <li key={step.title}>
+                  <span>
+                    <FontAwesomeIcon icon={faCertificate} className="list-icon" />
+                    <strong>{step.title}</strong>
+                  </span>{' '}
+                  <span>{step.text}</span>
+                </li>
+              ))}
             </ol>
           </div>
           <Socials />
 
+          <Testimonials />
+
           <div className="cta-section">
-            <h2>Ready to align your architecture with your business goals?</h2>
-            <strong>Let&apos;s talk.</strong>
-            <a
-              href="https://calendly.com/nickolasstricker/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-inverted  page-contact"
-            >
-              Book a Discovery Call
-            </a>
+            <h2>More buyers are one fix away.</h2>
+            <p className="cta-text">Find the leaks, get them fixed, and watch more visitors turn into customers.</p>
+            <CtaLink href={AUDIT_URL} external className="btn-inverted page-contact">
+              Get your $800 audit
+            </CtaLink>
+            <CtaLink href="/contact" className="btn-inverted page-contact cta-secondary">
+              Get a fixed quote
+            </CtaLink>
+            <CtaLink href={CALENDLY_URL} external className="btn-inverted page-contact cta-secondary">
+              Book a call
+            </CtaLink>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

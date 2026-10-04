@@ -3,7 +3,7 @@ import Services from '../../components/services/Services';
 export const metadata = {
   title: 'Services',
   description:
-    'High-impact enterprise systems architecture, AWS cloud migration, security frameworks, and workflow automation consulting from Stricker Digital.',
+    "Revenue Leak Audits and done-for-you fixes from Stricker Digital. Find out why visitors leave without buying in 48 hours, then get the speed, checkout, and security fixes built for a fixed price.",
 };
 
 export default function Page() {

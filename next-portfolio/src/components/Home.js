@@ -4,6 +4,8 @@ import SplitTwo from '../../public/images/splitters/bottom-wave-2';
 import HomeImageCarousel from './HomeImageCarousel';
 import HomeVsl from './HomeVsl';
 import Socials from './socials/Socials';
+import About from './About';
+import Testimonials from './testimonials/Testimonials';
 
 import './styles/Home.css';
 import './styles/animations.scss';
@@ -12,11 +14,6 @@ const summary1 =
   "Most developers focus entirely on syntax. Most sales reps focus entirely on quotas. My unfair advantage sits at the intersection of both: building production-grade SaaS, architecting secure AWS infrastructure, and running deep enterprise discovery that protects and grows business margins.";
 const summary12 =
   "I believe in learning relentlessly, translating technical complexity into clear business outcomes, and bringing people along for the ride. If you have a vision worth building, let's make it real together.";
-const summary2 = `My path into tech started with curiosity, picking up JavaScript through YouTube tutorials and Udemy courses while working retail after high school. That obsession turned into a career.
-I sharpened my skills at Bloom Institute of Technology, studying full-stack web development and CS fundamentals, then stayed on as a contract Teaching Assistant leading daily standups, mentoring 10+ engineers through JavaScript, Java, and Python, and bridging the gap between stakeholders and dev teams on real projects.
-    `;
-const summary3 = `Today I'm a Senior Full-Stack Engineer shipping features across a 600,000+ line enterprise platform, and the founder of Stricker Digital, where I architect secure, high-performance web systems and run technical discovery for B2B and luxury clients. I'm AWS Solutions Architect – Associate certified and actively pursuing Sales Engineer / Forward Deployed Engineer roles where deep engineering execution meets enterprise commercial value.
-Everything I do is rooted in the same belief: technology should empower people, not intimidate them.`;
 
 export default function Home() {
   return (
@@ -106,12 +103,10 @@ export default function Home() {
       <SplitTwo fillColor="#28da00" />
       <div className="page-split-padding-dark split-wave-2"></div>
 
-      <div className="section-container home-bottom-conatiner">
-        <div className="section-content intro-section-content" data-aos="fade-right">
-          <h1 style={{ marginLeft: 'auto', textAlign: 'right' }}>Background</h1>
-          <p className="intro-p">{summary2}</p>
-          <p className="intro-p">{summary3}</p>
-          {/* <p>{summary4}</p>  // Optional trailing paragraph you had defined */}
+      <div className="section-container home-about-container">
+        <div className="section-content intro-section-content">
+          <About />
+          <Testimonials />
         </div>
       </div>
     </div>

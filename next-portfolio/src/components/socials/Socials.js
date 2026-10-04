@@ -4,7 +4,7 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import './Socials.scss';
 
-const socialItems = [
+export const socialItems = [
   {
     type: 'linkedin',
     label: 'LinkedIn',
@@ -14,7 +14,7 @@ const socialItems = [
   {
     type: 'youtube',
     label: 'YouTube',
-    href: 'https://www.youtube.com/@NickStrickerDigital',
+    href: 'https://www.youtube.com/@NickolasStricker',
     icon: faYoutube,
   },
   {
@@ -25,7 +25,7 @@ const socialItems = [
   },
 ];
 
-const contactDetails = [
+export const contactDetails = [
   {
     type: 'email',
     label: 'Email',
