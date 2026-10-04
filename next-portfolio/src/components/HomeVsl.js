@@ -18,7 +18,7 @@ export default function HomeVsl() {
       className="home-vsl"
       data-aos="fade-up"
       data-aos-duration="1500"
-      data-aos-delay="800"
+      data-aos-delay="300"
     >
       {playing ? (
         <iframe

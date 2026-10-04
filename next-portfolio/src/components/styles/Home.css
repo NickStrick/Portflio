@@ -5,12 +5,6 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
-.home-indent-two{
-    margin-left:30px
-}
-.home-indent:last-child{
-    margin-left:35px;
-}
 .home-tagline{
     font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif !important;
     font-style: italic;
@@ -21,21 +15,68 @@
     color: var(--main-accent);
     margin-bottom: 0.5em;
 }
-.home-cta-group{
+/* ---------- Hero: text + photo on the left, video + buttons on the right ---------- */
+.home-hero{
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: clamp(2rem, 4vw, 4.5rem);
+    align-items: center;
+    /* fill the first screen under the fixed navbar (content-container has 100px top padding) */
+    min-height: calc(100vh - 140px);
+    padding-bottom: 1.5rem;
+    padding-inline: max(30px, 6%);
+}
+.hero-intro .home-main-header{
+    padding-top: 0;
+    margin-top: 0;
+}
+.hero-intro .home-indent{
+    margin: 0.4rem 0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+.hero-intro .home-tagline{
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+.hero-media{
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    padding-top: 2.75rem;
+    align-items: stretch;
+    gap: 1rem;
+    /* never let video + buttons be taller than the screen: cap width by available height */
+    width: min(100%, 900px, calc((100vh - 330px) * 16 / 9));
+    min-width: min(100%, 480px);
+    justify-self: center;
+}
+.hero-eyebrow{
+    color: var(--main-accent);
+}
+.home-cta-group{
+    display: flex;
+    gap: 1rem;
     width: 100%;
 }
-.home-cta-group .header-btn{
-    margin: 0 !important;
+.home-cta-group .hero-btn{
+    flex: 1 1 0;
+    margin: 0;
+    padding: 1rem 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px -14px rgba(40,218,0,0.8);
+}
+.hero-media .home-resume-btn{
+    align-self: center;
+    width: fit-content;
+    padding: 0.75rem 2rem;
 }
 .home-vsl{
     position: relative;
     z-index: 12;
-    width: 640px;
-    margin-top: 2.25rem;
+    width: 100%;
     aspect-ratio: 16/9;
     border-radius: 18px;
     overflow: hidden;
@@ -124,34 +165,31 @@
         bottom: 10px;
     }
 }
-.home-cta-group .home-resume-btn{
-    width: fit-content;
-    padding: 0.75rem 2rem;
-}
 .home-main-header{
     margin-bottom: 0;
 }
 .home-main-header span{
     display: block;
 }
-.home-main-image{
+.home-carousel{
+    position: relative;
+    /* sized by screen height too, so the left column fits on first load */
+    width: clamp(220px, min(34vh, 28vw), 380px);
     aspect-ratio: 1/1;
+    margin-top: 1.25rem;
+}
+.home-main-image{
     position: absolute;
-    top:0px;
-    right:12%;
+    inset: 0;
     border-radius: 100%;
     z-index: 10;
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    min-width: 320px;
-    max-width: 580px !important;
-    width:35%;
     box-shadow: 0px 0px 30px -17px rgba(152,255,152,1);
 }
 .home-carousel-layer{
     opacity: 1;
-    margin-top:20px;
 }
 .home-carousel-layer-fade{
     z-index: 11;
@@ -196,13 +234,32 @@ p{
    
 }
 
-@media (max-width: 1560px) {
-    .home-main-image{
-        left: 0;
-        top:calc(100% - 100px);
-        margin:0 auto;
+/* Stack on tablets/phones: video + buttons first, then the intro */
+@media (max-width: 1050px) {
+    .home-hero{
+        grid-template-columns: 1fr;
+        min-height: 0;
+        gap: 2.5rem;
+        padding-inline: 18px;
     }
-    .home-first-content{
-        padding-bottom: 140px;
+    .hero-media{
+        order: -1;
+        width: 100%;
+        min-width: 0;
+        max-width: 760px;
+    }
+    .home-carousel{
+        width: clamp(220px, 62vw, 340px);
+    }
+}
+@media (max-width: 960px) {
+    /* .home .section-content already leaves an 18px gutter each side here */
+    .home-hero{
+        padding-inline: 0;
+    }
+}
+@media (max-width: 600px) {
+    .home-cta-group{
+        flex-direction: column;
     }
 }

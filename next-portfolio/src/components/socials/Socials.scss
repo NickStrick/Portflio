@@ -118,16 +118,3 @@
     }
 }
 
-/* Extra top clearance on the homepage only, where the rotating profile
-   photo is absolutely positioned and drops below the hero at narrower
-   widths (see .home-main-image media query in Home.css). */
-@media (max-width: 1560px){
-    .socials-home{
-        padding-top: 380px;
-    }
-}
-@media (max-width: 600px){
-    .socials-home{
-        padding-top: 260px;
-    }
-}

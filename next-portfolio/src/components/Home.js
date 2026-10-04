@@ -19,67 +19,45 @@ export default function Home() {
   return (
     <div className="content-container home">
       <div className="section-container">
-        <div className="section-content home-first-content">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="1000"
-            data-aos-easing="ease-out-back"
-          >
-            <h1 className="home-main-header">
-              <span>Nick</span> <span>Stricker</span>
-            </h1>
+        <div className="section-content home-first-content home-hero">
+          <div className="hero-intro">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="600"
+              data-aos-easing="ease-out-back"
+            >
+              <h1 className="home-main-header">
+                <span>Nick</span> <span>Stricker</span>
+              </h1>
+            </div>
+
+            <p className="home-indent home-tagline" data-aos="flip-left" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-easing="ease-out-back">
+              Bridging the Gap Between Complex Architecture and Enterprise Outcomes.
+            </p>
+            <p className="home-indent" data-aos="flip-left" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-easing="ease-out-back">
+              Senior Full-Stack Engineer &amp; Solutions Architect, AWS certified.
+            </p>
+            <p className="home-indent" data-aos="flip-left" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-easing="ease-out-back">
+              I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
+            </p>
+
+            <HomeImageCarousel />
           </div>
 
-          <p
-            className="home-indent home-indent-two home-tagline"
-            data-aos="flip-left"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="1000"
-            data-aos-easing="ease-out-back"
-          >
-            Bridging the Gap Between Complex Architecture and Enterprise Outcomes.
-          </p>
-          <p
-            className="home-indent home-indent-two"
-            data-aos="flip-left"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="1000"
-            data-aos-easing="ease-out-back"
-          >
-            Senior Full-Stack Engineer &amp; Solutions Architect, AWS certified.
-          </p>
-          <p
-            className="home-indent home-indent-two"
-            data-aos="flip-left"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="left"
-            data-aos-delay="1000"
-            data-aos-easing="ease-out-back"
-          >
-            I design secure, high-performance systems and translate technical complexity into clear business metrics that move enterprise deals forward.
-          </p>
+          <div className="hero-media">
+            <span className="section-eyebrow hero-eyebrow">Start here · A quick hello from Nick</span>
+            <HomeVsl />
 
-          <HomeVsl />
-
-          <div className="home-cta-group">
-            <Link
-              data-aos="fade-right"
-              href="/projects"
-              className="header-btn btn-gradient !mb-1 w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-            >
-              Review Technical Projects
-            </Link>
-            <Link
-              data-aos="fade-right"
-              href="/services"
-              className="btn-g-wrap header-btn btn-gradient w-full transition-all duration-300 ease-in-out text-2xl md:text-3xl px-16 py-3 rounded-full focus:outline-none bg-purple-custom text-white hover:bg-language-hover"
-            >
-              Enterprise Consulting / Hire Me
-            </Link>
+            <div className="home-cta-group">
+              <Link href="/projects" className="btn-gradient hero-btn">
+                Review Technical Projects
+              </Link>
+              <Link href="/services" className="btn-gradient hero-btn">
+                Enterprise Consulting / Hire Me
+              </Link>
+            </div>
             <a
               href="/NickStricker-SolutionsEngineer-Resume.pdf"
               target="_blank"
@@ -89,9 +67,6 @@ export default function Home() {
               Download Résumé (PDF)
             </a>
           </div>
-
-          <HomeImageCarousel />
-
         </div>
       </div>
 
