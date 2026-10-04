@@ -93,7 +93,7 @@ const Certificate = () => {
                             <div className='certimage-container'>
                                 <div className="certimage-background"></div>
                                 {cert.inProgress ? (
-                                <div className='image cert-pending'>
+                                <div className='image cert-pending' style={{ width: '260px' }}>
                                     <strong>{cert.name}</strong>
                                     <span>In Progress</span>
                                 </div>

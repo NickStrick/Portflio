@@ -131,6 +131,9 @@
 }
 .nslogo{
     height: 200px;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
     position: absolute;
     right: 0px;
     margin-top: -10px;
@@ -167,6 +170,7 @@
     }
     .nslogo{
     height: 80px;
+    width: auto;
     position: absolute;
     right: auto;
     margin-top: -100px;

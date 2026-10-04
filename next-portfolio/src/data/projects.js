@@ -80,7 +80,7 @@ The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync cli
         weeksCompleted: 4,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         contribution: ``,
-        color:'#d26cec', hover: '#a66cec',
+        color:'#855734', hover: '#F7E2AB',
         type: 'Business Website'
       },
       
