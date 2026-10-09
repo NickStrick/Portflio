@@ -1,13 +1,17 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react'
+import Script from 'next/script'
+
 import './Contact.scss'
 import './HoloText.scss'
 import Holo from './HoloText.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintBrush, faHammer, faHandshakeSimple, faCopy} from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush, faHammer, faHandshakeSimple, faCopy, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import BackgroundSvg from '../../../public/images/contact/dotsvg.js'
 import Socials from '../socials/Socials'
+import { LIMITS, validateContact } from '../../lib/contactValidation'
 
 
 // function initateConfetti(){
@@ -79,88 +83,63 @@ import Socials from '../socials/Socials'
 //     }
 // }
 
-function Contact() {
-    // let [helpOpen, setHelp] = useState(false);
-    // let [inputObj, setInput] = useState({
-    //     name:'', 
-    //     message:'',
-    //     email:''
-    // })
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+const EMPTY_FORM = { name: '', email: '', message: '' };
 
-    // const fetchData = async (data) => {
-    //     await axios(
-    //     `https://softball-science-data.vercel.app/locker/5`,
-    //     ).then(res => {
-    //     let oldData = JSON.parse(res.data.data[0].value)
-    //         sendEmailData(oldData, data);
-    //     }).catch(err => {
-    //         console.log(err)
-    //     })
-    // };
-    // function sentAlert(){
-        
-    //     document.getElementById('SentScreen').classList.add('show');
-    //     initateConfetti()
-    //     setTimeout(function(){
-    //         document.getElementById('SentScreen').classList.remove('show');
-    //     },1650)
-    // }
-    // const sendEmailData = async (oldData, newData) => {
-    //     let sendData = ''
-    //     if(oldData) sendData = [newData, ...oldData]
-    //     let postString ={ "value":JSON.stringify(sendData) }
-        
-    //     await axios.put(
-    //     `https://softball-science-data.vercel.app/locker/5`,
-    //     postString
-    //     ).then(res => {
-    //         // alert('Message sent!')
-    //         console.log(res)
-    //         setInput({
-    //             name:'', 
-    //             message:'',
-    //             email:''
-    //         })
-    //         document.getElementById('SaveScreen').classList.remove('show');
-    //         sentAlert()
-    //         // props.setData()
-    //     }
-    //     ).catch(err => {
-    //         console.log(err)
-    //         document.getElementById('SaveScreen').classList.remove('show');
-    //         alert('Something went wrong! did not save your data!')
-    //     })
-    // }
-    // function checkUrlValue(url){
-    //     let urlArray = url.split('/')
-    //     if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
-    //         return true;
-    //     }else{
-    //         setInput({url:'',id:inputObj.id})
-    //         alert('URL is in the wrong format! Canceling...')
-    //         return false
-    //     }
-    // }
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     let formData = new FormData(e.target)
-    //     let data = {};
-    //     for (const pair of formData.entries()) {
-    //         data[pair[0]] = pair[1]
-    //     }
-    //     document.getElementById('SaveScreen').classList.add('show')
-    //     data.date = new Date().toDateString() 
-    //     fetchData(data)
-    // }
-    // const handleCancel = (e) => {
-    //     e.preventDefault()
-    //     if(helpOpen)setHelp(!helpOpen)
-    //     props.setShowModal()
-    // }
-    // const handleHelp = (e) => {
-    //     e.preventDefault()
-    //     setHelp(!helpOpen)
-    // }
+function Contact() {
+    const [form, setForm] = useState(EMPTY_FORM);
+    const [errors, setErrors] = useState({});
+    const [status, setStatus] = useState({ state: 'idle', text: '' });
+    const startedAt = useRef(0);
+
+    useEffect(() => { startedAt.current = Date.now(); }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prev) => ({ ...prev, [name]: value }));
+        if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (status.state === 'sending') return;
+
+        const { errors: found, valid } = validateContact(form);
+        setErrors(found);
+        if (!valid) return;
+
+        const formData = new FormData(e.target);
+        setStatus({ state: 'sending', text: '' });
+        document.getElementById('SaveScreen')?.classList.add('show');
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...form,
+                    website: formData.get('website') || '',
+                    turnstileToken: formData.get('cf-turnstile-response') || '',
+                    startedAt: startedAt.current,
+                }),
+            });
+            const out = await res.json().catch(() => ({}));
+            if (!res.ok || !out.ok) {
+                if (out.errors) setErrors(out.errors);
+                setStatus({ state: 'error', text: out.error || 'Something went wrong. Please email instead.' });
+                return;
+            }
+            setForm(EMPTY_FORM);
+            setStatus({ state: 'sent', text: 'Thanks! Your message was sent.' });
+            const sent = document.getElementById('SentScreen');
+            sent?.classList.add('show');
+            setTimeout(() => sent?.classList.remove('show'), 1650);
+        } catch {
+            setStatus({ state: 'error', text: 'Network error. Please try again or email instead.' });
+        } finally {
+            document.getElementById('SaveScreen')?.classList.remove('show');
+            window.turnstile?.reset();
+        }
+    };
     function buttonClick(link){
         window.open(link, "_blank");
     }
@@ -202,33 +181,54 @@ function Contact() {
                 </div>
                 <div className='section-column'>
                     
-                    {/* <form id="adsModalForm" onSubmit={handleSubmit} data-id={inputObj.id}>
-                    <div className="formGroup">
-                            <label>Name</label>
-                            <div className="form-input-group">
-                            <input defaultValue={inputObj.name} name="name" placeholder='Type your name...'/>
-                            </div>
-                            <div className="form-alert-message"></div>
+                    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                        {/* Honeypot: hidden from people, irresistible to bots. */}
+                        <div className="hp-field" aria-hidden="true">
+                            <label htmlFor="contact-website">Website</label>
+                            <input id="contact-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
                         </div>
                         <div className="formGroup">
-                            <label>E-Mail</label>
+                            <label htmlFor="contact-name">Name</label>
                             <div className="form-input-group">
-                                <input defaultValue={inputObj.email} name="email" placeholder='example@email.com'/>
+                                <input id="contact-name" name="name" value={form.name} onChange={handleChange}
+                                    maxLength={LIMITS.name.max} autoComplete="name" required
+                                    aria-invalid={!!errors.name} placeholder='Type your name...'/>
                             </div>
-                            <div className="form-alert-message"></div>
+                            <div className="form-alert-message" role="alert">{errors.name}</div>
                         </div>
                         <div className="formGroup">
-                            <label>Message</label>
+                            <label htmlFor="contact-email">E-Mail</label>
                             <div className="form-input-group">
-                            <textarea rows={5} defaultValue={inputObj.message} name="message" placeholder='Type your message...'></textarea>
+                                <input id="contact-email" name="email" type="email" value={form.email} onChange={handleChange}
+                                    maxLength={LIMITS.email.max} autoComplete="email" required
+                                    aria-invalid={!!errors.email} placeholder='example@email.com'/>
                             </div>
-                            <div className="form-alert-message"></div>
-                         </div>
+                            <div className="form-alert-message" role="alert">{errors.email}</div>
+                        </div>
+                        <div className="formGroup">
+                            <label htmlFor="contact-message">Message</label>
+                            <div className="form-input-group">
+                                <textarea id="contact-message" rows={5} name="message" value={form.message} onChange={handleChange}
+                                    maxLength={LIMITS.message.max} required
+                                    aria-invalid={!!errors.message} placeholder='Type your message...'></textarea>
+                            </div>
+                            <div className="form-alert-message" role="alert">
+                                {errors.message || (form.message.length > LIMITS.message.max * 0.9 && `${form.message.length}/${LIMITS.message.max}`)}
+                            </div>
+                        </div>
+                        {TURNSTILE_SITE_KEY && (
+                            <>
+                                <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
+                                <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark" />
+                            </>
+                        )}
                         <div className="form-submit">
-                           
-                            <button type="submit" className="formButton">Send an email &nbsp; &nbsp; <FontAwesomeIcon icon={faPaperPlane} /><span className="formButton-overlay"></span> </button>
+                            {status.text && <p className={`form-status form-status-${status.state}`} role="status">{status.text}</p>}
+                            <button type="submit" className="formButton" disabled={status.state === 'sending'}>
+                                {status.state === 'sending' ? 'Sending...' : 'Send a message'} &nbsp; &nbsp; <FontAwesomeIcon icon={faPaperPlane} /><span className="formButton-overlay"></span>
+                            </button>
                         </div>
-                    </form> */}
+                    </form>
                     <div className='intent-options'>
                         {intentOptions.map((option, index) => (
                             <button

@@ -55,11 +55,15 @@ export default function Page() {
 
           <section id="privacy">
             <h2>Privacy</h2>
-            <p>This site is a portfolio. It has no accounts, logins, or forms that store your information.</p>
+            <p>This site is a portfolio. It has no accounts or logins.</p>
             <ul>
               <li>
-                <strong>Contact buttons</strong> open your own email app or copy my details to your clipboard. Nothing
-                you type is sent to or stored by this site.
+                <strong>Contact form:</strong> the name, email, and message you submit are checked on my server and
+                saved to a private Google Form so I can reply. I don&apos;t sell or share them, and I delete them on
+                request. Your IP address is used briefly to limit spam and isn&apos;t stored.
+              </li>
+              <li>
+                <strong>Contact buttons</strong> open your own email app or copy my details to your clipboard.
               </li>
               <li>
                 <strong>Analytics:</strong> I use Vercel Web Analytics to count page views and see which pages are
