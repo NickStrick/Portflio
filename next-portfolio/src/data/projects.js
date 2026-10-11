@@ -10,9 +10,10 @@ import dots from '../../public/images/projects/connectingdots.jpg';
 import Amanda from '../../public/images/projects/amanda.jpg';
 import Luke from '../../public/images/projects/luke.png';
 import Connor from '../../public/images/projects/connor.png';
-import CMF from '../../public/images/projects/CMF.png';
+import CMF from '../../public/images/projects/copperfox.jpg';
 import grandWoodLogo from '../../public/images/projects/Grand.png';
 import claroflowLogo from '../../public/images/projects/claroflow.png';
+import chelleCraftsLogo from '../../public/images/projects/chellecrafts.png';
 
 const pData = [
     {
@@ -54,19 +55,34 @@ The architecture uses a Post-User-Registration Auth0 Hook to enrich and sync cli
         type: 'Luxury B2B / Secure Retail Architecture'
       },
     {
-        name: "CM Florals",
+        name: "Copper Fox Collective",
         description: 'An e-commerce store and lead capture website for a professional florist with 45 years of experience.',
         img: CMF,
         link: 'https://github.com/NickStrick/CM-Florals',
-        deployed: 'https://www.cmfloralsandgifts.com/',
-        role: 'Web Developer, Platform Engineer, and Architect',
+        deployed: 'https://www.copperfoxcollective.com/',
+        role: 'Web Developer, Platform Engineer, Architect, and Growth Consultant',
         techUsed: ['Planning','Front End','React', 'Next.js', 'TypeScript', 'TailwindCSS', 'AWS S3'],
         teamMemebers: 1,
         weeksCompleted: 4,
         pills: ['Planning','Front End','AWS S3', 'React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         contribution: ``,
         color:'#d26cec', hover: '#a66cec',
-        type: 'Business Website'
+        type: 'E-commerce Platform'
+      },
+       {
+        name: "Chelle's Fiber Crafts",
+        description: 'E-commerce platform for a local fiber arts business, featuring product listings, shopping cart functionality, and secure checkout.',
+        img: chelleCraftsLogo,
+        link: 'https://www.chellescrafts.com/',
+        deployed: 'https://www.chellescrafts.com/',
+        role: 'Web Developer, Platform Engineer, Architect, and Growth Consultant',
+        techUsed: ['Architecture', 'React', 'Node.js', 'REST APIs', 'AWS', 'Webhooks', 'SQL', 'WebSockets'],
+        teamMemebers: 1,
+        weeksCompleted: 4,
+        pills: ['Architecture', 'Front End', 'Back End', 'React', 'Node.js', 'AWS', 'WebSockets'],
+        contribution: `I was the sole developer for Chelle's Fiber Crafts, handling everything from architecture to front-end and back-end development. I designed a custom e-commerce platform that allowed the client to showcase their fiber arts products, manage inventory, and process secure payments.`,
+        color: '#BD5F3E', hover: '#94683A',
+        type: 'E-commerce Platform'
       },
       {
         name: "Grand Wood and Glass",
@@ -290,7 +306,7 @@ const caseStudies = {
     result: 'The app ran 30% faster and user friction dropped 22%, helping keep its biggest customers renewing.',
     linkLabel: 'See Expocad',
   },
-  'CM Florals': {
+  'Copper Fox Collective': {
     eyebrow: 'Local florist · Online store',
     title: 'Giving a 45-year florist an online store',
     problem: 'A florist with 45 years of experience needed new customers to find her, order online, and ask about custom flowers.',
@@ -298,12 +314,12 @@ const caseStudies = {
     result: 'One easy place for customers to shop and reach out, built just the way she pictured it.',
     linkLabel: 'See the live store',
   },
-  'Grand Wood and Glass': {
-    eyebrow: 'Woodworking & glass studio · Online store',
-    title: "Taking a craft studio's work online",
-    problem: 'A woodworking and glass company needed a way to sell online and bring in requests for custom pieces.',
-    built: 'A custom online store with lead capture for custom orders, built in 4 weeks on Next.js and AWS.',
-    result: 'One place for customers to shop, see the craft up close, and ask for custom work.',
+  "Chelle's Fiber Crafts": {
+    eyebrow: 'Fiber arts business · Online store',
+    title: "Building Chelle's Fiber Crafts an online shop",
+    problem: 'A local fiber arts business needed a way to show off handmade products, keep track of stock, and take payments online.',
+    built: 'A custom online store with product listings, a shopping cart, inventory tracking, and secure checkout, built in 4 weeks on React, Node.js, and AWS.',
+    result: 'One easy place for customers to browse and buy, with inventory and payments handled in the background.',
     linkLabel: 'See the live store',
   },
 };
