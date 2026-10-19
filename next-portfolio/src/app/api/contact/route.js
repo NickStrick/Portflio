@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { LIMITS, validateContact, neutralizeFormula } from '../../../lib/contactValidation';
+import { LIMITS, validateContact, neutralizeFormula, canonicalEmail, isDotSpam } from '../../../lib/contactValidation';
 
 // Required env (set in Vercel, never committed):
 //   GOOGLE_FORM_ID           the long id from .../forms/d/e/<ID>/viewform
@@ -13,15 +13,16 @@ import { LIMITS, validateContact, neutralizeFormula } from '../../../lib/contact
 const MAX_BODY_BYTES = 10_000;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 const RATE_MAX = 3;
+const HONEYPOT_KEYS = ['website', 'hp_field', 'website_hp'];
 
 // Best-effort per-instance limiter. Serverless instances don't share memory,
 // so this slows bursts rather than enforcing a global cap.
 const hits = new Map();
-function rateLimited(ip) {
+function rateLimited(key) {
   const now = Date.now();
-  const recent = (hits.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  const recent = (hits.get(key) || []).filter((t) => now - t < RATE_WINDOW_MS);
   recent.push(now);
-  hits.set(ip, recent);
+  hits.set(key, recent);
   if (hits.size > 5000) hits.clear();
   return recent.length > RATE_MAX;
 }
@@ -71,10 +72,11 @@ export async function POST(req) {
     return fail(400, 'Invalid request.');
   }
 
-  // Bot traps: the hidden field must stay empty and the form can't be filled instantly.
+  // Bot traps: the hidden fields must stay empty and the form can't be filled instantly.
   // Pretend success so bots don't learn what tripped them.
-  const elapsed = Date.now() - Number(body.startedAt);
-  if (body.website || !Number.isFinite(elapsed) || elapsed < LIMITS.minFillMs || elapsed > 24 * 60 * 60 * 1000) {
+  const honeypotFilled = HONEYPOT_KEYS.some((k) => typeof body[k] === 'string' && body[k].trim() !== '');
+  const elapsed = Date.now() - Number(body._ts ?? body.startedAt);
+  if (honeypotFilled || !Number.isFinite(elapsed) || elapsed < LIMITS.minFillMs || elapsed > 24 * 60 * 60 * 1000) {
     return NextResponse.json({ ok: true });
   }
 
@@ -82,6 +84,11 @@ export async function POST(req) {
 
   const { data, errors, valid } = validateContact(body);
   if (!valid) return fail(400, 'Please fix the highlighted fields.', { errors });
+
+  // Dot-trick / alias spam: fake success like the other bot traps.
+  if (isDotSpam(data.email)) return NextResponse.json({ ok: true });
+  // Rate-limit per real inbox too, so rotating aliases or IPs doesn't reset the count.
+  if (rateLimited(`email:${canonicalEmail(data.email)}`)) return fail(429, 'Too many messages. Please try again later.');
 
   const { GOOGLE_FORM_ID, GOOGLE_FORM_ENTRY_NAME, GOOGLE_FORM_ENTRY_EMAIL, GOOGLE_FORM_ENTRY_MESSAGE } = process.env;
   if (!GOOGLE_FORM_ID || !GOOGLE_FORM_ENTRY_NAME || !GOOGLE_FORM_ENTRY_EMAIL || !GOOGLE_FORM_ENTRY_MESSAGE) {

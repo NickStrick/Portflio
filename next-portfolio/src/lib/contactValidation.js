@@ -56,6 +56,22 @@ export function validateContact(input) {
   return { data, errors, valid: Object.keys(errors).length === 0 };
 }
 
+// One key per real inbox: lower-case, drop +alias tags, and drop Gmail's ignored dots,
+// so u.s.e.r+x@gmail.com and user@gmail.com count as the same sender.
+export function canonicalEmail(email) {
+  const [local = '', domain = ''] = String(email).toLowerCase().split('@');
+  const user = local.split('+')[0];
+  if (domain === 'gmail.com' || domain === 'googlemail.com') return `${user.replace(/\./g, '')}@gmail.com`;
+  return `${user}@${domain}`;
+}
+
+// Bots rotate dot placements (u.w.ani.saj.u@gmail.com) to dodge dedupe; real addresses rarely do.
+export function isDotSpam(email) {
+  const local = String(email).toLowerCase().split('@')[0].split('+')[0];
+  const dots = (local.match(/\./g) || []).length;
+  return dots > 3 || (dots > 1 && dots / local.length > 0.25);
+}
+
 // Spreadsheets run cells starting with these as formulas (CSV/formula injection),
 // so prefix them with a quote before the response lands in Google Sheets.
 export function neutralizeFormula(value) {

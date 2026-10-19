@@ -118,8 +118,9 @@ function Contact() {
                 body: JSON.stringify({
                     ...form,
                     website: formData.get('website') || '',
+                    hp_field: formData.get('hp_field') || '',
                     turnstileToken: formData.get('cf-turnstile-response') || '',
-                    startedAt: startedAt.current,
+                    _ts: startedAt.current,
                 }),
             });
             const out = await res.json().catch(() => ({}));
@@ -186,6 +187,8 @@ function Contact() {
                         <div className="hp-field" aria-hidden="true">
                             <label htmlFor="contact-website">Website</label>
                             <input id="contact-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                            <label htmlFor="contact-hp">Company</label>
+                            <input id="contact-hp" name="hp_field" type="text" tabIndex={-1} autoComplete="off" />
                         </div>
                         <div className="formGroup">
                             <label htmlFor="contact-name">Name</label>
